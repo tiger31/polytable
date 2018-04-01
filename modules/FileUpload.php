@@ -27,7 +27,7 @@ function store_file() {
     if (substr_count($file_type, '/') > 1) {
         AjaxResponse::create()->error(403, array("info" => "Multiple MIME-TYPE detected"))->response();
     }
-    if ((filesize($_FILES['image']['tmp_name']) / 1024) / 1024 > 100) {
+    if (($_FILES['image']['size'] / 1024) / 1024 > 5) {
         AjaxResponse::create()->error(403, array("info" => "File is too large"))->response();
     }
     $file = null;
@@ -58,7 +58,7 @@ function store_file() {
         if ($is_image && !file_exists($thumbnail_dir))
             mkdir($thumbnail_dir, 0777);
     }
-    $upload_filename = md5(generateRandomString(8) . time()) . $file_ext;
+    $upload_filename = md5(generateRandomString(16) . time()) . $file_ext;
     $upload_file = $upload_dir . $upload_filename;
     if ($is_image) {
         $thumbnail_file = $thumbnail_dir . $upload_filename;
@@ -73,6 +73,8 @@ function store_file() {
         "name" => $upload_filename,
         "original_name" => (strlen($filename) > 64) ? substr($filename, 0, (64 - strlen($file_ext) - 1)) . $file_ext : $filename,
         "showable" => (int)$is_image,
+        "size" => $_FILES['image']['size'],
+        "hash" => hash_file("md5", $_FILES['image']['tmp_name']),
         "adder_id" => $user->id,
         "stored_untill" => $time->format("Y-m-d")
     );

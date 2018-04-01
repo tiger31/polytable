@@ -1,0 +1,92 @@
+.group {
+    position: relative;
+    font-size: 16px;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #325a46;
+    float : left;
+    background-color: #eaeaea;
+    margin: 5px;
+    font-weight: bold;
+}
+.group:hover {
+    background-color: var(--green);
+    color: white;
+}
+#search {
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+.group_search {
+    border: none;
+    width: 100%;
+
+    /* за счет верхнего (8px) и нижнего (9px) внутренних отступов
+    ** регулируем высоту формы
+    ** внутренний отступ справа (37px) делаем больше левого,
+    ** т.к. там будет размещена кнопка отправки	*/
+    padding: 8px 37px 9px 15px;
+
+    /* чтобы ширина поля ввода (100%) включала в себя внутренние отступы */
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* добавляем внутренние тени */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.3);
+
+    /* закругляем углы */
+    border-radius: 20px;
+
+    background: #EEE;
+    font: 13px Tahoma, Arial, sans-serif;
+    color: #555;
+    outline: none;
+}
+.group_search:focus {
+    outline: none;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4);
+    background: #E8E8E8;
+    color: #333;
+}
+.group_search_submit {
+    border: none;
+    /* позиционируем кнопку абсолютно от правого края формы */
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    width: 75px;
+    /* растягиваем кнопку на всю высоту формы */
+    height: 100%;
+    cursor: pointer;
+    /* добавляем прозрачность кнопке отправки */
+    opacity: 0.5;
+    outline: none;
+}
+.group_search_submit:before{
+    position: absolute;
+    top: 11px;
+    left: 0;
+    content: url(https://lh4.googleusercontent.com/-b-5aBxcxarY/UAfFW9lVyjI/AAAAAAAABUg/gQtEXuPuIds/s13/go.png);
+}
+.group_search_submit:hover {
+    opacity: 0.8;
+}
+#group_search_result {
+    margin-top: 20px;
+    max-width: 650px;
+    overflow: hidden;
+    display: inline-block;
+}
+#search_non {
+    color: dimgray;
+}
+#search_non a {
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+}

@@ -1,0 +1,14 @@
+{{#if exists}}
+    <div class="lesson_homework">
+        <div class="homework_text">{{text}}</div>
+        {{#files}}
+            {{#if showable}}
+                <img class="homework_file view" alt="{{original}}" title="{{original}}" src="uploads/thumbnails/{{date}}/{{name}}"/>
+            {{else}}
+                <a href="uploads/files/{{date}}/{{name}}">
+                    <img class="homework_file" alt="{{original}}" title="{{original}}" src="assets/images/file.png"/>
+                </a>
+            {{/if}}
+        {{/files}}
+    </div>
+{{/if}}

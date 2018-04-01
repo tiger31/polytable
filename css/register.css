@@ -1,0 +1,211 @@
+:root {
+    --lightGray: #fafafa;
+    --gray: #eaeaea;
+    --darkGray: #cacaca;
+    --blackGray: #313131;
+    --green: #21a649;
+    --grayGreen: #105d3b;
+    --darkGreen: #00392a;
+    --red: #cc0000;
+    --blue: #0099ff;
+    --darkBlue: #0066cc;
+    --purple: #663399;
+    --orange: #ff6600;
+}
+html, body, table, tr, td {
+    margin: 0;
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+}
+body {
+    /* background-image: url("../assets/images/myawsmbg.png"); */
+    background-color: var(--green);
+    font-family: Calibri;
+}
+a {
+    text-decoration: none;
+}
+#registerForm {
+    margin: 0 auto;
+    background-color: white;
+    width: 500px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 10px 0 rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0 0 10px 0 rgba(50, 50, 50, 0.75);
+    box-shadow:         0 0 10px 0 rgba(50, 50, 50, 0.75);
+}
+#title {
+    font-size: 18px;
+    text-align: center;
+    color: var(--blackGray);
+    background-color: white;
+    font-weight: bold;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 470px;
+}
+form {
+    margin: 0;
+    display: block;
+}
+form div {
+    position: relative;
+}
+form div > div{
+    position: relative;
+    height: 70px;
+
+}
+form label {
+    color: var(--green);
+    font-size: 14px;
+    padding-left: 25px;
+}
+form input {
+    background-color: white;
+    color: var(--blackGray);
+    border: 0;
+    border-bottom: 2px var(--gray) solid;
+    font-size: 14px;
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+    width: 430px;
+}
+
+form input::placeholder {
+    color: var(--darkGray);
+}
+form input:focus {
+    border-bottom: 2px var(--green) solid;
+    outline: none;
+}
+form button, button, .on_valid {
+    background-color: var(--green);
+    display: block;
+    border: 0;
+    margin: 20px auto 0 auto;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 430px;
+}
+.notification {
+    color: var(--blackGray);
+    min-height: 25px;
+    text-align: center;
+    font-size: 12px;
+    width: 420px;
+    margin: 0 auto;
+}
+.text {
+    color: var(--blackGray);
+    float: left;
+    font-size: 14px;
+    margin-bottom:5px;
+}
+.invalid, .invalid:focus {
+    border-bottom: 2px var(--red) solid;
+    outline: none;
+}
+.valid, .valid:focus {
+    border-bottom: 2px var(--green) solid;
+    outline: none;
+}
+.valid label {
+    color: red;
+}
+.errorMessage {
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+    font-size: 13px;
+    color: var(--red);
+    margin: 0 auto;
+    text-align: right;
+    width: 430px;
+    height: 15px;
+ }
+#confirm {
+    width: 500px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+}
+#logo {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+}
+#response_title {
+    width: 480px;
+    padding: 10px 10px 0 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+#info {
+    width: 480px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+}
+a {
+    display: block;
+    color: white;
+    margin: 0 auto;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+#result {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+}
+#result #icon {
+    font-size: 96px;
+    display: none;
+}
+#result #success {
+    font-weight: bolder;
+    font-size:  32px;
+    color: var(--blackGray);
+    display: none;
+}
+#result #text {
+    margin-top:  10px;
+    font-size: 18px;
+    font-weight: 200;
+    color: var(--blackGray);
+    display: none;
+}
+#result #mail {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 200;
+    display: none;
+}
+#result #mail a {
+    display: inline;
+    color: var(--green);
+    font-style: italic;
+}
+#result #group {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 200;
+    color: var(--blackGray);
+    display: none;
+}
+#result #group:hover {
+    color: var(--green);
+}

@@ -91,11 +91,8 @@ function Editor(object, config) {
     this.object = object;
     this.config = config;
     this.element = undefined;
-    var _this = this;
 
-    $.get(config.template, function (data) {
-        _this.model = Handlebars.compile(data);
-    });
+    this.model = config.template;
     //New
 
     this.on("templated", function () {

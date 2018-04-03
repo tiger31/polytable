@@ -34,6 +34,10 @@ function Calendar(group, element) {
             "path" : "templates/calendar/homework.handlebars",
             "name" : "homework",
             "type" : "partial"
+        },
+        "homework_editor" : {
+            "path" : "templates/controls/homework_editor.handlebars",
+            "type" : "template"
         }
     };
     for(var template in this.templates) {
@@ -351,7 +355,7 @@ function Lesson(data) {
     //Editor
     if (Calendar.editor) {
         this.editor = new Editor(this, {
-            template: "templates/controls/homework_editor.handlebars",
+            template: Calendar.templates["homework_editor"],
             template_created: function (editor) {
                 //Setting up close event on close button
                 $(editor.element).find(".editor_title_close").on("click", function () {
@@ -360,12 +364,20 @@ function Lesson(data) {
                 //Setting up new variables
                 editor.ajax_field = new Field($(editor.element).find("textarea"),
                     {
-                        'regex' : /.{0,140}/,
-                        'regex_check' : true,
+                        'regex_check' : false,
                         'ajax_ignore' : true,
                         'show_errors' : false,
                         'empty_valid' : true
                     });
+                editor.ajax_field.on("changed", function (value) {
+                    var length = value.length;
+                    var counter = $(editor.element).find(".editor_counter").text(length + "/140");
+                    console.log(length);
+                    if (length > 140)
+                        $(counter).addClass("invalid");
+                    else
+                        $(counter).removeClass("invalid");
+                });
                 editor.ajax_button = new AjaxButton($(editor.element).find(".editor_submit"), {'text' : editor.ajax_field},
                     {
                         'url' : 'action.php',
@@ -373,7 +385,7 @@ function Lesson(data) {
                             return {
                                 'action' : 'send',
                                 'date' : elem.controller.object.date_key, // AjaxButton.Editor.Lesson.date_key
-                                'lesson' :elem.controller.object.db_key,
+                                'lesson' : elem.controller.object.db_key,
                                 'text' : JSON.stringify({'text' : elem.fields['text'].get_value(), 'files' : get_values(editor.file_list)})
                             }
                         }
@@ -383,10 +395,14 @@ function Lesson(data) {
                     $(this.button).html('<i class="ui icon star loading" style="font-size: 19px; margin: 0"></i>');
                 });
                 editor.ajax_button.on("success", function (result) {
-                    if (result['response'] === true)
-                        editor.emitter.emit("accepted", result);
-                    else
+                    if (result['response'] !== undefined && result['response'] !== null) {
+                        if (result['response'] === true)
+                            editor.emitter.emit("accepted", result);
+                        else
+                            editor.emitter.emit("rejected", result);
+                    } else {
                         editor.emitter.emit("rejected", result);
+                    }
                 });
                 editor.ajax_loader = $(editor.element).find("#imageLoader").dropzone(imageAjaxConfig).get(0)['dropzone'];
                 editor.file_list = {};
@@ -459,6 +475,9 @@ function Lesson(data) {
                     }
                     //reloading listeners for images
                     Lesson.listeners.image_view.func(editor.object, Lesson.listeners.image_view);
+                });
+                editor.on("rejected", function(response) {
+
                 });
             },
             get_data: function () {

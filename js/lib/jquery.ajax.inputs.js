@@ -1,5 +1,5 @@
 function Field(field, statement, controller) {
-    this.emitter = new Emitter("validate ajax_ready ajax_received", this);
+    this.emitter = new Emitter("changed validate ajax_ready ajax_received", this);
     //Default filed info
     this.field = field;
     this.name = $(field).attr("name");
@@ -130,6 +130,7 @@ Field.prototype = {
         return (this.ajax_ignore_statement !== undefined && this.ajax_ignore_statement());
     },
     on_change:function () {
+        this.emitter.emit("changed", this.get_value());
         if (this.value_not_empty()) {
             if ((!this.regex_check || this.preg_match()))
                 this.validate();

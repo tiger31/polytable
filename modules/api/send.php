@@ -11,6 +11,10 @@ class send extends APICall {
         $this->pre_check();
         if (isJSON($_GET['text']) && DateTime::createFromFormat("Y-m-d", $_GET['date']) !== false) {
             $json = json_decode($_GET['text'], true);
+            if (mb_strlen($json['text'], "utf-8") > 140)
+                AjaxResponse::create()
+                    ->error(400, array("info" => "Text is to large", "affected_row" => "text", "state" => "invalid"))
+                    ->response();
             $files = array();
             if ($json['files'] !== null && count($json['files']) > 0) {
                 $name_list = $json['files'];

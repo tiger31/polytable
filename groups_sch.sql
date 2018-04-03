@@ -127,7 +127,7 @@ REPLACE INTO `calendar` (`group_id`, `day`, `weekday`, `lesson`, `subject`, `typ
 	(24113, '2018-04-04', 3, 1, 'Профессионально-ориентированный курс иностранного языка', 'Практика', '14:00', '15:40', '["Борщенко Галина Михайловна"]', '["9-й учебный корпус, ауд. 112"]'),
 	(24113, '2018-04-04', 3, 2, 'Философия', 'Лекции', '16:00', '17:40', '["Сафонова Алла Сергеевна"]', '["Главное здание, ауд. 235"]'),
 	(24113, '2018-04-05', 4, 0, 'Теория вероятностей и математическая статистика 2', 'Практика', '10:00', '11:40', '["Никитин Кирилл Вячеславович"]', '["9-й учебный корпус, ауд. 319"]'),
-	(24113, '2018-04-05', 4, 1, 'Курсовой проект по Прикладному программированию', 'Лабораторные', '12:00', '13:40', '["Петров Максим Алексеевич"]', '["9-й учебный корпус, ауд. 317"]'),
+	(24113, '2018-04-05', 4, 1, 'Курсовой проект по Прикладному программированию', 'Лабораторные', '12:00', '13:40', '["Гагарский Кирилл Алексеевич"]', '["9-й учебный корпус, ауд. 309"]'),
 	(24113, '2018-04-07', 6, 0, 'Основы проектной деятельности', 'Лекции', '10:00', '11:40', '["Лексашов Александр Викторович"]', '["9-й учебный корпус, ауд. 325"]'),
 	(24113, '2018-04-07', 6, 1, 'Основы проектной деятельности', 'Лабораторные', '12:00', '13:40', '["Лексашов Александр Викторович"]', '["9-й учебный корпус, ауд. 305"]'),
 	(24113, '2018-04-07', 6, 3, 'Элективные курсы по физической культуре', 'Практика', '14:00', '15:40', '[]', '["Спорткомплекс, Секции"]');
@@ -161,7 +161,6 @@ CREATE TABLE IF NOT EXISTS `contributors` (
 -- Дамп данных таблицы groups_sch.contributors: ~1 rows (приблизительно)
 /*!40000 ALTER TABLE `contributors` DISABLE KEYS */;
 REPLACE INTO `contributors` (`group_id`, `user_id`) VALUES
-	(24113, 17),
 	(24113, 14);
 /*!40000 ALTER TABLE `contributors` ENABLE KEYS */;
 
@@ -1310,7 +1309,7 @@ REPLACE INTO `groups` (`name`, `id`, `header_login`, `cache`, `cache_until`, `ca
 	('43504/21', 24385, NULL, 0, NULL, '2017-12-03 19:01:15', 1, 5),
 	('33503/4', 24145, NULL, 0, NULL, '2017-12-03 19:01:15', 1, 5),
 	('23558/3', 24098, NULL, 0, NULL, '2017-12-03 19:01:15', 1, 5),
-	('23531/1', 24113, 'tiger31', 1, '2018-03-10', '2018-03-28 20:36:53', 1, 53),
+	('23531/1', 24113, 'tiger31', 1, '2018-04-07', '2018-04-01 00:00:34', 1, 49),
 	('з13536/1', 25622, NULL, 0, NULL, '2017-12-03 19:01:15', 1, 5),
 	('33504/4', 24140, NULL, 0, NULL, '2017-12-03 19:01:15', 1, 5),
 	('43501/3', 24359, NULL, 0, NULL, '2017-12-03 19:01:15', 1, 5),
@@ -1761,26 +1760,13 @@ CREATE TABLE IF NOT EXISTS `homeworks` (
   `sender_id` int(11) NOT NULL,
   `date` date NOT NULL,
   `lesson` int(11) NOT NULL,
-  `text` varchar(1024) DEFAULT NULL,
+  `text` json DEFAULT NULL,
   `added` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`group_id`,`date`,`lesson`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы groups_sch.homeworks: ~11 rows (приблизительно)
+-- Дамп данных таблицы groups_sch.homeworks: ~0 rows (приблизительно)
 /*!40000 ALTER TABLE `homeworks` DISABLE KEYS */;
-REPLACE INTO `homeworks` (`group_id`, `sender_id`, `date`, `lesson`, `text`, `added`) VALUES
-	(24113, 0, '2017-11-27', 0, '{"text":"464645675jhghjghj","files":[{"showable":"1","name":"577ddd9ada4e23ab8cf7c700ffff4ee4.jpg","original":"9640b2q00o3nwmzajj4cqi1nabgi.jpg","date":"2017-11-26"},{"showable":"1","name":"4821ddc2768d03e77e43737577db6139.jpg","original":"1472210907118346892.jpg","date":"2017-11-26"},{"showable":"1","name":"543e2e4ac30bd40f92c2ea859d574100.jpg","original":"irpkfjrcgxk.jpg","date":"2017-11-26"},{"showable":"1","name":"859bd8cd9ddc1b5be2c97a3126179d68.jpg","original":"isbptzj.jpg","date":"2017-11-26"}]}', '2017-11-26 00:48:58'),
-	(24113, 6, '2017-12-07', 0, '{"text":"123","files":[{"showable":"1","name":"5898808473a08e6817afe83be964a8ec.jpg","original":"irpkfjrcgxk.jpg","date":"2017-12-07"},{"showable":"1","name":"07b1168dfdaa919edb7bae563b0fedf6.jpg","original":"1472210907118346892.jpg","date":"2017-12-07"},{"showable":"1","name":"17d241e9f869a40f03f2885723748336.jpg","original":"isbptzj.jpg","date":"2017-12-07"}]}', '2017-12-07 07:55:40'),
-	(24113, 6, '2017-12-09', 0, '{"text":"ДДДззз33","files":[{"showable":"1","name":"99b3863f8ac26a9ca5ddd6ea3dc0ff9c.jpg","original":"irpkfjrcgxk.jpg","date":"2017-12-08"},{"showable":"1","name":"1f66cbe90ae46f6b353c9cf1e533a02e.jpg","original":"isbptzj.jpg","date":"2017-12-08"},{"showable":"0","name":"7d532efc2a1aa1501cf95ee5974a7b51.pdf","original":"kab4.pdf","date":"2017-12-08"},{"showable":"1","name":"3cd7aba456967862280bf8b4cff65ddd.jpg","original":"034ulsyfpma.jpg","date":"2017-12-08"},{"showable":"1","name":"e683ab98d72ce5a99f03e153d18c6226.jpg","original":"1472210907118346892.jpg","date":"2017-12-08"}]}', '2017-12-08 14:40:50'),
-	(24113, 6, '2017-12-11', 0, '{"text":"7854634hjdgbd","files":[{"showable":"1","name":"b2f134fe479a0ab71616b25b18984143.jpg","original":"8d3fa9933bb66d6f7ebfef5aecbc9411--cat-drawing-tutorial-cute.jpg","date":"2017-12-10"},{"showable":"1","name":"699f2c47927053bea114f205141edd4c.jpg","original":"034ulsyfpma.jpg","date":"2017-12-10"},{"showable":"1","name":"1329e975b0913eaf58757592416562cf.jpg","original":"1472210907118346892.jpg","date":"2017-12-10"}]}', '2017-12-10 21:59:49'),
-	(24113, 14, '2017-12-27', 0, '{"text":"Happy New Year!","files":[{"showable":"1","name":"3d59d59512c094630faac71b546fd4a2.jpg","original":"isbptzj.jpg","date":"2017-12-28"},{"showable":"1","name":"a1dfb344e1f651aaead72befb115a5ca.jpg","original":"irpkfjrcgxk.jpg","date":"2017-12-28"},{"showable":"1","name":"d546c35f422790afd4fada7cdce54ca0.jpg","original":"1472210907118346892.jpg","date":"2017-12-28"}]}', '2017-12-28 17:11:23'),
-	(24113, 6, '2018-01-09', 0, '{"text":"gh\\nj\\ng\\njghj\\ngh\\njgh\\nj\\nghj\\nghj\\ng\\nhj\\nghj\\ng\\nh\\njg\\nhj\\ng\\nhj\\ngh\\njg\\nj\\nghj","files":[]}', '2018-01-01 19:12:09'),
-	(24113, 6, '2018-01-11', 0, '{"text":"хуйf","files":[{"showable":"1","name":"db217b3bb325833a2cddcbbb640a6a86.jpg","original":"1472210907118346892.jpg","date":"2018-01-01"}]}', '2018-01-01 17:19:37'),
-	(24113, 6, '2018-02-19', 0, '{"text":"ДДДДЗЗЗЗ\\n","files":[{"showable":"1","name":"d1c31b08bd9078a4e0e13903669f13c3.jpg","original":"8d3fa9933bb66d6f7ebfef5aecbc9411--cat-drawing-tutorial-cute.jpg","date":"2018-02-17"},{"showable":"1","name":"6614748944bb3cde2c124eaecd4af71c.jpg","original":"9640b2q00o3nwmzajj4cqi1nabgi.jpg","date":"2018-02-17"},{"showable":"1","name":"cf15cdcdada0d97810d4c991c2d528d0.png","original":"bitcoin_png16.png","date":"2018-02-17"}]}', '2018-02-17 17:46:07'),
-	(24113, 6, '2018-02-26', 0, '{"text":"34532ds","files":[{"showable":"1","name":"99cfd44a9ee8eb983b6188d52bec7c3e.jpg","original":"9gqs_1ngqby.jpg","date":"2018-02-28"}]}', '2018-02-28 18:14:48'),
-	(24113, 6, '2018-02-27', 0, '{"text":"хуй1","files":[{"showable":"0","name":"b9687c00a9cbfcda586a92a7b614ff0d.txt","original":"1_zadanie_10_var.txt","date":"2018-02-28"},{"showable":"1","name":"bac24868399d8428fc0555090b5075dd.jpg","original":"8d3fa9933bb66d6f7ebfef5aecbc9411--cat-drawing-tutorial-cute.jpg","date":"2018-02-28"},{"showable":"1","name":"4c4efb644d01aa60a93bad96cd04d549.jpg","original":"9640b2q00o3nwmzajj4cqi1nabgi.jpg","date":"2018-02-28"},{"showable":"1","name":"cf03560b99515a5a2fcc341b35bd1d15.jpg","original":"1472210907118346892.jpg","date":"2018-02-28"},{"showable":"1","name":"8845bd209c04ea5f624f62be5721a85b.jpg","original":"034ulsyfpma.jpg","date":"2018-03-20"}]}', '2018-02-28 18:09:31'),
-	(24113, 6, '2018-03-20', 0, '{"text":"Пизда5","files":[{"showable":"1","name":"ef18b51930a7a47e132654ca600e96d9.jpg","original":"a2kcjhhmeg8.jpg","date":"2018-03-20"},{"showable":"1","name":"4235a019523aabca5b3ed0fc73b10b4c.jpg","original":"1472210907118346892.jpg","date":"2018-03-20"},{"showable":"1","name":"524d8ca27a8c072bb41cd87af1df04da.jpg","original":"034ulsyfpma.jpg","date":"2018-03-20"}]}', '2018-03-20 02:10:38'),
-	(24113, 6, '2018-03-22', 0, '{"text":"[eg","files":[{"showable":"1","name":"94247bb2740e6c5cd3cd4c1d27cde03f.jpg","original":"a2kcjhhmeg8.jpg","date":"2018-03-22"},{"showable":"1","name":"910c4b54d51df21815557c78d121c68c.jpg","original":"9640b2q00o3nwmzajj4cqi1nabgi.jpg","date":"2018-03-22"}]}', '2018-03-22 14:45:10');
 /*!40000 ALTER TABLE `homeworks` ENABLE KEYS */;
 
 -- Дамп структуры для процедура groups_sch.homework_delete
@@ -1836,115 +1822,18 @@ DELIMITER ;
 DROP TABLE IF EXISTS `uploads`;
 CREATE TABLE IF NOT EXISTS `uploads` (
   `name` varchar(64) NOT NULL,
-  `original_name` varchar(64) DEFAULT NULL,
+  `original_name` varchar(64) NOT NULL,
   `showable` int(1) NOT NULL,
-  `adder_id` int(11) DEFAULT NULL,
+  `size` bigint(20) unsigned NOT NULL,
+  `hash` varchar(32) NOT NULL,
+  `adder_id` int(11) NOT NULL,
   `added` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `stored_untill` date DEFAULT NULL,
-  KEY `name_index` (`name`)
+  `stored_untill` date NOT NULL,
+  PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы groups_sch.uploads: ~89 rows (приблизительно)
+-- Дамп данных таблицы groups_sch.uploads: ~12 rows (приблизительно)
 /*!40000 ALTER TABLE `uploads` DISABLE KEYS */;
-REPLACE INTO `uploads` (`name`, `original_name`, `showable`, `adder_id`, `added`, `stored_untill`) VALUES
-	('c18746cebe92567c5ba8314495fde9f6.jpg', '1503638196_238518549.jpg.jpg', 1, 0, '2017-10-29 19:27:31', '2017-11-09'),
-	('01c2af9290d2bc9c26c435aa3ace5f9a.jpg', '1472210907118346892.jpg.jpg', 1, 0, '2017-10-29 19:27:33', '2017-11-09'),
-	('1a5fcf652852ac285f09658f2ed896e0.txt', '12312312.txt.txt', 0, 0, '2017-10-29 19:27:34', '2017-11-09'),
-	('c17bf52ec64bf8479a037c19c9f344c0.png', 'doc.png', 1, 0, '2017-10-29 21:42:38', '2017-10-31'),
-	('d4dedf35a9f19f60de59e5519110bd6b.jpg', '1503638196_238518549.jpg', 1, 0, '2017-10-29 21:42:41', '2017-10-31'),
-	('911d6024ea1ec3fd62923c8d052c9504.jpg', '1503638196_238518549.jpg', 1, 0, '2017-10-31 15:18:17', '2017-11-14'),
-	('5f4f35afbe27dd6915d6402306013a66.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 0, '2017-10-31 15:18:19', '2017-11-14'),
-	('345790addaef9cf285aeabf6bb49c63d.jpg', '1472210907118346892.jpg', 1, 0, '2017-10-31 18:46:47', '2017-11-14'),
-	('0eb34181a47e31bda065afa4915b6503.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 0, '2017-10-31 18:46:48', '2017-11-14'),
-	('2ea23ca65ec4953899ea471fdf4a2705.jpg', '1503638196_238518549.jpg', 1, 0, '2017-10-31 18:46:49', '2017-11-14'),
-	('2ad52e2868c99ac2eae695adeea4d581.txt', '12312312.txt', 0, 0, '2017-10-31 18:46:51', '2017-11-14'),
-	('d56503d2d05db026283c0500a0ae4a03.png', 'flat.png', 1, 0, '2017-10-31 18:46:56', '2017-11-14'),
-	('ca941a46e41af2b890c48ddf5f8d465a.jpg', '1472210907118346892.jpg', 1, 0, '2017-11-01 16:14:35', '2017-11-15'),
-	('0f41542234f149d91359c697822071cc.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 0, '2017-11-01 16:14:37', '2017-11-15'),
-	('31d4f2187606885646da52f12b3f713f.jpg', '1503638196_238518549.jpg', 1, 0, '2017-11-01 16:14:38', '2017-11-15'),
-	('c339f64267088a8756cdd56905287723.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 0, '2017-11-01 17:03:16', '2017-11-15'),
-	('eeb1bf2a2dccbd26025a6c37448f73e0.jpg', '1472210907118346892.jpg', 1, 0, '2017-11-01 17:03:17', '2017-11-15'),
-	('e36a91c5f9d4f521dfd15b6bcbdfcd80.png', 'doc.png', 1, 0, '2017-11-01 17:47:30', '2017-11-16'),
-	('2d0f120d470087092c5a935fc0d9bbf5.png', 'flat.png', 1, 0, '2017-11-01 17:47:34', '2017-11-16'),
-	('ff261fae8da033bb8fd5281c56d1e6f4.txt', '12312312.txt', 0, 0, '2017-11-01 17:47:36', '2017-11-16'),
-	('d445fe7358160876a0efd8ebb1dc5545.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 0, '2017-11-01 17:47:38', '2017-11-16'),
-	('3c1c95aabadbaad5fb8e29f98bef2880.jpg', '1472210907118346892.jpg', 1, 0, '2017-11-01 17:47:39', '2017-11-16'),
-	('d45c1dfea67fcc03ba454d710bc4a0bd.jpg', '1503638196_238518549.jpg', 1, 0, '2017-11-01 20:05:00', '2017-11-03'),
-	('93d2d5bc9fab1eefaa2ae6a33b8b37a8.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 0, '2017-11-23 18:55:37', '2017-12-07'),
-	('7b62e9626656a3463175fedc2b325049.jpg', 'isbptzj.jpg', 1, 0, '2017-11-23 20:28:23', '2017-12-07'),
-	('6e15ac05385199e5b6b28bf5467f9817.jpg', '1472210907118346892.jpg', 1, 0, '2017-11-23 20:28:26', '2017-12-07'),
-	('25c6edb1a6e517ae89604eb906fbb16a.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 0, '2017-11-25 23:35:34', '2017-11-27'),
-	('4e5098d50ef57a7f8e016b8a496717ba.jpg', '034ulsyfpma.jpg', 1, 0, '2017-11-25 23:35:46', '2017-11-27'),
-	('450e6a529ffc9dc65d81d6eff6f35d88.jpg', 'irpkfjrcgxk.jpg', 1, 0, '2017-11-25 23:35:51', '2017-11-27'),
-	('87d21d11e334792fa0b06598c2f840e0.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 0, '2017-11-25 23:37:00', '2017-11-27'),
-	('5d1c57f4563483d5dad11abb7d38e7d7.jpg', '1472210907118346892.jpg', 1, 0, '2017-11-25 23:56:47', '2017-11-27'),
-	('854ca2192d6e4311ddcbcef9a9096844.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 0, '2017-11-26 00:01:39', '2017-11-28'),
-	('847b69688780fa7aaabbdef11391658f.png', 'doc.png', 1, 0, '2017-11-26 00:02:04', '2017-11-28'),
-	('75e677722608c54e2e5c9a82f0acfc22.png', 'doc.png', 1, 0, '2017-11-26 00:04:48', '2017-11-28'),
-	('aaf34fcbbe8450c18daf246f8ea841a4.png', 'doc.png', 1, 0, '2017-11-26 00:05:15', '2017-11-28'),
-	('4a517fb37b506e3f26d59bc3b19fcc98.jpg', '1472210907118346892.jpg', 1, 0, '2017-11-26 00:05:20', '2017-11-28'),
-	('6a06814469014c31113d9cc1aa86b262.png', 'doc.png', 1, 0, '2017-11-26 00:06:32', '2017-11-28'),
-	('9190732499602c2f9ef39d8d0a9ed42f.jpg', '1472210907118346892.jpg', 1, 0, '2017-11-26 00:43:13', '2017-11-28'),
-	('fa73f4e84656b56eddd87850b1f603d7.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 0, '2017-11-26 00:43:13', '2017-11-28'),
-	('81df1f9d0c9ffef7a2de03dd9b8ed467.jpg', 'irpkfjrcgxk.jpg', 1, 0, '2017-11-26 00:43:13', '2017-11-28'),
-	('edb98e6780fb41cc327a1989b276d6c1.jpg', 'isbptzj.jpg', 1, 0, '2017-11-26 00:43:13', '2017-11-28'),
-	('40613c7e54da0d8b465505403dae9ac9.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 0, '2017-11-26 00:44:45', '2017-11-28'),
-	('764d9d78ac0a4549224fdf7a80f33af4.jpg', '1472210907118346892.jpg', 1, 0, '2017-11-26 00:44:45', '2017-11-28'),
-	('92f077023d4be214e8dd557788dc6dbd.jpg', 'irpkfjrcgxk.jpg', 1, 0, '2017-11-26 00:44:45', '2017-11-28'),
-	('d684f1aecb8b223337d71c8f453d7496.jpg', 'isbptzj.jpg', 1, 0, '2017-11-26 00:44:46', '2017-11-28'),
-	('59f0bddeeee85d792479276890debafb.jpg', '1472210907118346892.jpg', 1, 0, '2017-11-26 00:45:58', '2017-11-28'),
-	('d4110ec60060cb286b387b1b25da7ad1.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 0, '2017-11-26 00:45:59', '2017-11-28'),
-	('20e0435f6a570138be8a8158a59a2a1e.jpg', 'irpkfjrcgxk.jpg', 1, 0, '2017-11-26 00:45:59', '2017-11-28'),
-	('baf8cea059af47d28b4d0948a84ad503.jpg', 'isbptzj.jpg', 1, 0, '2017-11-26 00:45:59', '2017-11-28'),
-	('577ddd9ada4e23ab8cf7c700ffff4ee4.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 0, '2017-11-26 00:47:15', '2017-12-11'),
-	('4821ddc2768d03e77e43737577db6139.jpg', '1472210907118346892.jpg', 1, 0, '2017-11-26 00:47:15', '2017-12-11'),
-	('543e2e4ac30bd40f92c2ea859d574100.jpg', 'irpkfjrcgxk.jpg', 1, 0, '2017-11-26 00:47:16', '2017-12-11'),
-	('859bd8cd9ddc1b5be2c97a3126179d68.jpg', 'isbptzj.jpg', 1, 0, '2017-11-26 00:47:16', '2017-12-11'),
-	('8ee846d721667654e546ad72f23018e8.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 0, '2017-11-26 00:54:06', '2017-11-28'),
-	('5898808473a08e6817afe83be964a8ec.jpg', 'irpkfjrcgxk.jpg', 1, 6, '2017-12-07 07:55:37', '2018-01-07'),
-	('07b1168dfdaa919edb7bae563b0fedf6.jpg', '1472210907118346892.jpg', 1, 6, '2017-12-07 07:55:37', '2018-01-07'),
-	('17d241e9f869a40f03f2885723748336.jpg', 'isbptzj.jpg', 1, 6, '2017-12-07 07:55:37', '2018-01-07'),
-	('99b3863f8ac26a9ca5ddd6ea3dc0ff9c.jpg', 'irpkfjrcgxk.jpg', 1, 6, '2017-12-08 14:40:40', '2018-01-09'),
-	('dabce45e205c95f1c62b15e055bcb38d.jpg', '1472210907118346892.jpg', 1, 6, '2017-12-08 14:40:41', '2018-01-09'),
-	('1f66cbe90ae46f6b353c9cf1e533a02e.jpg', 'isbptzj.jpg', 1, 6, '2017-12-08 14:40:41', '2018-01-09'),
-	('7d532efc2a1aa1501cf95ee5974a7b51.pdf', 'kab4.pdf', 0, 6, '2017-12-08 14:40:48', '2018-01-09'),
-	('3cd7aba456967862280bf8b4cff65ddd.jpg', '034ulsyfpma.jpg', 1, 6, '2017-12-08 14:41:13', '2018-01-09'),
-	('e683ab98d72ce5a99f03e153d18c6226.jpg', '1472210907118346892.jpg', 1, 6, '2017-12-08 14:41:36', '2018-01-09'),
-	('b2f134fe479a0ab71616b25b18984143.jpg', '8d3fa9933bb66d6f7ebfef5aecbc9411--cat-drawing-tutorial-cute.jpg', 1, 6, '2017-12-10 21:57:21', '2018-01-11'),
-	('699f2c47927053bea114f205141edd4c.jpg', '034ulsyfpma.jpg', 1, 6, '2017-12-10 21:57:21', '2018-01-11'),
-	('1329e975b0913eaf58757592416562cf.jpg', '1472210907118346892.jpg', 1, 6, '2017-12-10 21:57:21', '2018-01-11'),
-	('8bc8bdf03311b998afe0612f2f9c0f3c.jpg', '034ulsyfpma.jpg', 1, 6, '2017-12-10 22:33:14', '2017-12-12'),
-	('d8bdec4d5c21ad5845fd31c4cc4b313b.jpg', '1472210907118346892.jpg', 1, 6, '2017-12-14 01:59:43', '2017-12-16'),
-	('3d59d59512c094630faac71b546fd4a2.jpg', 'isbptzj.jpg', 1, 6, '2017-12-28 17:11:17', '2018-01-27'),
-	('a1dfb344e1f651aaead72befb115a5ca.jpg', 'irpkfjrcgxk.jpg', 1, 6, '2017-12-28 17:11:41', '2018-01-27'),
-	('d546c35f422790afd4fada7cdce54ca0.jpg', '1472210907118346892.jpg', 1, 6, '2017-12-28 17:11:43', '2018-01-27'),
-	('352f2b1340cd7c97505101a7664251fc.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 6, '2017-12-28 17:12:45', '2017-12-30'),
-	('db217b3bb325833a2cddcbbb640a6a86.jpg', '1472210907118346892.jpg', 1, 6, '2018-01-01 19:00:26', '2018-02-11'),
-	('d1c31b08bd9078a4e0e13903669f13c3.jpg', '8d3fa9933bb66d6f7ebfef5aecbc9411--cat-drawing-tutorial-cute.jpg', 1, 6, '2018-02-17 17:46:01', '2018-03-19'),
-	('6614748944bb3cde2c124eaecd4af71c.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 6, '2018-02-17 17:46:02', '2018-03-19'),
-	('cf15cdcdada0d97810d4c991c2d528d0.png', 'bitcoin_png16.png', 1, 6, '2018-02-17 17:46:02', '2018-03-19'),
-	('b9687c00a9cbfcda586a92a7b614ff0d.txt', '1_zadanie_10_var.txt', 0, 6, '2018-02-28 18:09:25', '2018-03-27'),
-	('bac24868399d8428fc0555090b5075dd.jpg', '8d3fa9933bb66d6f7ebfef5aecbc9411--cat-drawing-tutorial-cute.jpg', 1, 6, '2018-02-28 18:09:26', '2018-03-27'),
-	('4c4efb644d01aa60a93bad96cd04d549.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 6, '2018-02-28 18:09:26', '2018-03-27'),
-	('cf03560b99515a5a2fcc341b35bd1d15.jpg', '1472210907118346892.jpg', 1, 6, '2018-02-28 18:09:26', '2018-03-27'),
-	('99cfd44a9ee8eb983b6188d52bec7c3e.jpg', '9gqs_1ngqby.jpg', 1, 6, '2018-02-28 18:14:43', '2018-03-26'),
-	('beef9f50b423c1cf8930dbdad7d3fe10.jpg', '8d3fa9933bb66d6f7ebfef5aecbc9411--cat-drawing-tutorial-cute.jpg', 1, 6, '2018-03-20 02:21:16', '2018-03-22'),
-	('f051be69d0ce6b9d6cd2fd4944f42b6b.jpg', '9gqs_1ngqby.jpg', 1, 6, '2018-03-20 02:21:17', '2018-03-22'),
-	('ef18b51930a7a47e132654ca600e96d9.jpg', 'a2kcjhhmeg8.jpg', 1, 6, '2018-03-20 02:22:30', '2018-04-20'),
-	('4235a019523aabca5b3ed0fc73b10b4c.jpg', '1472210907118346892.jpg', 1, 6, '2018-03-20 02:22:38', '2018-04-20'),
-	('86d60206a62ee8e1b7fe85b58f4c4f1f.jpg', 'a2kcjhhmeg8.jpg', 1, 6, '2018-03-20 03:02:23', '2018-03-22'),
-	('bea7e218b58da33fbd495f5a99ee2cb7.jpg', '9gqs_1ngqby.jpg', 1, 6, '2018-03-20 03:02:28', '2018-03-22'),
-	('4ec564dc297c3b86062a82f53561d83f.log', 'dodopizza.ru-1514645782165.log', 0, 6, '2018-03-20 03:04:01', '2018-03-22'),
-	('8845bd209c04ea5f624f62be5721a85b.jpg', '034ulsyfpma.jpg', 1, 6, '2018-03-20 03:19:25', '2018-03-27'),
-	('b4b230ec5344e3b9574a77c75a94ec49.jpg', '034ulsyfpma.jpg', 1, 6, '2018-03-20 03:23:15', '2018-03-22'),
-	('4611253f2d76c15c31abc60706c1c9b9.jpg', '9gqs_1ngqby.jpg', 1, 6, '2018-03-20 04:04:26', '2018-04-20'),
-	('8301e657ec39153f11848f22800fa665.jpg', 'fuebc2gmtli.jpg', 1, 6, '2018-03-20 04:07:29', '2018-04-20'),
-	('f2582b291f16fadaabd993a72294fab3.jpg', 'e7kb9t0jmgc.jpg', 1, 6, '2018-03-20 04:09:20', '2018-04-20'),
-	('524d8ca27a8c072bb41cd87af1df04da.jpg', '034ulsyfpma.jpg', 1, 6, '2018-03-20 04:19:44', '2018-04-20'),
-	('94247bb2740e6c5cd3cd4c1d27cde03f.jpg', 'a2kcjhhmeg8.jpg', 1, 6, '2018-03-22 14:44:59', '2018-04-22'),
-	('910c4b54d51df21815557c78d121c68c.jpg', '9640b2q00o3nwmzajj4cqi1nabgi.jpg', 1, 6, '2018-03-22 14:45:01', '2018-04-22'),
-	('f67ad1330308faa61a6a18bea8b58c65.log', 'dodopizza.ru-1514645782165.log', 0, 6, '2018-03-22 14:45:03', '2018-04-22'),
-	('71ebe9ede97be8b057e951339e1ba6dd.log', 'dodopizza.ru-1514645782165.log', 0, 6, '2018-03-22 14:56:10', '2018-04-22');
 /*!40000 ALTER TABLE `uploads` ENABLE KEYS */;
 
 -- Дамп структуры для таблица groups_sch.users
@@ -1971,7 +1860,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Дамп данных таблицы groups_sch.users: ~3 rows (приблизительно)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 REPLACE INTO `users` (`id`, `login`, `email`, `password_hash`, `password_changed`, `session_hash`, `last_ip`, `number`, `vk_link`, `is_head`, `group`, `privileges`, `verified`, `active`, `created`) VALUES
-	(6, 'tiger31', 'tiger31839@gmail.com', '$2y$10$4Rk6Qdk64fRaZoTFeOfrgerI3jHFSVEP4Jo6IAO7.K4ogirALIt7i', '2017-12-05 11:20:39', NULL, '127.0.0.1', '+7(999)-999-99-99', 'https://vk.com/t_fluttershy1', 1, '23531/1', 2, 1, 1, '2017-12-26 14:21:42'),
+	(6, 'tiger31', 'tiger31839@gmail.com', '$2y$10$4Rk6Qdk64fRaZoTFeOfrgerI3jHFSVEP4Jo6IAO7.K4ogirALIt7i', '2017-12-05 11:20:39', NULL, '127.0.0.1', '+7(999)-999-99-99', 'https://vk.com/t_fluttershy', 1, '23531/1', 2, 1, 1, '2017-12-26 14:21:42'),
 	(8, 'admin', 'admin@admin.ru', '$2y$10$uNtfLSlyyY240UKVy7IhHu0LdOuga3ASwu5fGHZMSqTzkaya4FM/C', '2017-12-07 10:07:59', NULL, '127.0.0.1', '+7(999)-999-99-99', 'https://vk.com/dfkjghdkf', 0, '23531/2', 0, 0, 1, '2017-12-26 14:21:42'),
 	(14, 'root', 'root@root.root', '$2y$10$uvicIHIj8F3.3JhOwWaKXeVUJ9eaGJArMMylrBHP0klsD593wjemS', '2017-12-26 15:47:45', NULL, '127.0.0.1', '+7(999)-999-99-98', 'https://vk.com/fgjfk', 0, '23531/1', 0, 0, 1, '2017-12-26 15:47:45'),
 	(15, 'tiger3177', 'tiger3177@mail.ru', '$2y$10$e.L1cLW1z7yvsw1AnShB4uuTnFiG6Bwrb9pc7r9RQ55jdUw1OiLsW', '2018-02-18 01:35:40', NULL, NULL, NULL, NULL, 0, '23531/1', 0, 0, 0, '2018-02-18 01:35:40'),

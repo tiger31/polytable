@@ -345,7 +345,7 @@ function Lesson(data) {
     this.teachers = data['teachers'];
     this.places = data['places'];
     this.element = undefined;
-    this.homework = new Homework(data['text']);
+    this.homework = new Homework(data['text'], data['files']);
     this.editor = undefined;
     var _this = this;
     //Editor
@@ -416,11 +416,12 @@ function Lesson(data) {
                 if (editor.object.homework.exists) {
                     $(editor.element).find("textarea").text(editor.object.homework.text);
                     editor.object.homework.files.forEach(function (element) {
-                        var thumb = (element['showable']) ? "../uploads/thumbnails/" + element['date'] + "/" + element['name'] :
+                        var thumb = (element['showable']) ? "../uploads/thumbnails/" + element['name'] :
                             "../../assets/images/file.png";
                         var file = {
                             name: element['original'],
-                            type: (element['showable']) ? "image/jpeg" : "text/plain"
+                            type: (element['showable']) ? "image/jpeg" : "text/plain",
+                            size: element['size']
                         };
                         editor.ajax_loader.emit("addedfile", file);
                         editor.ajax_loader.emit("thumbnail", file, thumb);
@@ -437,10 +438,10 @@ function Lesson(data) {
                     $(editor.ajax_button.button).html($(icon).fadeIn(500, function() {
                         editor.window.hide();
                         $(editor.ajax_button.button).html("Сохранить");
-                        $(editor.object.element).find(".lesson_homework").replaceWith(homework);
                     }));
                     var replace = _this.homework.exists;
-                    editor.object.homework = new Homework(result['text']);
+                    editor.object.homework = new Homework(result['text'], result['files']);
+                    console.log(editor.object.homework);
                     var homework = $(Handlebars.partials['homework'](editor.object.homework.template_data()));
                     if (!replace) {
                         $(editor.object.element)
@@ -575,13 +576,14 @@ Lesson.prototype = {
     }
 };
 
-function Homework(text) {
+function Homework(text, files) {
     this.exists = false;
-    if (text !== null && text !== undefined) {
+    if (text !== null || files !== null) {
         this.exists = true;
-        this.text = text['text'];
-        this.files = text['files'];
-        this.files.map(file => file["showable"] = file["showable"] === "1");
+        this.text = text || "";
+        this.files = files || [];
+        for (var i = 0; i < this.files.length; i++)
+            this.files['showable'] = this.files['showable'] === 1;
     }
 }
 Homework.prototype = {

@@ -225,7 +225,7 @@ function Month(month) {
 }
 
 function Day(date, data) {
-    this.emitter = new Emitter("templated");
+    this.emitter = new Emitter("templated lessons_templated");
     this.date = date;
     this.date_key = date.format("YYYY-MM-DD");
     this.day = date.date();
@@ -247,6 +247,13 @@ function Day(date, data) {
         $(_this.element).on("click", function () {
             if (_this.has_cache)
                 _this.show();
+        });
+    });
+    this.on("lessons_templated", function () {
+        $(_this.element).on("dblclick", function () {
+            $('html, body').animate({
+                scrollTop: ($(_this.element_list).offset().top - 50)
+            },300);
         });
     })
 }
@@ -303,6 +310,7 @@ Day.prototype = {
             lessons : this.lessons.map(l => l.template_data())
         }
         this.element_list = $(Calendar.templates["lessonList"](args));
+        this.emitter.emit("lessons_templated");
         return this.element_list;
     },
     show: function () {
@@ -392,6 +400,7 @@ function Lesson(data) {
                     }
                     , editor);
                 editor.ajax_button.on("sent", function () {
+                    this.disable();
                     $(this.button).html('<i class="ui icon star loading" style="font-size: 19px; margin: 0"></i>');
                 });
                 editor.ajax_button.on("success", function (result) {
@@ -453,6 +462,7 @@ function Lesson(data) {
                     var icon = $('<i class="ui icon check" style="font-size: 19px; margin: 0; display: none"></i>');
                     $(editor.ajax_button.button).html($(icon).fadeIn(500, function() {
                         editor.window.hide();
+                        editor.ajax_button.activate();
                         $(editor.ajax_button.button).html("Сохранить");
                     }));
                     var replace = _this.homework.exists;
@@ -477,7 +487,13 @@ function Lesson(data) {
                     Lesson.listeners.image_view.func(editor.object, Lesson.listeners.image_view);
                 });
                 editor.on("rejected", function(response) {
-
+                    var target = $(editor.ajax_button.button);
+                    var icon = $('<i class="ui icon close" style="font-size: 19px; margin: 0; display: none; color: white"></i>');
+                    $(target).html($(icon).fadeIn(500)).addClass("error");
+                    setTimeout(function () {
+                        $(target).html("Сохранить").removeClass("error");
+                        editor.ajax_button.activate();
+                    }, 1000)
                 });
             },
             get_data: function () {
@@ -602,7 +618,7 @@ function Homework(text, files) {
         this.text = text || "";
         this.files = files || [];
         for (var i = 0; i < this.files.length; i++)
-            this.files['showable'] = this.files['showable'] === 1;
+            this.files[i]['showable'] = this.files[i]['showable'] == "1";
     }
 }
 Homework.prototype = {

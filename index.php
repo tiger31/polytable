@@ -16,6 +16,7 @@ session_check(true);
     <link rel="stylesheet" type="text/css" href="css/search.css"/>
     <link rel="stylesheet" type="text/css" href="css/footer.css"/>
     <script type="text/javascript" src="js/lib/jquery3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/lib/jquery.modal.window.js"></script>
     <script type="text/javascript" src="js/lib/jquery.ajax.inputs.js"></script>
     <script type="text/javascript" src="js/lib/jquery.dropzone.js"></script>

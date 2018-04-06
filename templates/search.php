@@ -13,10 +13,10 @@
             return {
                 'query': elem.fields["group"].get_value()
             }
-        },
-        'callback': function (result) {
-            print_result(result);
         }
+    });
+    Button.on("success", function (result) {
+        print_result(result);
     });
 
     function print_result(result) {

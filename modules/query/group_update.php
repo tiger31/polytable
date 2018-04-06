@@ -15,7 +15,11 @@ class group_update extends db_query{
             "keys" => array("name", "count"),
             "query" => $mysql->prepare("UPDATE groups SET recache_count=:count WHERE `name`=:name")
         );
-        array_push($this->multiple, $cache, $id, $recache);
+        $refresh_counter = array(
+            "keys" => array(),
+            "query" => $mysql->prepare("UPDATE groups SET recache_count=5 WHERE cache=1"),
+        );
+        array_push($this->multiple, $cache, $id, $recache, $refresh_counter);
         $this->type = db_query::UPDATE;
     }
 };

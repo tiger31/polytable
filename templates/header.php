@@ -1,4 +1,4 @@
-<img class="logo" src="assets/images/logo3.png" />
+<a href="http://<?=$_SERVER['HTTP_HOST'];?>"><img class="logo" src="assets/images/logo3.png" /></a>
 <div id="login" <?=(isset($_SESSION["user"]) and $_SESSION['user'] !== null) ? 'class="logged"' : ""?>>
     <?php if (!isset($_SESSION["user"]) or $_SESSION['user'] === null): ?>
         <img src="assets/images/login2.png"/>

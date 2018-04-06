@@ -109,7 +109,7 @@ Calendar.prototype = {
      */
     construct: function (data) {
         var date_start, date_end;
-        if (data !== null && data !== undefined) {
+        if (data !== null && data !== undefined && data.days.length !== 0) {
             var cache_dates = Object.keys(data.days);
             var date_from = new Date(cache_dates[0]);
             var date_to = new Date(cache_dates[cache_dates.length - 1]);
@@ -117,8 +117,9 @@ Calendar.prototype = {
             date_end = moment(date_to).endOf("month");
         } else {
             date_start = moment().startOf("month");
-            date_end = moment.endOf("month");
+            date_end = moment().endOf("month");
         }
+        console.log(date_start, date_end);
         //clearing current data stored
         this.months = {};
         for (var date = moment(date_start); date <= date_end; date = moment(date).add(1, 'days')) {

@@ -9,6 +9,9 @@
     background-color: #eaeaea;
     margin: 5px;
     font-weight: bold;
+    width: 100px;
+    height: 20px;
+    text-align: center;
 }
 .group:hover {
     background-color: var(--green);
@@ -78,7 +81,7 @@
 }
 #group_search_result {
     margin-top: 20px;
-    max-width: 650px;
+    max-width: 600px;
     overflow: hidden;
     display: inline-block;
 }

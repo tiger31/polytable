@@ -19,7 +19,7 @@ class send extends APICall {
             if ($json['files'] !== null && count($json['files']) > 0) {
                 $name_list = $json['files'];
                 $date = new DateTime($_GET['date']);
-                $date->modify("+1 month");
+                $date->modify("+2 month");
                 if ($name_list) {
                     $new_set = array();
                     foreach (array_slice($name_list, 0, 5) as $file) {

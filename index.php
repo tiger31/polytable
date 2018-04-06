@@ -24,9 +24,7 @@ session_check(true);
 </head>
 <body>
     <div id="index_header">
-        <div style="padding: 0 30px">
-            <?php include_once "templates/header.php"?>
-        </div>
+        <?php include_once "templates/header.php"?>
     </div>
     <div id="main">
         <div id="polylogo"><img src="assets/images/logo2.png"/></div>

@@ -83,11 +83,15 @@ function cacheData($group_id, $weeks_amount = 2) {
     $until = (count($insert_data) > 0) ? end($insert_data)['day'] : "1970-01-01";
     $mysql->exec(QUERY_GROUP_UPDATE, RETURN_IGNORE, array("until" => $until, "id" => $group_id));
 
+    return true;
+
 }
 function cacheAll() {
     global $mysql;
     $result = $mysql->exec(QUERY_GROUP_SELECT, RETURN_FALSE_ON_EMPTY, array());
     foreach ($result as $key => $group) {
-        if ($group['cache'] == 1) cacheData($group["id"], 2);
+        if ($group['cache'] == 1) {
+            cacheData($group["id"], 2);
+        }
     }
 }

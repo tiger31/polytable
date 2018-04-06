@@ -40,8 +40,13 @@ if (isset($_GET['code'])) {
     if (isset($token['access_token'])) {
         $user_id = $token['user_id'];
         $user = $mysql->exec(QUERY_USER_SELECT, RETURN_FALSE_ON_EMPTY,
-            array("vk_link" => "https://vk.com/" . (is_int($user_id)? "id" : "") . $user_id));
+            array("vk_link" => "https://vk.com/" . (is_int($user_id) ? "id" : "") . $user_id));
         $_SESSION['user'] = new User($user, $mysql);
+        $_SESSION['HTTP_USER_AGENT'] = $_SERVER['HTTP_USER_AGENT'];
+        $mysql->exec(QUERY_USER_UPDATE, RETURN_IGNORE, array("ip" => $_SERVER["REMOTE_ADDR"], "id" => $user["id"]));
+    } else {
+        $_SESSION['user'] = null;
+        session_destroy();
     }
 }
 

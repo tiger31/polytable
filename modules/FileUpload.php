@@ -51,8 +51,8 @@ function store_file() {
         $is_image = false;
         $file = $_FILES['image']['tmp_name'];
     }
-    $upload_dir = 'uploads/' . (($is_image) ? 'images' : 'files') . '/' . date("Y-m-d") . '/';
-    $thumbnail_dir = 'uploads/thumbnails/' . date("Y-m-d") . '/';
+    $upload_dir = 'uploads/' . (($is_image) ? 'images' : 'files') . '/';
+    $thumbnail_dir = 'uploads/thumbnails/';
     if (!file_exists($upload_dir)) {
         mkdir($upload_dir, 0777);
         if ($is_image && !file_exists($thumbnail_dir))
@@ -74,7 +74,7 @@ function store_file() {
         "original_name" => (strlen($filename) > 64) ? substr($filename, 0, (64 - strlen($file_ext) - 1)) . $file_ext : $filename,
         "showable" => (int)$is_image,
         "size" => $_FILES['image']['size'],
-        "hash" => hash_file("md5", $_FILES['image']['tmp_name']),
+        "hash" => md5_file($upload_file),
         "adder_id" => $user->id,
         "stored_untill" => $time->format("Y-m-d")
     );

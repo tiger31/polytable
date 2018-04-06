@@ -22,6 +22,7 @@
 
     header("Content-Type: application/json");
 
+    //КАСТЫЛИ!!!! НАПИШИ НОРМАЛЬНУЮ СИСТЕМУ МОДУЛЕЙ
     if (!isset($_GET['action']) && !isset($_POST['action'])) {
         AjaxResponse::create()->error(400, array("info" => "Request sent without action"))->response();
     } else {

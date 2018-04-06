@@ -45,6 +45,10 @@ class db_interaction {
     public $mysqlPDO;
     private $queries = array();
 
+    function __invoke($query_name, $type, array $values) {
+        return $this->exec($query_name, $type, $values);
+    }
+
     function __construct($host, $user, $password, $database, $options) {
         $this->mysqlPDO = new PDO("mysql:host=$host;dbname=$database;charset=utf8", $user, $password, $options);
     }

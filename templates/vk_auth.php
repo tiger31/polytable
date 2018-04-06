@@ -39,11 +39,9 @@ if (isset($_GET['code'])) {
     // всё ок, можем работать с API
     if (isset($token['access_token'])) {
         $user_id = $token['user_id'];
-        var_dump($user_id);
-
-        $user = $mysql->exec(QUERY_USER_SELECT, RETURN_FALSE_ON_EMPTY, array("vk_link" => "https://vk.com/" .  $user_id));
-
-        var_dump($user);
+        $user = $mysql->exec(QUERY_USER_SELECT, RETURN_FALSE_ON_EMPTY,
+            array("vk_link" => "https://vk.com/" . (is_int($user_id)? "id" : "") . $user_id));
+        $_SESSION['user'] = new User($user, $mysql);
     }
 }
 

@@ -3,6 +3,10 @@
 class user_select extends db_query {
     function prepare(PDO $mysql) {
         $this->is_multiple = true;
+        $select_by_vk_link = array(
+            "keys" => array("vk_link"),
+            "query" => $mysql->prepare("SELECT * FROM users WHERE vk_link=:vk_link")
+        );
         $select_single = array(
             "keys" => array("login"),
             "query" => $mysql->prepare("SELECT * FROM users WHERE login=:login")
@@ -19,7 +23,7 @@ class user_select extends db_query {
             "keys" => array(),
             "query" => $mysql->prepare("SELECT MAX(id) FROM users")
         );
-        array_push($this->multiple, $select_single, $select_group, $select_max, $id);
+        array_push($this->multiple, $select_by_vk_link, $select_single, $select_group, $select_max, $id);
         $this->type = db_query::SELECT;
     }
 };

@@ -1,11 +1,11 @@
 <?php
 
-
 include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/Config.php";
 include_once $local_modules_path . "/Connect.php";
 include_once $local_modules_path . "/classes/User.php";
 global $mysql;
-$mysql->set_active(QUERY_USER_SELECT, QUERY_USER_UPDATE);
+$mysql->set_active(QUERY_USER_SELECT);
+session_start();
 
 $client_id = '6433445'; // ID приложения
 $client_secret = 'FjfrJcqVSRSzCmhlbVKL'; // Защищённый ключ
@@ -39,8 +39,10 @@ if (isset($_GET['code'])) {
     // всё ок, можем работать с API
     if (isset($token['access_token'])) {
         $user_id = $token['user_id'];
+        var_dump($user_id);
 
         $user = $mysql->exec(QUERY_USER_SELECT, RETURN_FALSE_ON_EMPTY, array("vk_link" => "https://vk.com/" .  $user_id));
+
         var_dump($user);
     }
 }

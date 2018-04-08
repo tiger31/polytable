@@ -16,6 +16,8 @@
             <button type="submit">Войти</button>
             <div id="register">Староста? <a href="register.php">Оставьте заявку группы</a></div>
         </form>
+        <div title="vk_link" id="vk_auth" style="color: var(--darkGray);    text-align: center;    font-size: 12px;">
+            <?php include_once "vk_auth.php" ?> </div>
     </div>
 <?php else: ?>
     <div id="user">

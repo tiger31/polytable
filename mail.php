@@ -20,13 +20,6 @@ function accept_request($login) {
                 ->error(400, array("info" => "Login is invalid", "affected_row" => "login", "state" => "not found"))
                 ->response();
 
-        //письмо на email для подтверждения
-        $from = "";
-        $to = $data["email"]; // mail.ru плохо разбирает заголовок
-        $subject = (isset($group_id)) ? "Подтверждения заявки группы " . $data["group"] : "Подтверждение студента ";
-        $subject = '=?utf-8?B?' . base64_encode($subject) . '?=';
-        $headers = "From: $from\r\nReply-to: $from\r\nMIME-Version: 1.0' . \"\r\nContent-type: text\html; charset=utf-8\r\n";
-
         $hash = md5(generateRandomString(32));
         $link = $_SERVER['HTTP_HOST'] . "/confirm.php?login=" . $login . "&hash=" . $hash;
 
@@ -40,6 +33,16 @@ function accept_request($login) {
                 "for" => "ACCOUNT",
                 "lifetime" => $now->format("Y-m-d H:i:s")
             ));
+
+
+        //письмо на email для подтверждения
+        $from = "polytable.ru";
+        $to = $data["email"]; // mail.ru плохо разбирает заголовок
+        $subject = (isset($group_id)) ? "Подтверждения заявки группы " . $data["group"] : "Подтверждение регистрации";
+
+        $headers  = "MIME-Version: 1.0\r\n";
+        $headers .= "Content-type: text/html; charset=UTF-8\r\n";
+        $headers .= "From: <".$from. ">" ;
 
         $message = file_get_contents("templates/mail.html");
         $message = str_replace("{LINK}", $link, $message);

@@ -6,9 +6,13 @@
 </div>
 <div id="group_search_result"></div>
 <script type="text/javascript">
+    $(".group_search").on("keyup", function (event) {
+       if (event.keyCode === 13)
+           $(".group_search_submit").trigger("click");
+    });
     var Field = new Field($(".group_search"), {"regex": /.{1,16}/, "ajax_ignore": true, "show_errors": false});
     var Button = new AjaxButton($(".group_search_submit"), {"group": Field}, {
-        'url': '../modules/Search.php',
+        'url': 'Search.php',
         'data_from_func': function (elem) {
             return {
                 'query': elem.fields["group"].get_value()

@@ -20,7 +20,7 @@
         </div>
         <div id="social">
             <div id="social_container">
-                <a id="social_link" href="">
+                <a id="social_link" href="https://vk.com/polytable" target="_blank">
                     <img src="assets/images/vk.png">
                 </a>
                 <a id="social_link" href="">

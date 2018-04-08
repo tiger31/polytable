@@ -11,7 +11,7 @@ class cache extends APICall {
         $this->pre_check();
         include_once  $_SERVER['DOCUMENT_ROOT'] . "/modules/TimetableCache.php";
         $group = $mysql->exec(QUERY_GROUP_SELECT, RETURN_FALSE_ON_EMPTY, array("name" => $this->user->group));
-        if ($group["recache_count"] > 0) {
+        if ($group["recache_count"] > 0 && $group["cache"] == 1) {
             if (cacheData($this->user->group_id)) {
                 $group = $mysql->exec(QUERY_GROUP_SELECT, RETURN_FALSE_ON_EMPTY, array("name" => $this->user->group));
                 $cache_date = ($group['cache_last'] != null) ? new DateTime($group['cache_last']) : null;

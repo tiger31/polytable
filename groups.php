@@ -15,12 +15,12 @@
     //Data checks
     if (!isset($_GET['id']) or (isset($_GET['id']) and !preg_match(REGEX['group'], $_GET['id']))) {
         //TODO searching
-        header("Location: " . $default_redirect);
+        header("Location: " . "/");
         die();
     }
     $result = $mysql->exec(QUERY_GROUP_SELECT, RETURN_FALSE_ON_EMPTY, array("name" => $_GET['id']));
-    if (!$result){
-        header("Location: " . $default_redirect);
+    if (!$result) {
+        header("Location: " . "/");
         die();
     }
 
@@ -30,10 +30,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
-        <title>PolyTable</title>
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta name="description" content="Polytable - улучшенное расписание вашего вуза">
+        <meta name="keywords" content="Polytable, Политех, СПбПУ, ИКНТ, КСПТ, ФТК">
+        <title>Группа <?=$result['name'];?> - PolyTable</title>
+        <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96">
         <link rel="stylesheet" type="text/css" href="css/semantic.css">
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
         <link rel="stylesheet" type="text/css" href="css/dropzone.css"/>
+        <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48396962 = new Ya.Metrika({ id:48396962, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/48396962" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
         <script type="text/javascript" src="js/lib/jquery3.2.1.min.js"></script>
         <script type="text/javascript" src="js/lib/handlebars-latest.js"></script>
         <script type="text/javascript" src="js/lib/moment.js"></script>
@@ -56,7 +63,14 @@
             </td>
         </tr>
         <tr id="notification">
-            <td></td>
+            <td>
+                <? if($result['cache'] == 0):?>
+                    <div class="not">
+                        <i class="ui icon exclamation"></i>
+                        <span>Мы находимся на стадии закрытого тестирования, поэтому расписание для этой группы временно не кэшируется. Если вы хотите принять участие в тестировании заполните <a href="https://goo.gl/forms/GyHTcBMh9c6y9vJC3" target="_blank">эту форму</a></span>
+                    </div>
+                <? endif;?>
+            </td>
         </tr>
         <tr id="content">
             <td>

@@ -35,9 +35,6 @@
                     В вашей группе староста пока не подтвежден
                 </div>
             </div>
-            <div class="ui green small button <?=($this->user->verified) ? "" : "disabled";?>" id="head_request" >
-                Я староста :3
-            </div>
         <? endif; ?>
         <? if($this->user->is_head): ?>
             <div class="content">

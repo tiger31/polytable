@@ -98,7 +98,7 @@ class User {
     static function loadFromSession() {
         if (session_status() === PHP_SESSION_NONE) session_start();
         if (session_check(true)) {
-           return $_SESSION['user'];
+            return $_SESSION['user'];
         }
         return false;
     }

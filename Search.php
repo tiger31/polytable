@@ -1,5 +1,5 @@
 <?php
-include_once "Connect.php";
+include_once "modules/Connect.php";
 header("Content-type text/json");
 $mysql->set_active(QUERY_GROUP_SELECT);
 

@@ -92,6 +92,7 @@ $(document).ready(function () {
                 pass_c.set_error("Пароли не совпадают");
             }
         }
+        controller.on_valid();
     });
     pass_c.on('validate', function () {
         if (pass.value_not_empty() && pass_c.value_not_empty()) {
@@ -105,6 +106,7 @@ $(document).ready(function () {
                 pass_c.set_error("Пароли не совпадают");
             }
         }
+        controller.on_valid();
     });
     //
     var button = new AjaxButton($('.on_valid'), arr, {
@@ -122,7 +124,7 @@ $(document).ready(function () {
     button.on("success", function (data) {
         var result = new Response(data, ["title", "name", "url", "default", "group"]);
         if (result.error_list.length !== 0) {
-
+            console.log(result.error_list);
         } else {
             var form = $("#registerForm");
             var table = $('<table style="width: 100%; height: 100%"></table>');

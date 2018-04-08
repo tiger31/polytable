@@ -1,7 +1,7 @@
 <a href="http://<?=$_SERVER['HTTP_HOST'];?>"><img class="logo" src="assets/images/logo3.png" /></a>
 <div id="login" <?=(isset($_SESSION["user"]) and $_SESSION['user'] !== null) ? 'class="logged"' : ""?>>
     <?php if (!isset($_SESSION["user"]) or $_SESSION['user'] === null): ?>
-        <img src="assets/images/login2.png"/>
+        <i class="ui icon user circle outline circular"></i>
     <?php else: ?>
         <img src="data/image/32/<?=$_SESSION['user']->getID()?>.png" />
         <div id="logged"><?=$_SESSION['user']->login;?></div>
@@ -14,7 +14,7 @@
             <input type="text" title="login" name="login" placeholder="Логин" required/>
             <input type="password" title="password" name="password" placeholder="Пароль" required/>
             <button type="submit">Войти</button>
-            <div id="register">Староста? <a href="register.php">Оставьте заявку группы</a></div>
+            <div id="register"><a href="register.php">Регистарция</a></div>
         </form>
     </div>
 <?php else: ?>

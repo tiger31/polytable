@@ -10,12 +10,10 @@ session_start();
 global $mysql;
 $mysql->set_active(QUERY_FILE_INSERT);
 
-use \Eventviva\ImageResize;
 function store_file() {
     global $mysql, $user;
     $filename = strtolower($_FILES['image']['name']);
     $file_type = strtolower($_FILES['image']['type']);
-
     $is_image = false;
     $image = null;
     //check if contain php and kill it
@@ -41,7 +39,7 @@ function store_file() {
         $image_info = getimagesize($_FILES['image']['tmp_name']);
         if (in_array($image_info['mime'], $mime)) {
             $is_image = true;
-            $image = new ImageResize($_FILES['image']['tmp_name']);
+            $image = new \Eventviva\ImageResize($_FILES['image']['tmp_name']);
             $image->resizeToLongSide(1920);
         } else {
             $is_image = false;
@@ -53,6 +51,7 @@ function store_file() {
     }
     $upload_dir = 'uploads/' . (($is_image) ? 'images' : 'files') . '/';
     $thumbnail_dir = 'uploads/thumbnails/';
+
     if (!file_exists($upload_dir)) {
         mkdir($upload_dir, 0777);
         if ($is_image && !file_exists($thumbnail_dir))
@@ -63,10 +62,11 @@ function store_file() {
     if ($is_image) {
         $thumbnail_file = $thumbnail_dir . $upload_filename;
         $image->save($upload_file);
-        $image->crop(50, 50, ImageResize::CROPCENTER);
+        $image->crop(50, 50, \Eventviva\ImageResize::CROPCENTER);
         $image->save($thumbnail_file);
     } else
         move_uploaded_file($_FILES['image']['tmp_name'], $upload_file);
+    chmod($upload_file, 0644);
     $time = new DateTime("tomorrow");
     $time->modify("next day");
     $file_data = array(

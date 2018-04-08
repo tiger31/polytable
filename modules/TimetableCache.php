@@ -91,7 +91,7 @@ function cacheAll() {
     $result = $mysql->exec(QUERY_GROUP_SELECT, RETURN_FALSE_ON_EMPTY, array());
     foreach ($result as $key => $group) {
         if ($group['cache'] == 1) {
-            cacheData($group["id"], 2);
+            cacheData($group["id"], 3);
         }
     }
 }

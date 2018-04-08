@@ -143,7 +143,6 @@ Field.prototype = {
                 this.ajax_timer = setTimeout(this.ajax, 500, this);
             }
         } else {
-            console.log("cleared");
             this.clear();
         }
         if (this.error !== undefined && this.log_level > 2) console.log(this.error);
@@ -317,7 +316,7 @@ function Response(data, fields) {
             _this.error_list.push(element);
         })
     } else if (data['response'] !== undefined) {
-        this.result = data['response'];;
+        this.result = data['response'];
         fields.forEach(function (field) {
             var value = data[field];
             if (value !== undefined) {

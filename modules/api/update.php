@@ -38,7 +38,7 @@ class update extends APICall {
         if ($result) {
             $this->user->number = $data['number'];
             $this->user->vk_link = $data["vk_link"];
-            if (!$this->user->verified && $data['number'] !== "" && $data["vk_link"] !== "") {
+            if (!$this->user->verified && $data['number'] !== null && $data["vk_link"] !== null) {
                 $this->user->verified = true;
                 $mysql->exec(QUERY_USER_UPDATE, RETURN_IGNORE, array("id" => $this->user->id));
             }

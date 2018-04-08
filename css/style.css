@@ -71,6 +71,13 @@ body {
     border-radius: 16px;
     float: right;
 }
+#login > i.icon {
+    width: 32px !important;
+    height: 32px !important;
+    padding: 0 !important;
+    font-size: 32px;
+    color: white;
+}
 #group_number {
     display: block;
     margin: 10px auto;
@@ -434,7 +441,7 @@ body {
 }
 .lesson_list_item {
     float: right;
-    width: 200px;
+    width: 225px;
     height: 17px;
     display: block;
     margin: 0 20px 5px 5px;
@@ -998,4 +1005,27 @@ body {
 .question h4 {
     font-size: 16px;
     font-weight: normal;
+}
+.not {
+    height: 70px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: rgba(255,0,0,0.7);
+    padding: 10px;
+}
+.not i {
+    font-size: 70px;
+    color: white;
+    float: left;
+}
+.not span {
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+.not span a {
+    font-size: 16px;
+    color: white;
+    text-decoration: underline;
 }

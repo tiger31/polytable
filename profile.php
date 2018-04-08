@@ -9,7 +9,7 @@
     include_once $local_modules_path . "/Security.php";
 
     if (!session_check(true)) {
-        header("Location: " . $default_redirect);
+        header("Location: " . "/");
     }
     $user = User::loadFromSession();
     $profile = new Profile($user);
@@ -18,9 +18,14 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="Cache-Control" content="no-cache">
         <title>Профиль</title>
+        <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96">
         <link rel="stylesheet" type="text/css" href="css/semantic.css">
         <link rel="stylesheet" type="text/css" href="css/profile.css"/>
+        <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48396962 = new Ya.Metrika({ id:48396962, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/48396962" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
         <script type="text/javascript" src="js/lib/jquery3.2.1.min.js"></script>
         <script type="text/javascript" src="js/lib/jquery.ajax.inputs.js"></script>
         <script type="text/javascript" src="js/lib/jquery.formatter.min.js"></script>

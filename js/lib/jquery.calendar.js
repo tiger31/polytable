@@ -477,9 +477,10 @@ function Lesson(data) {
                             .append('<div class="lesson_homework_show">Показать ДЗ</div>');
                         Lesson.listeners.homework_show.func(editor.object, Lesson.listeners.homework_show);
                     } else {
-                        $(editor.object.element)
-                            .find(".lesson_homework_show")
-                            .trigger("click");
+                        if ($(editor.object.element).find(".lesson_homework_show").text() === "Cкрыть ДЗ")
+                            $(editor.object.element)
+                                .find(".lesson_homework_show")
+                                .trigger("click");
                         $(editor.object.element)
                             .find(".lesson_homework")
                             .replaceWith(homework);

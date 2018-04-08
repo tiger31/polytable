@@ -10,7 +10,8 @@ $mysql->set_active(QUERY_GROUP_INSERT, QUERY_GROUP_CHECK, QUERY_USER_CHECK, QUER
 if (session_status() !== 2) session_start();
 
 include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/Security.php";
-function accept_request($login) {
+function accept_request($login)
+{
     global $mysql;
     if (isset($login)) {
         //Prepared mysql query for selecting single "head request";
@@ -36,17 +37,23 @@ function accept_request($login) {
 
 
         //письмо на email для подтверждения
-        $from = "polytable.ru";
         $to = $data["email"]; // mail.ru плохо разбирает заголовок
         $subject = (isset($group_id)) ? "Подтверждения заявки группы " . $data["group"] : "Подтверждение регистрации";
+        $subject = '=?utf-8?B?' . base64_encode($subject) . '?=';
 
-        $headers  = "MIME-Version: 1.0\r\n";
+        $headers = "MIME-Version: 1.0\r\n";
         $headers .= "Content-type: text/html; charset=UTF-8\r\n";
-        $headers .= "From: <".$from. ">" ;
+        $headers .= "From: polytable.ru <no-reply@polytable.ru>\r\n";
+        $headers .= "Replay-To: Support <support@polytable.ru>\r\n";
+        $headers .= "X - Priority: 1 (Highest)\r\n";
+        $headers .= "X - MSMail - Priority: High\r\n";
+        $headers .= "Importance: High";
 
-        $message = file_get_contents("templates/mail.html");
-        $message = str_replace("{LINK}", $link, $message);
-        $message = str_replace("{HOST}", $_SERVER['HTTP_HOST'], $message);
+        $message = file_get_contents("templates / mail . html");
+        $message = str_replace("{
+            LINK}", $link, $message);
+        $message = str_replace("{
+            HOST}", $_SERVER['HTTP_HOST'], $message);
         mail($to, $subject, $message, $headers);
         return true;
     }

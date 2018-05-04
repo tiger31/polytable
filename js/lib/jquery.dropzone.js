@@ -1443,6 +1443,8 @@
       }
       for (headerName in headers) {
         headerValue = headers[headerName];
+        if (headerValue instanceof Function)
+          headerValue = headerValue();
         if (headerValue) {
           xhr.setRequestHeader(headerName, headerValue);
         }

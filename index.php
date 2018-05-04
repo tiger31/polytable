@@ -1,11 +1,5 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/Config.php";
-include_once $local_modules_path . "/Connect.php";
-include_once $local_modules_path . "/Security.php";
-include_once $local_modules_path . "/classes/User.php";
-
-session_start();
-session_check(true);
 
 ?>
 <html>
@@ -18,7 +12,7 @@ session_check(true);
     <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96">
-    <link rel="stylesheet" type="text/css" href="css/semantic.css"/>
+    <link rel="stylesheet" type="text/css" href="css/icon.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/search.css"/>
     <link rel="stylesheet" type="text/css" href="css/footer.css"/>

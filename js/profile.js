@@ -1,16 +1,21 @@
 $(document).ready(function () {
-    $(".module").each(function (index, element) {
-        Module.list.push(new Module(element));
-    });
-    $(".accordion").each(function (index, element) {
-        var estimatedList = $(element).next();
-        if ($(estimatedList).hasClass("list")) {
-            $(element).on("click", function () {
-                $(estimatedList).slideToggle(300);
-        })
+    $.getJSON({
+        url : "action.php",
+        data : {
+            action : "profile",
+        },
+        success : function (response) {
+            if (response['response']) {
+                for (let module of Object.keys(response['data'])) {
+                    $.getScript(`js/modules/module.${module}.js`, function () {
+                        const m = eval(`new ${module}(response['data'][module])`);
+                        m.node = $(eval(`${module}.config.load_node`));
+                        m.template(true);
+                    })
+                }
+            }
         }
     });
-    Module.active_chain("main");
 });
 
 function Module(element) {
@@ -71,86 +76,4 @@ Module.active_chain = function (group) {
         module.show();
     });
 };
-function FieldsEdit(fields, trigger, button) {
-    this.blocks = {};
-    this.fields = {};
-    this.trigger = trigger;
-    this.state = false;
-    this.button_classes = $(button).attr("class");
-    for (var field in fields) {
-        if (fields.hasOwnProperty(field)) {
-            this.blocks[field] = $('.description#' +  field);
-            var input = $(this.blocks[field]).find("input").removeClass("hidden");
-            this.fields[field] = new Field(input, fields[field]);
-            input.addClass("hidden");
-        }
-    }
-    this.fallbackIcon = $(button).find("i");
-    this.fallbackText = $(button).text();
-    this.button = new AjaxButton(button, this.fields, {
-        "url" : "action.php",
-        "data_from_func" : function (elem) {
-            var data = {};
-            Object.keys(elem.fields).forEach(function (element) {
-                data[element] = elem.fields[element].get_value();
-            });
-            data['action'] = "update";
-            return data;
-        }
-    });
-    this.button.disable();
-    this.button.on("disable", function () {
-        $(button).text("").append($(_this.fallbackIcon), _this.fallbackText);
-    });
-    this.button.on("activate", function () {
-        $(button).text("").append($("<i class=\"ui icon save\"></i>"), "Сохранить");
-    });
-    this.button.on("success", function (result) {
-        if (result['response'] !== undefined) {
-            $(trigger).trigger("click");
-        }
-    });
-    $(button).on("click", function () {
-        if (_this.button.disabled) {
-            $(trigger).trigger("click");
-        }
-    });
-    var _this = this;
-    $(trigger).on("click", function () {
-        if (_this.state) {
-            _this.restore();
-            _this.button.disable();
-            $(this).removeClass("remove").addClass("write");
-        } else {
-            _this.edit();
-            _this.button.activate();
-            $(this).removeClass("write").addClass("remove");
-        }
-    });
-}
-FieldsEdit.prototype = {
-    constructor: FieldsEdit,
-    edit: function () {
-        this.state = true;
-        var _this = this;
-        $(this.button.button).removeClass("disabled");
-        Object.keys(this.blocks).forEach(function (block) {
-            var swap = $(_this.blocks[block]).find(".swap");
 
-            $(_this.blocks[block]).find("span").hide(0);
-            $(_this.blocks[block]).find("input").removeClass("hidden").val($(swap).text());
-            _this.fields[block].on_change();
-            if ($(_this.blocks[block]).hasClass("hidden")) $(_this.blocks[block]).removeClass("hidden").addClass("hide");
-        });
-    },
-    restore: function () {
-        this.state = false;
-        var _this = this;
-        $(this.button.button).attr("class", this.button_classes);
-        Object.keys(this.blocks).forEach(function (block) {
-            $(_this.blocks[block]).find("span").show(0);
-            $(_this.blocks[block]).find("input").addClass("hidden");
-            if ($(_this.blocks[block]).hasClass("hide")) $(_this.blocks[block]).removeClass("hide").addClass("hidden");
-        });
-    }
-};

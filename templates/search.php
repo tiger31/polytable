@@ -12,14 +12,16 @@
     });
     var Field = new Field($(".group_search"), {"regex": /.{1,16}/, "ajax_ignore": true, "show_errors": false});
     var Button = new AjaxButton($(".group_search_submit"), {"group": Field}, {
-        'url': 'Search.php',
-        'data_from_func': function (elem) {
+        'url': 'search.php',
+        "data": function (elem) {
             return {
                 'query': elem.fields["group"].get_value()
             }
         }
     });
     Button.on("success", function (result) {
+        if (result.length === 1)
+            window.location.replace("https://<?=$_SERVER['HTTP_HOST'];?>/groups.php?id=" + result[0]['name']);
         print_result(result);
     });
 
@@ -30,7 +32,7 @@
         $(result_container).append('<div id="search_non">По Вашему запросу групп не найдено. Староста? <a href="/register.php">Оставьте заявку</a> и расписание группы будет создано в ближайшее время</div>')
         }
         for (var i = 0; i < result.length; i++) {
-            var link = "http://<?=$_SERVER['HTTP_HOST'];?>/groups.php?id=" + result[i]['name'];
+            var link = "https://<?=$_SERVER['HTTP_HOST'];?>/groups.php?id=" + result[i]['name'];
             $(result_container).append($('<a href="' + link + '" class="group">' + result[i]['name'] + '</a>'))
         }
     }

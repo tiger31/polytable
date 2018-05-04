@@ -315,21 +315,5 @@ function get_values(obj) {
     return values;
 }
 
-imageAjaxConfig =  {
-    url: "action.php",
-    paramName: "image",
-    maxFilesize: 100,
-    thumbnailHeight: 50,
-    thumbnailWidth: 50,
-    maxFiles: 5,
-    addRemoveLinks: true,
-    renameFile: Date.now(),
-    dictDefaultMessage: "Нажмите или перетащите файлы сюда",
-    dictFileTooBig: "Размер файла не должен превышать 100Мб",
-    dictCancelUpload: "",
-    dictCancelUploadConfirmation: "Вы уверены, что хотите отменить загрузку?",
-    dictRemoveFile: "",
-    dictMaxFilesExceeded: "Нельзя прикреплять больше пяти фалов"
-};
 
 

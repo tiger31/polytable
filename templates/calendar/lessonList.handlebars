@@ -1,8 +1,12 @@
-<div class="lessons_container {{class}}">
+<div class="lessons_container {{class}}" {{{linker _l "lcontainer"}}}>
     <div class="day_title">{{title}}</div>
     <div class="lessons">
-        {{#lessons}}
-            {{> lesson}}
-        {{/lessons}}
+        {{#if cache}}
+            {{#lessons}}
+                {{> lesson}}
+            {{/lessons}}
+        {{else}}
+            <div class="zero-lesson">Похоже, что это выходной. *счастье*</div>
+        {{/if}}
     </div>
 </div>

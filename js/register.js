@@ -37,23 +37,17 @@ var fields = {
     },
     'password' : {
         'regex_check' : true,
-        'regex' : /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
+        'regex' : /^(?=^.{8,}$)(?=.*\d)(?=.*[a-z])(?!.*\s).*$/,
         'errors' : {
             'regex' : 'Слабый или содержит недопустимые символы'
         }
     },
     'password_confirm' : {
         'regex_check' : true,
-        'regex' : /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
+        'regex' : /^(?=^.{8,}$)(?=.*\d)(?=.*[a-z])(?!.*\s).*$/,
         'errors' : {
             'regex' : 'Слабый или содержит недопустимые символы'
         }
-    }
-};
-
-var triggers = {
-    'group' : {
-        'class' : 'input.group_ajax_ignore'
     }
 };
 $(document).ready(function () {
@@ -111,7 +105,8 @@ $(document).ready(function () {
     //
     var button = new AjaxButton($('.on_valid'), arr, {
         "url" : "action.php",
-        "data_from_func" : function (elem) {
+        "method" : "POST",
+        "data" : function (elem) {
             var data = {};
             Object.keys(elem.fields).map(function (key) {
                 data[key] = elem.fields[key].get_value();
@@ -158,6 +153,5 @@ $(document).ready(function () {
 
         }
     });
-    controller.set_triggers(triggers);
 });
 

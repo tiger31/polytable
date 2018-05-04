@@ -1,17 +1,8 @@
 $(document).ready(function () {
+    $("#header").find("td").append($("<div id='group'></div>").text(Calendar.group_id));
     calendar.on("constructed", function () {
-        calendar.template($("#calendar"), $("#day_lessons"));
-    });
-    calendar.on("templated", function () {
-        if (!calendar.visible) {
-            calendar.show(moment().month());
-            if (Calendar.activeDay !== undefined)
-                Calendar.activeDay.toggle_lessons(true);
-        }
-    });
-    calendar.load_controls({
-        next: $(".arrow.right").find("i"),
-        prev: $(".arrow.left").find("i")
+        calendar.node = $("#calendar-block");
+        calendar.template();
     });
     calendar.load();
 });

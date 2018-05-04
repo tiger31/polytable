@@ -1,0 +1,28 @@
+<div id="day_lessons">
+    {{#list}}
+        {{> lesson_list}}
+    {{/list}}
+</div>
+<div id="curr_month" {{{linker _l "current_month"}}}></div>
+<div id="container">
+    <div class="arrow left">
+        <i class="ui icon chevron left" {{{linker _l "arrow_left"}}}></i>
+    </div>
+    <div id="calendar" {{{linker _l "calendar"}}}>
+        {{#months}}
+            {{> month}}
+        {{/months}}
+    </div>
+    <div class="arrow right">
+        <i class="ui icon chevron right" {{{linker _l "arrow_right"}}}></i>
+    </div>
+</div>
+<div id="cached_last">{{cache}}</div>
+<div id="calendar-type">
+    <div class="switch-var"><span>Месяц</span></div>
+    <label class="switch">
+        <input type="checkbox" {{{linker _l "calendar_type"}}}>
+        <span class="slider round"></span>
+    </label>
+    <div class="switch-var"><span>Неделя</span></div>
+</div>

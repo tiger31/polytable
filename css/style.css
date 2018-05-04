@@ -36,6 +36,16 @@ body {
 }
 #header .logo {
     padding-top: 4px;
+    float: left;
+}
+#header #group {
+    margin: 0 auto;
+    padding-top: 4px;
+    width: 300px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--gray);
 }
 #marking #header td  {
     padding: 0 30px 0 30px;
@@ -46,6 +56,7 @@ body {
 }
 #marking #content {
     height: auto;
+    background-color: #1e6d3c;
 }
 #content {
     vertical-align: top;
@@ -87,6 +98,7 @@ body {
     color: var(--blackGray);
 }
 #user {
+    z-index: 1000;
     display: none;
     position: absolute;
     top: 50px;
@@ -134,21 +146,23 @@ body {
 }
 .arrow {
     width: 70px;
-    font-size: 56px;
+    font-size: 40px;
     transition: 0.4s;
     color: var(--darkGray);
 }
 .arrow:hover {
-    color: var(--blackGray);
+    color: white;
     cursor: pointer;
 }
 #calendar {
-    /* margin: 0 auto; */
     width: 561px;
-    min-height: 316px;
-    max-height: 474px;
-    /* background: #eee; */
-    overflow: hidden;
+    height: 474px;
+    position: relative;
+    transition: .7s;
+}
+#calendar.weekly {
+    height: 75px;
+    padding: 0 0 10px 0;
 }
 .matrix {
     width: 79px;
@@ -158,7 +172,7 @@ body {
 .day {
     display: none;
     margin: 2px;
-    background: var(--lightGray);
+    background: #539267;
     width: 75px;
     height: 75px;
     float: left;
@@ -172,29 +186,26 @@ body {
     cursor: default;
 }
 .uncached, .past{
-    background: var(--gray);
+    background: #1e6539;
 }
 .uncached {
     cursor: default;
 }
 .current {
-    background-color: #ddf9d9;
+    background-color: #4da240;
 }
 .weekend {
     /* margin-left: 10px; */
-    background: #e5dada;
+    background: #e43636c7;
     cursor: default;
 }
-.number, .weekDay, .period {
+.number, .weekDay, .period, .weekend {
     font-weight: bold;
-    color: gray;
+    color: var(--lightGray);
     line-height: 1;
 }
 .number {
     font-size: 32px;
-}
-.weekend > div > .number {
-    color: #cc0c0c;
 }
 .weekDay {
     font-size: 12px;
@@ -237,6 +248,12 @@ body {
 .warning {
     border-top: 15px solid red;
 }
+.month {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
 #loginForm {
     display: none;
     z-index: 10;
@@ -245,7 +262,7 @@ body {
     top: 70px;
     right: 50px;
     width: 250px;
-    height: 200px;
+    height: 250px;
     -webkit-box-shadow: 0 0 5px 0 rgba(50, 50, 50, 0.5);
     -moz-box-shadow:    0 0 5px 0 rgba(50, 50, 50, 0.5);
     box-shadow:         0 0 5px 0 rgba(50, 50, 50, 0.5);
@@ -262,7 +279,7 @@ body {
 #loginForm > form {
     margin: 5px 0 0 0;
 }
-#loginForm > form > input {
+#loginForm > form > input:not([type=checkbox]) {
     background-color: white;
     color: var(--blackGray);
     border: 0;
@@ -273,10 +290,51 @@ body {
     margin-bottom: 10px;
     width: 190px;
 }
+#loginForm > form > input[type="checkbox"] { display: none; }
+
+#loginForm > form > input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    padding-left: 55px;
+    margin-bottom: 10px;
+    font-family: Calibri, sans-serif;
+    font-size: 16px;
+    color: dimgrey;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+#loginForm > form > input[type="checkbox"] + label:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--green);
+    position: absolute;
+    left: 30px;
+    top: 0;
+    opacity: .6;
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+}
+
+#loginForm > form > input[type="checkbox"]:checked + label:before {
+    width: 10px;
+    top: -5px;
+    left: 35px;
+    border-radius: 0;
+    opacity: 1;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
 #loginForm > form > input::placeholder {
     color: var(--darkGray);
 }
-#loginForm > form > input:focus {
+#loginForm > form > input:not([type=checkbox]):focus {
     border-bottom: 2px var(--green) solid;
     outline: none;
 }
@@ -341,20 +399,25 @@ body {
      position: relative;
      text-decoration: none;
 }
-/* Profile part */
-
 /* Lessons part */
 #cached_last {
     width: 100%;
-    margin-top: 20px;
+    margin: 20px 0;
     text-align: center;
     font-size: 13px;
-    color: gray;
+    color: var(--lightGray);
+}
+#curr_month {
+    text-align: center;
+    margin: 10px 0;
+    color: var(--lightGray);
+    font-size: 24px;
+    font-weight: bold;
 }
 #day_lessons {
     width: 100%;
     min-height: 45px;
-    margin: 20px 0 0 0;
+    margin: 0;
     box-sizing: content-box;
     overflow: hidden;
     background: var(--green);
@@ -456,7 +519,7 @@ body {
     position: absolute;
     bottom: 0;
     background-color: var(--gray);
-    color: var(--darkGray);
+    color: #696969;
     font-weight: bold;
     padding: 10px;
     width: 105px;
@@ -711,7 +774,7 @@ body {
     color: var(--red);
 }
 .editor_submit, .editor_result {
-    width: 64px;
+    width: 75px;
     text-align: center;
     background-color: var(--green);
     display: block;
@@ -1028,4 +1091,80 @@ body {
     font-size: 16px;
     color: white;
     text-decoration: underline;
+}
+.zero-lesson {
+    padding-top: 140px;
+    color: var(--lightGray);
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 0 2px dimgrey;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    width: 48px;
+    height: 24px;
+    float: left;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--lightGray);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #1e6d3c;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+#calendar-type {
+    height: 24px;
+    width: 248px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+    display: block;
+    line-height: 24px;
+}
+.switch-var {
+    width: 100px;
+    float: left;
+    padding-bottom: 6px;
+    font-size: 18px;
+    color: var(--lightGray);
+    font-weight: bold;
+    height: 20px;
 }

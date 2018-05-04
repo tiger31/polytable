@@ -1,6 +1,6 @@
 moment.locale("ru");
 function Calendar(group, element) {
-    var _this = this;
+    let _this = this;
     this.element = element;
     this.emitter = new Emitter("loaded constructed templated");
     this.group_id = group;
@@ -40,7 +40,7 @@ function Calendar(group, element) {
             "type" : "template"
         }
     };
-    for(var template in this.templates) {
+    for(let template in this.templates) {
         (function() {
             const t = template;
             $.get(_this.templates[t]["path"], function (data) {
@@ -59,7 +59,7 @@ function Calendar(group, element) {
 Calendar.prototype = {
     constructor: Calendar,
     load: function () {
-        var _this = this;
+        let _this = this;
         $.getJSON({
             url: "action.php?action=calendar",
             data: {
@@ -76,27 +76,27 @@ Calendar.prototype = {
         });
     },
     load_controls: function (obj) {
-        var _this = this;
+        let _this = this;
         this.controls.next = obj.next;
         $(this.controls.next).on("click", function () {
-            var keys = Object.keys(_this.months);
-            var index = keys.indexOf(_this.month.toString());
+            let keys = Object.keys(_this.months);
+            let index = keys.indexOf(_this.month.toString());
             if (index !== -1 && index !== keys.length - 1)
                 _this.show(keys[index + 1]);
         });
         this.controls.prev = obj.prev;
         $(this.controls.prev).on("click", function () {
-            var keys = Object.keys(_this.months);
-            var index = keys.indexOf(_this.month.toString());
+            let keys = Object.keys(_this.months);
+            let index = keys.indexOf(_this.month.toString());
             if (index !== -1 && index !== 0)
                 _this.show(keys[index - 1]);
         });
     },
     refresh_controls: function () {
-        var keys = Object.keys(this.months).map(Number);
-        var month = parseInt(this.month);
-        var min = Math.min(...keys);
-        var max = Math.max(...keys);
+        let keys = Object.keys(this.months).map(Number);
+        let month = parseInt(this.month);
+        let min = Math.min(...keys);
+        let max = Math.max(...keys);
         $(this.controls.next).css("display", ((month === max) ? "none" : "block"));
         $(this.controls.prev).css("display", ((month === min) ? "none" : "block"));
     },
@@ -108,11 +108,11 @@ Calendar.prototype = {
      * Внимание! Месяцы в датах date_start и date_end могут отличаться
      */
     construct: function (data) {
-        var date_start, date_end;
+        let date_start, date_end;
         if (data !== null && data !== undefined && data.days.length !== 0) {
-            var cache_dates = Object.keys(data.days);
-            var date_from = new Date(cache_dates[0]);
-            var date_to = new Date(cache_dates[cache_dates.length - 1]);
+            let cache_dates = Object.keys(data.days);
+            let date_from = new Date(cache_dates[0]);
+            let date_to = new Date(cache_dates[cache_dates.length - 1]);
             date_start = moment(date_from).startOf("month");
             date_end = moment(date_to).endOf("month");
         } else {
@@ -122,8 +122,8 @@ Calendar.prototype = {
         console.log(date_start, date_end);
         //clearing current data stored
         this.months = {};
-        for (var date = moment(date_start); date <= date_end; date = moment(date).add(1, 'days')) {
-            var month = date.month();
+        for (let date = moment(date_start); date <= date_end; date = moment(date).add(1, 'days')) {
+            let month = date.month();
             if (this.months[month] === undefined || this.months === null)
                 this.months[month] = new Month(date);
             this.months[month].days.push(new Day(date, data.days[date.format("YYYY-MM-DD")]));
@@ -131,40 +131,40 @@ Calendar.prototype = {
         this.emitter.emit("constructed");
     },
     template: function (element, element2) {
-        var _this = this;
+        let _this = this;
         //Создание матрицы элементов для плавной анимации
-        var max = Math.max(...Object.values(this.months).map(m => m.days.length + m.empty));
-        var rows = Math.ceil(max / 7);
-        for (var r = 0; r < rows; r++) {
+        let max = Math.max(...Object.values(this.months).map(m => m.days.length + m.empty));
+        let rows = Math.ceil(max / 7);
+        for (let r = 0; r < rows; r++) {
             this.matrix[r] = [];
-            for (var c = 0; c < 7; c++) {
+            for (let c = 0; c < 7; c++) {
                 this.matrix[r].push($('<div class="matrix"></div>'));
                 $(element).append(this.matrix[r][c]);
 
             }
         }
         //Шаблонизация дней
-        var keys = Object.keys(this.months);
-        for (var m = 0; m < keys.length; m++) {
-            var month = this.months[keys[m]];
-            var shift = month.empty;
-            for (var i = 0; i < shift; i++) {
-                var empty = $('<div class="day empty"></div>');
+        let keys = Object.keys(this.months);
+        for (let m = 0; m < keys.length; m++) {
+            let month = this.months[keys[m]];
+            let shift = month.empty;
+            for (let i = 0; i < shift; i++) {
+                let empty = $('<div class="day empty"></div>');
                 month.elements.push(empty);
                 $(this.matrix[Math.floor(i / 7)][i % 7]).append(empty);
             }
-            for (i; i < month.days.length + shift; i++) {
-                var day = month.days[i - shift];
-                var day_template = day.template();
+            for (let i in month.days.length + shift) {
+                let day = month.days[i - shift];
+                let day_template = day.template();
                 month.elements.push(day_template);
                 $(this.matrix[Math.floor(i / 7)][i % 7]).append(day_template);
                 //lessons
                 if (month.days[i - shift].has_cache) {
-                    var lessons_template = day.template_lessons();
+                    let lessons_template = day.template_lessons();
                     $(element2).append(lessons_template);
-                    var j = 0;
+                    let j = 0;
                     $(lessons_template).find(".lesson").each(function () {
-                        var lesson = day.lessons[j];
+                        let lesson = day.lessons[j];
                         lesson.element = this;
                         lesson.emitter.emit("templated");
                         j++;
@@ -179,11 +179,11 @@ Calendar.prototype = {
         this.emitter.emit("templated");
     },
     show: function (month) {
-        var timeout = 50;
+        let timeout = 50;
         if (this.visible) {
             //hide part
             $(this.months[this.month].elements).each(function () {
-                var day = this;
+                let day = this;
                 setTimeout(function () {
                     $(day).fadeOut(300);
                 }, timeout);
@@ -194,7 +194,7 @@ Calendar.prototype = {
         //show part
         this.month = month;
         $(this.months[month].elements).each(function () {
-            var day = this;
+            let day = this;
             setTimeout(function () {
                 $(day).fadeIn(300);
             }, timeout);
@@ -236,14 +236,14 @@ function Day(date, data) {
     this.element = undefined;
     this.element_list = undefined;
     if (data !== null && data !== undefined) {
-        var lesson_keys = Object.keys(data);
+        let lesson_keys = Object.keys(data);
         this.has_cache = true;
         this.time_start = data[lesson_keys[0]]["time_start"];
         this.time_end = data[lesson_keys[lesson_keys.length - 1]]["time_end"];
-        for (var i = 0; i < data.length; i++)
+        for (let i = 0; i < data.length; i++)
             this.lessons.push(new Lesson(data[i]));
     }
-    var _this = this;
+    let _this = this;
     this.on("templated", function () {
         $(_this.element).on("click", function () {
             if (_this.has_cache)
@@ -262,8 +262,8 @@ Day.short = ["ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС"];
 Day.prototype = {
     constructor: Day,
     get_class_list: function () {
-        var class_list = [];
-        var today = moment().startOf('day');
+        let class_list = [];
+        let today = moment().startOf('day');
         if (today.format("YYYY-MM-DD") === this.date_key) {
             class_list.push("current");
             if (this.weekday !== 6)
@@ -281,7 +281,7 @@ Day.prototype = {
 
     },
     get_day_message: function () {
-        var prefix = this.get_prefix();
+        let prefix = this.get_prefix();
         if (!this.has_cache)
             return "На " + prefix + " данных нет, удачи :)";
         if (this.lessons.length === 0)
@@ -289,7 +289,7 @@ Day.prototype = {
         return prefix + " пар: " + this.lessons.length;
     },
     template: function() {
-        var args = {
+        let args = {
             classList : this.get_class_list(),
             number : this.date.format("DD"),
             weekDay : Day.short[this.weekday],
@@ -301,15 +301,15 @@ Day.prototype = {
         return this.element;
     },
     template_lessons: function () {
-        var class_list = [];
+        let class_list = [];
         if (moment().format("YYYY-MM-DD") === this.date_key && this.has_cache) {
             Calendar.activeDay = this;
         }
-        var args = {
+        let args = {
             class : class_list.join(" "),
             title : this.date_key,
             lessons : this.lessons.map(l => l.template_data())
-        }
+        };
         this.element_list = $(Calendar.templates["lessonList"](args));
         this.emitter.emit("lessons_templated");
         return this.element_list;
@@ -327,17 +327,17 @@ Day.prototype = {
     },
     toggle_lessons: function (show) {
         if (show) {
-            var timeout = 0;
+            let timeout = 0;
             $(this.element_list).addClass("active");
             $(this.element).addClass("active");
-            for (var i = 0; i < this.lessons.length; i++) {
+            for (let i = 0; i < this.lessons.length; i++) {
                 this.lessons[i].show(450 + timeout);
                 timeout += 250;
             }
         } else {
             $(this.element_list).removeClass("active");
             $(this.element).removeClass("active");
-            for (var i = 0; i < this.lessons.length; i++) {
+            for (let i = 0; i < this.lessons.length; i++) {
                 this.lessons[i].hide(0);
             }
         }
@@ -360,7 +360,7 @@ function Lesson(data) {
     this.element = undefined;
     this.homework = new Homework(data['text'], data['files']);
     this.editor = undefined;
-    var _this = this;
+    let _this = this;
     //Editor
     if (Calendar.editor) {
         this.editor = new Editor(this, {
@@ -379,8 +379,8 @@ function Lesson(data) {
                         'empty_valid' : true
                     });
                 editor.ajax_field.on("changed", function (value) {
-                    var length = value.length;
-                    var counter = $(editor.element).find(".editor_counter").text(length + "/140");
+                    let length = value.length;
+                    let counter = $(editor.element).find(".editor_counter").text(length + "/140");
                     console.log(length);
                     if (length > 140)
                         $(counter).addClass("invalid");
@@ -390,7 +390,7 @@ function Lesson(data) {
                 editor.ajax_button = new AjaxButton($(editor.element).find(".editor_submit"), {'text' : editor.ajax_field},
                     {
                         'url' : 'action.php',
-                        'data_from_func' : function (elem) {
+                        "data" : function (elem) {
                             return {
                                 'action' : 'send',
                                 'date' : elem.controller.object.date_key, // AjaxButton.Editor.Lesson.date_key
@@ -418,7 +418,7 @@ function Lesson(data) {
                 editor.file_list = {};
                 //Setting up custom events for fields
                 editor.ajax_loader.on("success", function (file, result) {
-                    var json = result;
+                    let json = result;
                     if (json['error'] === undefined) {
                         editor.file_list[file.name] = json['filename'];
                     } else {
@@ -442,9 +442,9 @@ function Lesson(data) {
                 if (editor.object.homework.exists) {
                     $(editor.element).find("textarea").text(editor.object.homework.text);
                     editor.object.homework.files.forEach(function (element) {
-                        var thumb = (element['showable']) ? "../uploads/thumbnails/" + element['name'] :
+                        let thumb = (element['showable']) ? "../uploads/thumbnails/" + element['name'] :
                             "../../assets/images/file.png";
-                        var file = {
+                        let file = {
                             name: element['original'],
                             type: (element['showable']) ? "image/jpeg" : "text/plain",
                             size: element['size']
@@ -460,16 +460,16 @@ function Lesson(data) {
                 }
                 //Client-server dialog
                 editor.on("accepted", function (result) {
-                    var icon = $('<i class="ui icon check" style="font-size: 19px; margin: 0; display: none"></i>');
+                    let icon = $('<i class="ui icon check" style="font-size: 19px; margin: 0; display: none"></i>');
                     $(editor.ajax_button.button).html($(icon).fadeIn(500, function() {
                         editor.window.hide();
                         editor.ajax_button.activate();
                         $(editor.ajax_button.button).html("Сохранить");
                     }));
-                    var replace = _this.homework.exists;
+                    let replace = _this.homework.exists;
                     editor.object.homework = new Homework(result['text'], result['files']);
                     console.log(editor.object.homework);
-                    var homework = $(Handlebars.partials['homework'](editor.object.homework.template_data()));
+                    let homework = $(Handlebars.partials['homework'](editor.object.homework.template_data()));
                     if (!replace) {
                         $(editor.object.element)
                             .find(".lesson_controls")
@@ -489,8 +489,8 @@ function Lesson(data) {
                     Lesson.listeners.image_view.func(editor.object, Lesson.listeners.image_view);
                 });
                 editor.on("rejected", function(response) {
-                    var target = $(editor.ajax_button.button);
-                    var icon = $('<i class="ui icon close" style="font-size: 19px; margin: 0; display: none; color: white"></i>');
+                    let target = $(editor.ajax_button.button);
+                    let icon = $('<i class="ui icon close" style="font-size: 19px; margin: 0; display: none; color: white"></i>');
                     $(target).html($(icon).fadeIn(500)).addClass("error");
                     setTimeout(function () {
                         $(target).html("Сохранить").removeClass("error");
@@ -507,8 +507,9 @@ function Lesson(data) {
     }
     //Setting up listeners
     this.on("templated", function () {
-        for (var listener in Lesson.listeners) {
-            Lesson.listeners[listener].func(_this, Lesson.listeners[listener]);
+        for (let listener in Lesson.listeners) {
+            if (Lesson.listeners.hasOwnProperty(listener))
+                Lesson.listeners[listener].func(_this, Lesson.listeners[listener]);
         }
     });
 
@@ -532,13 +533,13 @@ Lesson.listeners = {
         event : "click",
         func : function (lesson, config) {
             $(lesson.element).find(config.element).on(config.event, function () {
-                var imageArr = $(this).parent().find(config.element);
-                var imageUrls = [];
+                let imageArr = $(this).parent().find(config.element);
+                let imageUrls = [];
                 $(imageArr).each(function () {
                     imageUrls.push($(this).attr("src").replace("uploads/thumbnails/", "uploads/images/"));
                 });
-                var index = $(imageArr).index(this);
-                var viewer = new ImageViewer(imageUrls, index);
+                let index = $(imageArr).index(this);
+                let viewer = new ImageViewer(imageUrls, index);
                 viewer.show(index);
             });
         }
@@ -549,7 +550,7 @@ Lesson.listeners = {
         func : function (lesson, config) {
             if (Calendar.editor) {
                 $(lesson.element).find(config.element).on(config.event, function () {
-                    var stored = ModalWindow.findStored(Editor.find, lesson.editor);
+                    let stored = ModalWindow.findStored(Editor.find, lesson.editor);
                     if (stored !== undefined) {
                         ModalWindow.setActive(stored);
                         ModalWindow.activeWindow.show();
@@ -619,7 +620,7 @@ function Homework(text, files) {
         this.exists = true;
         this.text = text || "";
         this.files = files || [];
-        for (var i = 0; i < this.files.length; i++)
+        for (let i = 0; i < this.files.length; i++)
             this.files[i]['showable'] = this.files[i]['showable'] == "1";
     }
 }

@@ -1,9 +1,9 @@
 {{#if exists}}
-    <div class="lesson_homework">
+    <div class="lesson_homework" {{{linker _l "homework" r=true}}}>
         <div class="homework_text">{{text}}</div>
         {{#files}}
             {{#if showable}}
-                <img class="homework_file view" alt="{{original}}" title="{{original}}" src="uploads/thumbnails/{{name}}"/>
+                <img class="homework_file view" alt="{{original}}" title="{{original}}" src="uploads/thumbnails/{{name}}" {{{linker _l "image"}}} />
             {{else}}
                 <a href="uploads/files/{{name}}">
                     <img class="homework_file" alt="{{original}}" title="{{original}}" src="assets/images/file.png"/>

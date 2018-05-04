@@ -1,4 +1,4 @@
-<div class="lesson">
+<div class="lesson" {{{linker _l "lesson" r=true}}}>
     <div class="header">
         <div class="lesson_title">{{subject}}</div>
         <div class="lesson_type {{color}}">
@@ -31,10 +31,10 @@
         {{/homework}}
         <div class="lesson_controls">
             {{#if homework.exists}}
-                <div class="lesson_homework_show">Показать ДЗ</div>
+                <div class="lesson_homework_show" {{{linker _l "homework_button"}}}>Показать ДЗ</div>
             {{/if}}
             {{#if editor}}
-                <div class="lesson_edit">Редактировать</div>
+                <div class="lesson_edit" {{{linker _l "edit_button"}}}>Редактировать</div>
             {{/if}}
         </div>
 </div>

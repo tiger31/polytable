@@ -1,5 +1,5 @@
 <script type="text/javascript" src="../js/lib/jquery3.2.1.min.js"></script>
-<script type="text/javascript" src="../js/lib/jquery.ajax.inputs.js"></script>
+<script type="text/javascript" src="../js/lib/jquery.ajax.inputs.js?1337"></script>
 <div id="search">
     <input type="text" name="query" class="group_search" placeholder="Поиск группы">
     <button class="group_search_submit" type="submit">Найти</button>

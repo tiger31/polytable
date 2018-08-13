@@ -1,5 +1,5 @@
 <?php set_time_limit(0);
-include_once "Config.php";
+include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/Config.php";
 global $mysql;
 
 const URL = "http://ruz2.spbstu.ru/api/v1/ruz/scheduler/";
@@ -7,7 +7,7 @@ const URL = "http://ruz2.spbstu.ru/api/v1/ruz/scheduler/";
 
 function cacheData($group_id, $weeks_amount = 3) {
     global $mysql;
-    $date = new DateTime("this week");
+    $date = new DateTime("last week");
 
     $calendar_data = array();
     for ($weeks = 0; $weeks < $weeks_amount; $weeks++) {
@@ -77,7 +77,7 @@ function cacheData($group_id, $weeks_amount = 3) {
             $lesson["places"] = json_encode($lesson["places"], JSON_UNESCAPED_UNICODE);
         }
         $mysql->multiple_insert($insert_data);
-
+        echo "Добавлено уникальных пар: " . count($insert_data) . "<br>";
         $until = (count($insert_data) > 0) ? end($insert_data)['day'] : "1970-01-01";
         $mysql->exec(QUERY_GROUP_UPDATE, RETURN_IGNORE, array("until" => $until, "id" => $group_id));
         return true;
@@ -89,9 +89,14 @@ function cacheData($group_id, $weeks_amount = 3) {
 function cacheAll() {
     global $mysql;
     $result = $mysql->exec(QUERY_GROUP_SELECT, RETURN_FALSE_ON_EMPTY, array());
+    $i = 1;
+    $count = count($result);
     foreach ($result as $key => $group) {
         if ($group['cache'] == 1) {
+            echo "Начато кэширование группы " . $group['name'] . " <br>";
             cacheData($group["id"], 6);
+            echo "Завершено кэширование группы " . $group['name'] . " ($i/$count) <br>";
+            $i++;
         }
     }
 }

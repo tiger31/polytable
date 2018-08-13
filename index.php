@@ -1,6 +1,6 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/Config.php";
-
+header("pragma","no-cache");
 ?>
 <html>
 <head>
@@ -13,15 +13,14 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/Config.php";
     <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96">
     <link rel="stylesheet" type="text/css" href="css/icon.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css?1337"/>
     <link rel="stylesheet" type="text/css" href="css/search.css"/>
     <link rel="stylesheet" type="text/css" href="css/footer.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48396962 = new Ya.Metrika({ id:48396962, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/48396962" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
     <script type="text/javascript" src="js/lib/jquery3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/lib/jquery.modal.window.js"></script>
-    <script type="text/javascript" src="js/lib/jquery.ajax.inputs.js"></script>
-    <script type="text/javascript" src="js/lib/jquery.dropzone.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.ajax.inputs.js?1337"></script>
     <script type="text/javascript" src="js/loginform.js"></script>
 </head>
 <body>

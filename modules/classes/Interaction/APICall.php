@@ -30,7 +30,7 @@ abstract class APICall {
                 if (User::$user) {
                     $headers = getallheaders();
                     if ($this->method === "POST" || $this->force_csrf_check)
-                        if (!$headers || !isset($headers['X-CSRF-TOKEN']) || !isset($_COOKIE['X-CSRF-TOKEN']) || !CSRF::verify_csrf_token($headers['X-CSRF-TOKEN']))
+                        if (!$headers || !isset($headers['x-csrf-token']) || !isset($_COOKIE['X-CSRF-TOKEN']) || !CSRF::verify_csrf_token($headers['x-csrf-token']))
                             $this->response->error(403, array("info" => "Forbidden"))->response();
                     //Rights check
                     if ($this->bit_mask > 0) {

@@ -1,6 +1,0 @@
-Order deny,allow
-Deny from all
-
-<FilesMatch "\.(handlebars)">
-    Allow from all
-</FilesMatch>

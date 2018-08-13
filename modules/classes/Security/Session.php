@@ -18,7 +18,6 @@ class Session {
         if (isset($_COOKIE['sseed'])) {
             if (isset($_SESSION["X-USER-ID"])) {
                 $user_data = $mysql(QUERY_USER_SELECT, RETURN_FALSE_ON_EMPTY, array("id" => $_SESSION["X-USER-ID"]));
-
                 if (!isset($_SESSION["X-USER-ID"], $_SESSION["X-USER-AGENT"]) || $_SESSION['X-USER-AGENT'] !== $_SERVER['HTTP_USER_AGENT']
                     || $_COOKIE['sseed'] !== $user_data['session_hash']) {
                     foreach ($this->reserved as $key => $value)

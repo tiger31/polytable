@@ -11,7 +11,7 @@ class Auth_mail extends Auth{
 
         $client_id = '759857'; // ID приложения
         $client_secret = 'f52bfdda6aced720c350b71e165f3d7e'; // Защищённый ключ
-        $redirect_uri = 'https://polytable.ru/auth.php'; // Адрес сайта
+        $redirect_uri = 'https://polytable.ru/auth.php?m=mail'; // Адрес сайта
 
         if (isset($_GET['code'])) {
             $params = array(
@@ -27,7 +27,7 @@ class Auth_mail extends Auth{
             curl_setopt($curl, CURLOPT_POST, 1);
             curl_setopt($curl, CURLOPT_POSTFIELDS, urldecode(http_build_query($params)));
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
             $result = curl_exec($curl);
             curl_close($curl);
             $tokenInfo = json_decode($result, true);

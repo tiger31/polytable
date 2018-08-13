@@ -6,7 +6,7 @@ use Configuration\Database\Interceptor;
 use Configuration\Database\Connection\Query;
 
     class Profile {
-        private $modules = array("profile_me");
+        private $modules = array("profile_me", "profile_group");
         private $data = array();
         public $mysql;
 

@@ -47,8 +47,9 @@ namespace Configuration\Rights;
             if ($mask === -1) return false;
             $arr = self::mask_to_arr($mask);
             for ($i = 0; $i < count(AccessController::$rights_arr); $i++)
-                if ($arr[$i] > $this->rights_arr[$i])
+                if ($arr[$i] > $this->rights_arr[$i]) {
                     return false;
+                }
             return true;
         }
 
@@ -83,7 +84,7 @@ namespace Configuration\Rights;
             if ($group !== RightsGroup::CONSUMER)
                 for ($i = 0; $i < count(AccessController::$rights_arr); $i++) {
                     $param_value = AccessController::$rights_arr[$i]->group;
-                    if ($mask_value < $param_value) {
+                    if ((bool)$arr[$i] && $mask_value < $param_value) {
                         $arr[$i] = 0;
                         if (AccessController::$rights_arr[$i]->power !== [])
                             foreach (AccessController::$rights_arr[$i]->power as $index)

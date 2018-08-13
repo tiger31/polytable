@@ -36,7 +36,7 @@ class Mailer {
         $this->mailer->SMTPSecure = $this->smtp_protocol;
         $this->mailer->Port = $this->smtp_port;
         //Mail setup
-        $this->mailer->setFrom($this->from);
+        $this->mailer->setFrom($this->from, $this->host);
         $this->mailer->addReplyTo($this->reply);
         foreach ($this->headers as $header)
             $this->mailer->addCustomHeader($header);
@@ -49,7 +49,7 @@ class Mailer {
         $this->mailer->Subject = $mail->subject;
         $this->mailer->Body = $mail->template;
         try {
-            //$this->mailer->send();
+            $this->mailer->send();
             return true;
         } catch (Exception $e) {
             return false;

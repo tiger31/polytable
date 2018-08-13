@@ -10,7 +10,7 @@ abstract class Auth {
     private $user = null;
     private $success = false;
 
-    protected function auth($login, $redirect=true, $modify_cookie = true, $cookie = 3600) {
+    protected function auth($login, $redirect=true, $modify_cookie = true, $cookie = 86400) {
         global $mysql;
         $user_data = $mysql(QUERY_USER_SELECT, RETURN_FALSE_ON_EMPTY, array("login" => $login));
         if ($user_data && $user_data['active'] == 1) {
@@ -31,22 +31,24 @@ abstract class Auth {
             $_SESSION['X-USER-ID'] = $this->user->id;
             $_SESSION['X-USER-AGENT'] = $_SERVER['HTTP_USER_AGENT'];
             if ($modify_cookie)
-                setcookie("sseed", $user_data['session_hash'], time() + $cookie, "; SameSite=Strict;", "", false);
+                setcookie("sseed", $user_data['session_hash'], time() + $cookie, "", "", false, true);
             CSRF::set_csrf_token();
             if ($redirect) static::redirect();
         }
+        if ($redirect) static::redirect();
     }
 
     static function close($redirect=true) {
         User::$user = null;
         unset($_SESSION['X-USER-ID'], $_SESSION['X-USER-AGENT']);
-        setcookie("sseed", "", 1, "; SameSite=Strict;", "", false);
+        setcookie("sseed", "", 1, "", "", false);
         CSRF::unset();
         if ($redirect) static::redirect();
     }
 
     static function redirect() {
-        header('Location: ' . ((isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : "index.php")));
+        $referer = (isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : "https://polytable.ru/index.php");
+        header("Location: $referer");
         die();
     }
 

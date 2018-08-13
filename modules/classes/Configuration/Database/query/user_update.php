@@ -31,7 +31,11 @@ class user_update extends Query{
             "keys" => array("login", "number"),
             "query" => $mysql->prepare("UPDATE users SET `number`=:number WHERE login=:login")
         );
-        array_push($this->multiple, $ip, $active, $verify, $email, $pass, $number, $session);
+        $vk = array(
+            "keys" => array("login", "vk_id"),
+            "query" => $mysql->prepare("UPDATE users SET vk_id=:vk_id WHERE login=:login")
+        );
+        array_push($this->multiple, $ip, $active, $verify, $email, $pass, $number, $session, $vk);
         $this->type = Query::UPDATE;
     }
 };

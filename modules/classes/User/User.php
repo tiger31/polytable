@@ -77,7 +77,7 @@ namespace User;
         }
 
         public function group_editor() {
-            return ($this->is_head || $this->is_contributor);
+            return ($this->rights->has(1));
         }
 
         static $user;

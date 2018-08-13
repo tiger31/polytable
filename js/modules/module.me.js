@@ -102,7 +102,6 @@ function me(data) {
             if (me.AjaxFieldsForms[form]['lock'])
                 this.forms[form].lock();
         }
-        console.log(this);
     });
 }
 me.config = {

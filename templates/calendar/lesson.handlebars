@@ -14,7 +14,7 @@
             {{#if exists}}
                 <div class="lesson_teacher">{{text}}</div>
                 {{#each teacher}}
-                    <div class="lesson_list_item">{{this}}</div>
+                    <a href="http://ruz.spbstu.ru/search/teacher?q={{this}}"><div class="lesson_list_item">{{this}}</div></a>
                 {{/each}}
             {{/if}}
         {{/teachers}}

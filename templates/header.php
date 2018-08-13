@@ -27,7 +27,7 @@
             <a href="https://oauth.yandex.ru/authorize?response_type=code&client_id=8f519b6836c247d5af94d5b7f55edb24&display=popup" style="text-decoration: none">
                 <i class="ui icon circular yandex red" style="height: 1em !important;"></i>
             </a>
-            <a href="https://connect.mail.ru/oauth/authorize?client_id=759857&response_type=code&redirect_uri=https://polytable.ru?m=mail" style="text-decoration: none">
+            <a href="https://connect.mail.ru/oauth/authorize?client_id=759857&response_type=code&redirect_uri=https://polytable.ru/auth.php?m=mail" style="text-decoration: none">
                 <i class="ui icon circular at orange" style="height: 1em !important;"></i>
             </a>
         </div>

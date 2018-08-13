@@ -22,7 +22,7 @@ table {
 body {
     /* background-image: url("../assets/images/myawsmbg.png"); */
     background-color: var(--green);
-    font-family: Calibri;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 a {
     text-decoration: none;
@@ -75,7 +75,6 @@ form input {
     margin: 0 auto;
     width: 430px;
 }
-
 form input::placeholder {
     color: var(--darkGray);
 }

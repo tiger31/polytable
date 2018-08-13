@@ -32,10 +32,6 @@ namespace Configuration\Database;
     define("QUERY_CONFIRM_DELETE", "confirm_remove");
     define("QUERY_CALENDAR_SELECT", "calendar_select");
 
-    define("CONFIG_QUERY_RIGHTS", "rights_select");
-    define("CONFIG_QUERY_GROUPS", "rights_groups_select");
-    define("CONFIG_QUERY_CALLS", "apicalls_select");
-
     class Connection {
         private $mysqlPDO;
         private $queries = array();

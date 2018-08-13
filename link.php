@@ -4,10 +4,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/Config.php";
 use User\User;
 
 $client_id = '6463991'; // ID приложения
-$client_secret = 'FjfrJcqVSRSzCmhlbVKL'; // Защищённый ключ
+$client_secret = 'R5MRskuOucoUzHPE6s4T'; // Защищённый ключ
 $redirect_uri = 'https://polytable.ru/link.php'; // Адрес сайта
 
 $user = User::$user;
+
 if ($user) {
     $login = $user->login;
     if (isset($_GET['code'])) {
@@ -28,5 +29,4 @@ if ($user) {
         $mysql->exec(QUERY_USER_UPDATE, RETURN_IGNORE, array("login" => $login, "vk_id" => null));
     }
 }
-header('Location: ' . ((isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : "profile.php")));
-die();
+header('Location: profile.php');

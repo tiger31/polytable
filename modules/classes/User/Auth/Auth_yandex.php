@@ -25,7 +25,7 @@ class Auth_yandex extends Auth{
             curl_setopt($curl, CURLOPT_POST, 1);
             curl_setopt($curl, CURLOPT_POSTFIELDS, urldecode(http_build_query($params)));
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
             $result = curl_exec($curl);
             curl_close($curl);
             $tokenInfo = json_decode($result, true);

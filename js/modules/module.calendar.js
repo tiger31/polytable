@@ -787,7 +787,7 @@ imageAjaxConfig =  {
     dictRemoveFile: "",
     dictMaxFilesExceeded: "Нельзя прикреплять больше пяти фалов",
     headers: {
-        'X-CSRF-TOKEN': function () {
+        'x-csrf-token': function () {
             const cookie = document.cookie.match(/X-CSRF-TOKEN=([\w]+)/);
             return (cookie) ? cookie[1] : null;
         }

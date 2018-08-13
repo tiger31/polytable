@@ -52,7 +52,11 @@
     <div class="subtitle">Привязать или отвязать профиль ВКонтакте</div>
     <div class="input">
         <div class="title">Профиль ВКонтакте:</div>
-        <div class="value"><a href="{{vk}}" target="_blank">{{vk}}</a></div>
+        {{#if vk_linked}}
+            <div class="value"><a href="{{vk}}" target="_blank">{{vk}}</a></div>
+        {{else}}
+            <div class="value">Не привязан</div>
+        {{/if}}
     </div>
 
         <div class="save-button" id="vk" {{{linker _l "vk_action"}}}>

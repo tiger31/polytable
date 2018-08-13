@@ -1,7 +1,7 @@
 $.ajaxSetup({
     beforeSend: function (xhr) {
         const cookie = document.cookie.match(/X-CSRF-TOKEN=([\w]+)/);
-        xhr.setRequestHeader("X-CSRF-TOKEN", (cookie) ? cookie[1] : null);
+        xhr.setRequestHeader("x-csrf-token", (cookie) ? cookie[1] : null);
     },
     dataType: "json"
 });
@@ -332,12 +332,13 @@ Emitter.prototype = {
 };
 
 //---------- Handlebars for iterator ----------//
-Handlebars.registerHelper('times', function(n, block) {
-    let content = '';
-    for(let i = 0; i < n; ++i)
-        content += block.fn(this);
-    return content;
-});
+if (Handlebars !== undefined)
+    Handlebars.registerHelper('times', function(n, block) {
+        let content = '';
+        for(let i = 0; i < n; ++i)
+            content += block.fn(this);
+        return content;
+    });
 //---------- Linker ----------//
 
 function Linker(module) {

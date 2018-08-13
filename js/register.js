@@ -51,22 +51,25 @@ var fields = {
     }
 };
 $(document).ready(function () {
-    var controller = new FieldsController();
-    var arr = {};
+    const controller = new FieldsController();
+    let arr = {};
     $('.validate').each(function () {
-        var field_name = $(this).attr('name');
+        const field_name = $(this).attr('name');
         if (fields[field_name] !== undefined) {
-            var field = new Field($(this), fields[field_name], controller);
+            const field = new Field($(this), fields[field_name], controller);
+            const error = $(this).siblings(".errorMessage");
             arr[field_name] = field;
             controller.add_field(field);
-            field.on("validate", function () {
-                var label = $(field.field).siblings("label");
+            field.on("validate ajax_received", function () {
+                const label = $(field.field).siblings("label");
+                error.text(this.error || "");
                 switch (field.state) {
                     case 1:
                     case 3: $(label).css("color", "var(--green)"); break;
                     case 2: $(label).css("color", "var(--red)"); break;
                 }
             });
+
         } else {
             console.warn("Unregistered field for validation : \"" + field_name + "\" -> ignore");
         }
@@ -116,6 +119,7 @@ $(document).ready(function () {
             return data;
         }
     });
+    controller.button = button;
     button.on("success", function (data) {
         var result = new Response(data, ["title", "name", "url", "default", "group"]);
         if (result.error_list.length !== 0) {

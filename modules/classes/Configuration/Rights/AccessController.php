@@ -56,7 +56,7 @@ class AccessController {
                 "FILES_STATS", 15, RightsGroup::MOD, [], [], false, "Просмотр стастики сервера по хранимым файлам"
             ));
             $this->register_right(new Right(
-                "SCTUCTURE_GROUPS", 16, RightsGroup::ADM, [], [], false, "Обновление структуры групп в соответсвие с API"
+                "STRUCTURE_GROUPS", 16, RightsGroup::ADM, [], [], false, "Обновление структуры групп в соответсвие с API"
             ));
         } catch (\Exception $e) {
             //TODO Logger;

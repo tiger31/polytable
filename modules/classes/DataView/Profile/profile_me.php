@@ -11,14 +11,14 @@ class profile_me extends Module {
         parent::__construct($mysql, $user);
         $this->name = "me";
         $this->data = array(
-            "id" => $user->id,
-            "login" => $user->login,
+            "id" => $user['id'],
+            "login" => $user['login'],
             "title" => $user->getPost(),
-            "group" => $user->group,
-            "email" => $user->email,
-            "vk" => $user->vk_id,
-            "number" => $user->number,
-            "password_changed" => $user->password_changed
+            "group" => $user['group'],
+            "email" => $user['email'],
+            "vk" => $user['vk_id'],
+            "number" => $user['number'],
+            "password_changed" => $user['password_changed']
         );
     }
 }

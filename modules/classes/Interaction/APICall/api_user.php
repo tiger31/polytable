@@ -34,21 +34,21 @@ class api_user extends APICall{
         switch ($this->input['type']) {
             case "change":
                 $this->response->response($mysql(QUERY_USER_UPDATE, RETURN_IGNORE, array(
-                    "login" => $this->user->login,
+                    "login" => $this->user['login'],
                     "number" => $this->input['number']
                 )));
                 break;
             case "password":
-                if (password_verify(Shield::escape_str($this->input['password']), $this->user->password_hash)) {
+                if (password_verify(Shield::escape_str($this->input['password']), $this->user['password_hash'])) {
                     $new_password = password_hash($this->input['new_password'], PASSWORD_BCRYPT);
                     $hash = md5(Shield::rnd_str(16)) . md5(Shield::rnd_str(32));
                     $mysql(QUERY_USER_UPDATE, RETURN_IGNORE, array(
-                        "login" => $this->user->login,
+                        "login" => $this->user['login'],
                         "sseed" => $hash
                     ));
                     setcookie("sseed", $hash, time() + 86000, "; SameSite=Strict;", "", false);
                     $this->response->response($mysql(QUERY_USER_UPDATE, RETURN_IGNORE, array(
-                        "login" => $this->user->login,
+                        "login" => $this->user['login'],
                         "pass" => $new_password
                     )));
                 } else {

@@ -28,7 +28,7 @@ abstract class Auth {
             $this->success = true;
             $mysql(QUERY_USER_UPDATE, RETURN_IGNORE, array("ip" => $_SERVER["REMOTE_ADDR"], "id" => $user_data["id"]));
             User::$user = $this->user;
-            $_SESSION['X-USER-ID'] = $this->user->id;
+            $_SESSION['X-USER-ID'] = $this->user['id'];
             $_SESSION['X-USER-AGENT'] = $_SERVER['HTTP_USER_AGENT'];
             if ($modify_cookie)
                 setcookie("sseed", $user_data['session_hash'], time() + $cookie, "", "", false, true);

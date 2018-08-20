@@ -25,7 +25,7 @@ class api_check extends APICall {
                 $this->response->response($result);
                 break;
             case "email":
-                $this->response->response($mysql->email_free($_GET['value']) || (User::$user && User::$user->email == $_GET['value']));
+                $this->response->response($mysql->email_free($_GET['value']) || (User::$user && User::$user['email'] == $_GET['value']));
                 break;
             default:
                 $this->response->error(400, array("info" => "Ajax is not provided"))->response();

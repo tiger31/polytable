@@ -3,8 +3,8 @@
     <?php if (\User\User::$user == null): ?>
         <i class="ui icon user circular" style="margin: 0;"></i>
     <?php else: ?>
-        <img src="data/image/32/<?=\User\User::$user->getID()?>.png" />
-        <div id="logged"><?=\User\User::$user->login;?></div>
+        <img src="data/image/32/<?=\User\User::$user['id']?>.png" />
+        <div id="logged"><?=\User\User::$user['login'];?></div>
     <?php endif; ?>
 </div>
 <?php if (\User\User::$user == null): ?>
@@ -34,7 +34,7 @@
     </div>
 <?php else: ?>
     <div id="user">
-        <a href="groups.php?id=<?=\User\User::$user->group;?>">Группа</a>
+        <a href="groups.php?id=<?=\User\User::$user['group'];?>">Группа</a>
         <a href="profile.php">Профиль</a>
         <a href="logout.php">Выйти</a>
     </div>

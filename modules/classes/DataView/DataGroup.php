@@ -2,19 +2,33 @@
 
 namespace DataView;
 
-class DataGroup {
+trait DataGroup {
 
-    protected $fields = array();
+    protected $access_data;
 
-    function __construct($data) {
-
+    public function offsetExists($offset) {
+        // TODO: Implement offsetExists() method.
     }
 
-    function __get($name) {
-        return $this->fields[$name]->value;
+    public function offsetGet($offset) {
+        return $this->access_data[$offset]->get();
     }
 
-    function __set($name, $value) {
-        return $this->fields[$name]->values = $value;
+    public function offsetSet($offset, $value) {
+        $this->access_data[$offset]->set($value);
+    }
+
+    public function offsetUnset($offset) {
+        unset($this->access_data[$offset]);
+    }
+
+    public function bind($offset, DataField $value) {
+        $trace = debug_backtrace();
+        $caller = ($trace[1]) ? $trace[1]['object'] : null;
+        $func = ($trace[1]) ? $trace[1]['function'] : null;
+        if ($caller === $this && $func == "__construct") {
+            $this->access_data[$offset] = $value;
+        } else
+            throw new \Exception("Trying to create bind-param from non-owner");
     }
 }

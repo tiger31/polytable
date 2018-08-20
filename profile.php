@@ -37,8 +37,8 @@
             <div id="menu">
                 <div class="item"><a href="/"><img src="assets/images/logo3.png"></a></div>
                 <div class="item card">
-                    <div id="avatar"><img src="data/image/64/<?=$user->getID()?>.png" /></div>
-                    <div id="name"><?=($user->verified) ? $user->getEscapedName() : $user->login;?></div>
+                    <div id="avatar"><img src="data/image/64/<?=$user['id']?>.png" /></div>
+                    <div id="name"><?=($user->verified) ? $user->getEscapedName() : $user['login'];?></div>
                     <div id="post"><?=$user->getPost();?></div>
                 </div>
                 <a href="logout.php">

@@ -23,9 +23,8 @@ class DataField {
     }
 
     public function get() {
-        $trace = end(debug_backtrace());
-        $caller =  $trace['object'] ? $trace['object'] : null;
-
+        $trace = debug_backtrace();
+        $caller = ($trace[2]) ? $trace[2]['object'] : null;
         if (!($caller instanceof Accessor))
             return null;
         if ($this->visibility === AccessMask::PRIVATE) {
@@ -40,7 +39,8 @@ class DataField {
 
     public function set($value) {
         $trace = debug_backtrace();
-        $caller = ($trace[1]) ? $trace[1]['object'] : null;
+        $caller = ($trace[2]) ? $trace[2]['object'] : null;
+
         if (!($caller instanceof Accessor))
             return null;
         if ($this->visibility === AccessMask::PRIVATE) {

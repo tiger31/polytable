@@ -58,6 +58,9 @@ class AccessController {
             $this->register_right(new Right(
                 "STRUCTURE_GROUPS", 16, RightsGroup::ADM, [], [], false, "Обновление структуры групп в соответсвие с API"
             ));
+            $this->register_right(new Right(
+                "LOG_READING", 17, RightsGroup::ADM, [], [], false, "Чтение серверных логов"
+            ));
         } catch (\Exception $e) {
             //TODO Logger;
         }

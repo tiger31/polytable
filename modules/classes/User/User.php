@@ -3,15 +3,20 @@
 namespace User;
 
     use Configuration\Rights\AccessMask;
+    use Configuration\Rights\Accessor;
     use Configuration\Rights\RightsGroup;
     use DataView\DataField;
-    use DataView\DataViewAccessor\MaskViewAccessor;
+    use DataView\DataGroup;
     use Security\Shield;
 
-    class User extends MaskViewAccessor {
+    class User {
         public $is_head;
         public $group_id;
         public $verified;
+
+        private $accessor;
+
+        use DataGroup;
 
         function __construct($data) {
             global $mysql;
@@ -19,7 +24,8 @@ namespace User;
             $this->group_id = $mysql->get_group($data['group'])['id'];
             $this->verified = (bool)$data['verified'];
 
-            parent::__construct((int)$data['privileges'], (int)$data['rights_group']);
+            $this->accessor = new Accessor((int)$data['privileges'], (int)$data['rights_group']);
+
             $this->bind("id", new DataField($data['id']), AccessMask::PUBLIC);
             $this->bind("login", new DataField($data['login']), AccessMask::PUBLIC);
             $this->bind("group", new DataField($data['group']), AccessMask::PUBLIC);

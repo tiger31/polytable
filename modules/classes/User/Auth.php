@@ -34,6 +34,7 @@ abstract class Auth {
                 setcookie("sseed", $user_data['session_hash'], time() + $cookie, "", "", false, true);
             CSRF::set_csrf_token();
             if ($redirect) static::redirect();
+            var_dump($_SESSION);
         }
         if ($redirect) static::redirect();
     }

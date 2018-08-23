@@ -3,7 +3,7 @@
 namespace DataView;
 
 use Configuration\Rights\AccessMask;
-use Configuration\Rights\Accessor;
+use Configuration\Rights\IAccessor;
 
 class DataField {
 
@@ -14,7 +14,7 @@ class DataField {
 
     public function __construct($value, $visibility = AccessMask::PRIVATE, $change = AccessMask::PRIVATE) {
         $trace = debug_backtrace();
-        if (!$trace[1] || !($trace[1]['object'] instanceof Accessor))
+        if (!$trace[1] || !in_array('DataView\DataGroup', class_uses_deep($trace[1]['object'])))
             throw new \Exception("Initializing DataField without an Accessor is not allowed");
         $this->owner = $trace[1]['object'];
         $this->value = $value;
@@ -25,10 +25,13 @@ class DataField {
     public function get() {
         $trace = debug_backtrace();
         $caller = ($trace[2]) ? $trace[2]['object'] : null;
-        if (!($caller instanceof Accessor))
+        if (!($caller instanceof IAccessor)) {
+            if ($this->visibility == AccessMask::PUBLIC)
+                return $this->value;
             return null;
+        }
         if ($this->visibility === AccessMask::PRIVATE) {
-            if ($this->owner === $caller)
+            if ($this->owner instanceof IAccessor && $this->owner->compare($caller))
                 return $this->value;
             return null;
         } else if ($caller->have_access($this->visibility)) {
@@ -41,10 +44,13 @@ class DataField {
         $trace = debug_backtrace();
         $caller = ($trace[2]) ? $trace[2]['object'] : null;
 
-        if (!($caller instanceof Accessor))
+        if (!($caller instanceof IAccessor)) {
+            if ($this->change == AccessMask::PUBLIC)
+                return $this->value = $value;
             return null;
+        }
         if ($this->visibility === AccessMask::PRIVATE) {
-            if ($this->owner === $caller)
+            if ($this->owner instanceof IAccessor && $this->owner->compare($caller))
                 return $this->value = $value;
             return null;
         } else if ($caller->have_access($this->change))

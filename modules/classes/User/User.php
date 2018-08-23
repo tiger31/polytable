@@ -4,17 +4,16 @@ namespace User;
 
     use Configuration\Rights\AccessMask;
     use Configuration\Rights\Accessor;
+    use Configuration\Rights\IAccessor;
     use Configuration\Rights\RightsGroup;
     use DataView\DataField;
     use DataView\DataGroup;
     use Security\Shield;
 
-    class User {
+    class User extends IAccessor implements \ArrayAccess {
         public $is_head;
         public $group_id;
         public $verified;
-
-        private $accessor;
 
         use DataGroup;
 
@@ -25,10 +24,11 @@ namespace User;
             $this->verified = (bool)$data['verified'];
 
             $this->accessor = new Accessor((int)$data['privileges'], (int)$data['rights_group']);
+            $this->accessor->friends = ["Configuration\Rights\UserDelegatedAccessor"];
 
-            $this->bind("id", new DataField($data['id']), AccessMask::PUBLIC);
-            $this->bind("login", new DataField($data['login']), AccessMask::PUBLIC);
-            $this->bind("group", new DataField($data['group']), AccessMask::PUBLIC);
+            $this->bind("id", new DataField($data['id'], AccessMask::PUBLIC));
+            $this->bind("login", new DataField($data['login'], AccessMask::PUBLIC));
+            $this->bind("group", new DataField($data['group'], AccessMask::PUBLIC));
             $this->bind("email", new DataField($data['email']));
             $this->bind("number", new DataField($data['number']));
             $this->bind("vk_id", new DataField($data['vk_id']));
@@ -42,7 +42,7 @@ namespace User;
         }
 
         function getPost() {
-            switch ($this->rights->group()) {
+            switch ($this->accessor->rights->group()) {
                 case RightsGroup::ADM:
                     return "Администратор";
                     break;
@@ -71,7 +71,7 @@ namespace User;
         }
 
         public function group_editor() {
-            return ($this->rights->has(1));
+            return ($this->accessor->rights->has(1));
         }
 
         static $user;

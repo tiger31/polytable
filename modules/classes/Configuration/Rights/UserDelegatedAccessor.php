@@ -5,11 +5,11 @@ namespace Configuration\Rights;
 use User\User;
 
 trait UserDelegatedAccessor {
-    public function delegate() {
-        if ($this instanceof Accessor) {
+    public function contract() {
+        if ($this instanceof IAccessor) {
             //Trait should be used by class implemented from Accessor or extended from any Accessor child,
             if (User::$user)
-                parent::__construct(User::$user->delegate());
+                $this->accept(User::$user->delegate());
         }
     }
 }

@@ -2,11 +2,12 @@
 
 namespace Interaction;
 
-use Security\Shield;
+use Configuration\Rights\IAccessor;
+use Configuration\Rights\UserDelegatedAccessor;
 use Security\CSRF;
 use User\User;
 
-abstract class APICall {
+abstract class APICall extends IAccessor {
     protected $user;
     protected $input;
 
@@ -17,7 +18,11 @@ abstract class APICall {
     protected $force_csrf_check;
     protected $response;
     protected $method;
+
+    use UserDelegatedAccessor;
+
     function __construct($config) {
+        $this->contract();
         $this->user = User::$user;
         $this->response = new Response();
         $this->pre_check();

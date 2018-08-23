@@ -3,6 +3,7 @@
 namespace Interaction\APICall;
 
 
+use Configuration\Logger;
 use Interaction\APICall;
 
 class api_log_reader extends APICall
@@ -21,7 +22,7 @@ class api_log_reader extends APICall
     function handle()
     {
         try {
-            $this->response->response(true, array("data" => \Configuration\Logger::read()));
+            $this->response->response(true, array("data" => Logger::read()));
         } catch (\Exception $e) {
 
         }

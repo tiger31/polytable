@@ -1,0 +1,29 @@
+body, html, table, tr, td {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+.label {
+    width: 60px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: baseline;
+    margin: 3px;
+    background: #e8e8e8 none;
+    padding: 5px;
+    color: rgba(0, 0, 0, .6);
+    text-transform: none;
+    font-weight: 700;
+    border: 0 solid transparent;
+    border-radius: 5px;
+}
+
+.error {
+    background-color: #db2828;
+}
+
+.warning {
+    background-color: yellow;
+
+}

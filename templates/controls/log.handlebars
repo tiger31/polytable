@@ -1,3 +1,6 @@
 {{#data}}
-    <div>{{this}}</div>
+    <div id={{@index}}><span class="label {{type}}">{{type}}</span> {{time}} from {{server.STACKTRACE.[0]}}
+        {{#if data}} with data: {{data}} {{/if}}
+        {{#if server.USER.id}} from user: {{server.USER}} {{/if}}
+    </div>
 {{/data}}

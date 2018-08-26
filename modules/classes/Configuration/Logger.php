@@ -47,14 +47,28 @@ class Logger
         if ($handle) {
             $i = 0;
             $result = array();
-            while (($buffer = fgets($handle, 4096)) !== false) {
+            while (($line = fgets($handle, 4096)) !== false) {
                 if ($i < $lines) {
-                    $decoded = json_decode($buffer, true);
-                    $str = $decoded['time'] . " " . $decoded['type'] . " from " . $decoded['server']['STACKTRACE'][0];
-                    $str .= ($decoded['server']['data']) ? ' with data: ' . $decoded['server']['data'] : '';
-                    $str .= ($decoded['server']['user']) ? ' from user: ' . $decoded['server']['user'] : '';
-                    array_push($result, $str);
+                    array_push($result, json_decode($line));
                     $i++;
+                }
+            }
+            if (!feof($handle)) {
+                echo "Ошибка: fgets() неожиданно потерпел неудачу\n";
+            }
+            fclose($handle);
+            return $result;
+        }
+    }
+
+    public static function readLine($lineNum)
+    {
+        $handle = @fopen($_SERVER['DOCUMENT_ROOT'] . '/log/logs.txt', "r");
+        if ($handle) {
+            $result = array();
+            while (($line = fgets($handle, 4096)) !== false) {
+                if ($i = $lineNum) {
+                    array_push($result, json_decode($line));
                 }
             }
             if (!feof($handle)) {

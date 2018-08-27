@@ -11,7 +11,7 @@ class api_log_reader extends APICall
     function __construct($config)
     {
         $this->name = "log_reader";
-        $this->fields = array();
+        $this->fields = json_decode('[{"name":"lines","isset":true}]', true);
         $this->method = "GET";
         $this->input = $_GET;
         parent::__construct($config);

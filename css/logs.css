@@ -27,3 +27,26 @@ body, html, table, tr, td {
     background-color: yellow;
 
 }
+
+.full_info {
+    display: none;
+    background-color: #99e5b1;
+}
+
+.value {
+    color: #cd3b0f;
+}
+
+.time, .type, .data, .server{
+    display: block;
+}
+
+.REQUEST_METHOD, .REQUEST_TIME, .REQUEST_URI, .HTTP_ACCEPT, .HTTP_USER_AGENT, .REMOTE_ADDR, .STACKTRACE {
+    display: block;
+    padding-left: 20px;
+}
+
+.array_element {
+    display: block;
+    padding-left: 40px;
+}

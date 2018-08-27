@@ -27,27 +27,20 @@ header("pragma","no-cache");
     <div id="index_header">
         <?php include_once "templates/header.php"?>
     </div>
-    <div id="main">
-        <div id="polylogo"><img src="assets/images/logo2.png"/></div>
-    </div>
     <div id="index_content">
-        <h1>Найди свою группу:</h1>
+        <div id="main">
+            <div id="polylogo"><img src="assets/images/logo2.png"/></div>
+        </div>
         <div id="index_search">
             <?php include_once "templates/search.php"; ?>
         </div>
+
         <h1>Вопрос?</h1>
         <div class="question">
             <div class="question_image"></div>
             <div class="question_text">
-                <h3>Как сделать так, чтобы расписание моей группы появилось на сайте?</h3>
-                <h4>Расписание загружается на сайт вместе с подтверждением регистрации старосты. Так что если вы не староста, то просите его или её зарегестрироваться.</h4>
-            </div>
-        </div>
-        <div class="question">
-            <div class="question_image"></div>
-            <div class="question_text">
                 <h3>Как часто обновляется расписание?</h3>
-                <h4>Расписание сохраняется на две недели вперёд, раз в неделю. Ночью с воскресенья на понедельник.</h4>
+                <h4>Расписание сохраняется на три недели вперёд, раз в неделю. Ночью с воскресенья на понедельник.</h4>
             </div>
         </div>
         <div class="question">

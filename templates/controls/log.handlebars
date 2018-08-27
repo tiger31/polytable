@@ -1,6 +1,31 @@
 {{#data}}
-    <div id={{@index}}><span class="label {{type}}">{{type}}</span> {{time}} from {{server.STACKTRACE.[0]}}
+    <div id={{@index}} {{{linker _l "div"}}}><span class="label {{type}}" {{{linker _l type}}}>{{type}}</span> {{time}}
+        from {{server.STACKTRACE.[0]}}
         {{#if data}} with data: {{data}} {{/if}}
         {{#if server.USER.id}} from user: {{server.USER}} {{/if}}
+        <div class="full_info">
+            <span class="type">type: <span class="label {{type}}">{{type}}</span></span>
+            <span class="time">time: <span class="value">{{time}}</span></span>
+            <span class="data">data: <span class="value">{{#if data}}{{data}}{{else}}null{{/if}}</span></span>
+            <span class="server">server:
+                <span class="REQUEST_METHOD">REQUEST_METHOD:
+                    <span class="value">{{server.REQUEST_METHOD}}</span></span>
+                <span class="REQUEST_TIME">REQUEST_TIME:
+                    <span class="value">{{server.REQUEST_TIME}}</span></span>
+                <span class="REQUEST_URI">REQUEST_URI:
+                    <span class="value">{{server.REQUEST_URI}}</span></span>
+                <span class="HTTP_ACCEPT">HTTP_ACCEPT:
+                    <span class="value">{{server.HTTP_ACCEPT}}</span></span>
+                <span class="HTTP_USER_AGENT">HTTP_USER_AGENT:
+                    <span class="value">{{server.HTTP_USER_AGENT}}</span></span>
+                <span class="REMOTE_ADDR">REMOTE_ADDR:
+                    <span class="value">{{server.REMOTE_ADDR}}</span></span>
+                <span class="STACKTRACE">STACKTRACE:
+                    {{#server.STACKTRACE}}
+                        <span class='array_element'>{{@index}}: <span class="value">{{this}}</span></span>
+                    {{/server.STACKTRACE}}
+                </span>
+            </span>
+        </div>
     </div>
 {{/data}}

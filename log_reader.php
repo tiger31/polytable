@@ -12,27 +12,14 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/Config.php"; ?>
     <script type="text/javascript" src="js/lib/handlebars-latest.js"></script>
     <script type="text/javascript" src="js/lib/jquery.ajax.inputs.js?1337"></script>
     <script type="text/javascript">
-        function view(lines) {
-            $.getJSON({
-                url: "action.php",
-                data: {
-                    action: "log_reader",
-                    lines: lines
-                },
-                success: function (response) {
-                    if (response['response']) {
-                        console.log(response);
-                        let logger = new log(response['data']);
-                        logger.template();
-                        $("#all").show();
-                    }
-                }
-            });
-        }
+
 
         function log(data) {
             AjaxModule.apply(this, [log.config]);
             this.data = data;
+            this.on("templated", function () {
+                this.setter.set("clicked");
+            });
         }
 
         log.config = {
@@ -47,41 +34,63 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/Config.php"; ?>
                         type: 'template'
                     }
                 ]
-            }, events: {}
+            },
+            events: {
+                clicked: {
+                    type: "html",
+                    object: "div",
+                    event: "click",
+                    handler: function (object) {
+                        $(object).find('.full_info').slideToggle(0);
+                    }
+                }
+            }
         };
 
         log.prototype = Object.create(AjaxModule.prototype);
         log.prototype.constructor = log;
         log.prototype.template_data = function () {
-            return Object.assign(this.template_object(), {data: this.data})
+            let data = [];
+            for (let obj of this.data)
+                data.push(Object.assign(this.template_object(), obj));
+            return {data: data};
         };
+        logger = new log([]);
 
-        $(document).ready(view(10));
+        function view(lines) {
+            $.getJSON({
+                url: "action.php",
+                data: {
+                    action: "log_reader",
+                    lines: lines
+                },
+                success: function (response) {
+                    if (response['response']) {
+                        logger.data = response['data'];
+                        logger.template();
+                    }
+                }
+            });
+        }
+
+        $(document).ready(
+            function () {
+                let num = 1;
+                view(num * 10);
+                $('#all').on("click", function () {
+                    view(Number.MAX_SAFE_INTEGER);
+                    $(this).hide(0);
+                });
+                $('#more').on("click", function () {
+                    view((num + 1) * 10);
+                    num++;
+                });
+            });
     </script>
 </head>
 <body>
 <div id="logged"></div>
-<button id="more" hidden>Show 10 more</button>
-<button id="all" hidden>Show all</button>
-<script>
-    $("#all").click(function () {
-        $.getJSON({
-            url: "action.php",
-            data: {
-                action: "log_reader",
-                lines: Number.MAX_SAFE_INTEGER
-            },
-            success: function (response) {
-                if (response['response']) {
-                    console.log(response);
-                    let logger = new log(response['data']);
-                    logger.template();
-                    $("#all").hide();
-                }
-            }
-        });
-    })
-
-</script>
+<button id="more">Show 10 more</button>
+<button id="all">Show all</button>
 </body>
 </html>

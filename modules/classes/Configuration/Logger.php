@@ -9,7 +9,7 @@ class Logger
     private static function getServerInfo()
     {
         $result['server']['REQUEST_METHOD'] = $_SERVER['REQUEST_METHOD'];
-        $result['server']['REQUEST_ TIME'] = $_SERVER['REQUEST_TIME'];
+        $result['server']['REQUEST_TIME'] = $_SERVER['REQUEST_TIME'];
         $result['server']['REQUEST_URI'] = $_SERVER['REQUEST_URI'];
         $result['server']['HTTP_ACCEPT'] = $_SERVER['HTTP_ACCEPT'];
         $result['server']['HTTP_USER_AGENT'] = $_SERVER['HTTP_USER_AGENT'];

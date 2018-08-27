@@ -4,7 +4,7 @@
     display: block;
     padding: 10px 20px;
     text-decoration: none;
-    color: #325a46;
+    color: #00392a;
     float : left;
     background-color: #eaeaea;
     margin: 5px;
@@ -12,6 +12,7 @@
     width: 100px;
     height: 20px;
     text-align: center;
+    border-radius: 10px;
 }
 .group:hover {
     background-color: var(--green);
@@ -81,6 +82,7 @@
 }
 #group_search_result {
     margin-top: 20px;
+    margin-bottom: 0px;
     max-width: 600px;
     overflow: hidden;
     display: inline-block;

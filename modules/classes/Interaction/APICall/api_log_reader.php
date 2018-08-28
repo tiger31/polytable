@@ -12,6 +12,8 @@ class api_log_reader extends APICall
     {
         $this->name = "log_reader";
         $this->fields = json_decode('[{"name":"lines","isset":true}]', true);
+        $this->bit_mask = 131072;
+        $this->user_needed = true;
         $this->method = "GET";
         $this->input = $_GET;
         parent::__construct($config);

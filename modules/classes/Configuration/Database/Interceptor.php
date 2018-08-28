@@ -31,7 +31,7 @@ class Interceptor {
     private function find_stored($query, $data) {
         if (is_array($this->stored[$query]))
             foreach ($this->stored[$query] as $result)
-                if ($result['data'] = $data)
+                if ($result['data'] == $data)
                     return $result['result'];
         return false;
     }

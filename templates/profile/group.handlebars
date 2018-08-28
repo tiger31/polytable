@@ -1,3 +1,15 @@
 <div class="module" id="group">
-    <div class="title">ГРУППА</div>
+    <div class="title">ГРУППА {{data.0.group}}</div>
+    <div id="data">
+        {{#data}}
+            <div class="mate">
+                <img src="data/image/32/{{id}}.png">
+                <div class="text login">{{login}}</div>
+                <div class="text post">{{title}}</div>
+                {{#if email}}<div class="text">email: <span class="email">{{email}}</span></div>{{/if}}
+                {{#if number}}<div class="text number">number: <a href="tel:{{number}}">{{number}}</a></div>{{/if}}
+                {{#if vk}}<div class="text">VK: <a href="{{vk}}">vk.com/id{{vk}}</a></div>{{/if}}
+            </div>
+        {{/data}}
+    </div>
 </div>

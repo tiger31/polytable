@@ -1,5 +1,6 @@
-function group() {
+function group(data) {
     AjaxModule.apply(this, [group.config])
+    this.data = data;
 }
 
 group.config = {
@@ -23,5 +24,8 @@ group.config = {
 group.prototype = Object.create(AjaxModule.prototype);
 group.prototype.constructor = group;
 group.prototype.template_data = function () {
-    return Object.assign(this.template_object(), {});
+    let data = [];
+    for (let obj of this.data)
+        data.push(Object.assign(this.template_object(), obj));
+    return {data: data};
 };

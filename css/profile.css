@@ -326,6 +326,50 @@ tr {
 }
 /* module common ends */
 
+#group img {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    margin-right: 10px;
+    display: block;
+    filter: drop-shadow(0px 0px 3px rgba(50,50,50,0.2));
+    -webkit-filter: drop-shadow(0px 0px 3px rgba(50,50,50,0.2));
+}
 
+#group .mate {
+    box-sizing: border-box;
+    position: relative;
+    font-weight: bold;
+    width: 350px;
+    height: 125px;
+    background-color: var(--plgray);
+    margin: 10px;
+    float: left;
+}
 
+.module .mate {
+    width: calc(100% - 40px);
+    padding: 20px;
+    overflow: hidden;
+    background-color: var(--plgray);
+    border-radius: 5px;
+}
 
+.module .mate img {
+    float: left;
+    clear: left;
+}
+#group .login {
+    font-size: 20px;
+    color: var(--darkGray);
+}
+
+#group .post {
+    font-size: 16px;
+    font-weight: normal;
+    color: dimgrey;
+}
+
+#group .email{
+    color: #cacaca;
+}

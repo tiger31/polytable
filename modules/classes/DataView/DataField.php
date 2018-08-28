@@ -24,7 +24,7 @@ class DataField {
 
     public function get() {
         $trace = debug_backtrace();
-        $caller = ($trace[2]) ? $trace[2]['object'] : null;
+        $caller = ($trace[2] && isset($trace[2]['object'])) ? $trace[2]['object'] : null;
         if (!($caller instanceof IAccessor)) {
             if ($this->visibility == AccessMask::PUBLIC)
                 return $this->value;
@@ -42,8 +42,7 @@ class DataField {
 
     public function set($value) {
         $trace = debug_backtrace();
-        $caller = ($trace[2]) ? $trace[2]['object'] : null;
-
+        $caller = ($trace[2] && isset($trace[2]['object'])) ? $trace[2]['object'] : null;
         if (!($caller instanceof IAccessor)) {
             if ($this->change == AccessMask::PUBLIC)
                 return $this->value = $value;

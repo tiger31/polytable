@@ -1,6 +1,7 @@
 <?php
 namespace Configuration\Database;
 
+    use Configuration\Database\Connection\MultilineInsert;
     use Configuration\Database\Connection\Query;
 
     define("RETURN_FALSE_ON_EMPTY", 1);
@@ -31,6 +32,12 @@ namespace Configuration\Database;
     define("QUERY_CONFIRM_SELECT", "confirm_select");
     define("QUERY_CONFIRM_DELETE", "confirm_remove");
     define("QUERY_CALENDAR_SELECT", "calendar_select");
+    define("QUERY_CALENDAR_STATIC_SELECT", "static_select");
+    define("QUERY_CALENDAR_STATIC_REMOVE", "static_remove");
+    define("QUERY_CALENDAR_STATIC_UPDATE", "static_update");
+    define("QUERY_CALENDAR_DYNAMIC_SELECT", "dynamic_select");
+    define("MLI_QUERY_CALENDAR_STATIC", "mli_calendar_static");
+    define("MLI_QUERY_CALENDAR_DYNAMIC", "mli_calendar_dynamic");
 
     class Connection {
         private $mysqlPDO;
@@ -54,12 +61,12 @@ namespace Configuration\Database;
 
         function set_active(...$queries) {
             foreach ($queries as $query) {
-                $file = $_SERVER['DOCUMENT_ROOT'] . "/modules/classes/" . str_replace('\\', "/", __NAMESPACE__) . "/query/" . $query . ".php";
-                if (file_exists($file)) {
-                    require_once $file;
+                $path = __NAMESPACE__ . "\Query\\" . $query;
+                if (class_exists_e($path)) {
+                    //require_once $file;
                     if (isset($this->queries[$query]))
                         continue;
-                    $this->queries[$query] = new $query();
+                    $this->queries[$query] = new $path();
                     $request = $this->queries[$query];
                     if ($request instanceof Query and $request->query === null) {
                         $request->prepare($this->mysqlPDO);
@@ -112,6 +119,19 @@ namespace Configuration\Database;
                             break;
                     }
                     return false;
+                }
+                return false;
+            }
+        }
+
+        function mli($query_name, $data) {
+            $this->set_active($query_name);
+            if (!isset($this->queries[$query_name])) {
+                return false;
+            } else {
+                $query = $this->queries[$query_name];
+                if ($query instanceof MultilineInsert) {
+                    return $query->exec($data);
                 }
                 return false;
             }

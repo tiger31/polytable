@@ -8,6 +8,7 @@ header("pragma","no-cache");
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta name="description" content="Polytable - улучшенное расписание вашего вуза">
     <meta name="keywords" content="Polytable, Политех, СПбПУ, ИКНТ, КСПТ, ФТК">
+    <meta name="theme-color" content="#105d3b">
     <title>PolyTable</title>
     <link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">

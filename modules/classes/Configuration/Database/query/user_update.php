@@ -1,7 +1,9 @@
 <?php
+namespace Configuration\Database\Query;
+
 use Configuration\Database\Connection\Query;
 class user_update extends Query{
-    function prepare(PDO $mysql) {
+    function prepare(\PDO $mysql) {
         $this->is_multiple = true;
         $ip = array(
             "keys" => array("ip", "id"),

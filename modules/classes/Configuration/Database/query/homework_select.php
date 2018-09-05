@@ -1,7 +1,9 @@
 <?php
+namespace Configuration\Database\Query;
+
 use Configuration\Database\Connection\Query;
 class homework_select extends Query {
-    function prepare(PDO $mysql) {
+    function prepare(\PDO $mysql) {
         $this->is_multiple = true;
         $select_all = array (
             "keys" => array("group_id"),

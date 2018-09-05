@@ -460,7 +460,7 @@ LinkerError.prototype.constructor = LinkerError;
 function AjaxModule(config, parent) {
     let _this = this;
     this.name = config['name'];
-    this.emitter = new Emitter("templated linked ready", this);
+    this.emitter = new Emitter("templated linked expanded ready", this);
     //Submodules control
     this.ready = false; //Means itself
     this.linked = false;
@@ -474,6 +474,10 @@ function AjaxModule(config, parent) {
             this.parent.on("linked", function () {
                 _this.emitter.emit("templated");
             });
+            this.parent.on("expanded", function () {
+                if (!_this.linked)
+                    _this.emitter.emit("templated");
+            })
         }
     } else {
         this.node = config['node'];
@@ -542,6 +546,15 @@ AjaxModule.prototype = {
         let replacement = this.loader.main.compilable(this.template_data());
         $(object).replaceWith(replacement);
         this.emitter.emit("templated");
+    },
+    expand: function (...templates) {
+        for (let template of templates) {
+            this.ready = false;
+            let object = this.html[template.node];
+            let addition = TemplatesLoader.templates[template.template].compilable(template.data);
+            $(object).append(addition);
+        }
+        this.emitter.emit("expanded");
     },
     get_node: function () {
         if (!this.submodule)

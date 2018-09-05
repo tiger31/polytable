@@ -48,7 +48,7 @@ class api_homework extends APICall {
             }
             $rows = array(
                 "group_id" => $user->group_id,
-                "sender_id" => $user->id,
+                "sender_id" => $user['id'],
                 "date" => $this->input['date'],
                 "lesson" => $this->input['lesson'],
                 "text" => json_encode($json, JSON_UNESCAPED_UNICODE)

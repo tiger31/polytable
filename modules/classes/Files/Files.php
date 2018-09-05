@@ -64,7 +64,7 @@ class Files {
         chmod($upload_file, 644);
         $time = new \DateTime("tomorrow");
         $time->modify("next day");
-        $file_data = array("name" => $upload_filename, "original_name" => (strlen($filename) > 64) ? substr($filename, 0, (64 - strlen($file_ext) - 1)) . $file_ext : $filename, "showable" => (int)$is_image, "size" => $_FILES['image']['size'], "hash" => md5_file($upload_file), "adder_id" => $user->id, "stored_untill" => $time->format("Y-m-d"));
+        $file_data = array("name" => $upload_filename, "original_name" => (strlen($filename) > 64) ? substr($filename, 0, (64 - strlen($file_ext) - 1)) . $file_ext : $filename, "showable" => (int)$is_image, "size" => $_FILES['image']['size'], "hash" => md5_file($upload_file), "adder_id" => $user['id'], "stored_untill" => $time->format("Y-m-d"));
         $mysql->exec(QUERY_FILE_INSERT, RETURN_IGNORE, $file_data);
         Response::create()->response(true, array("filename" => $upload_filename));
     }

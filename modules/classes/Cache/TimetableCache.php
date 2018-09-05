@@ -100,4 +100,4 @@ function cacheAll() {
         }
     }
 }
-cacheAll();
+cacheData(25888, 4);

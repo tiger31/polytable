@@ -1,7 +1,9 @@
 <?php
+namespace Configuration\Database\Query;
+
 use Configuration\Database\Connection\Query;
 class user_check extends Query {
-    function prepare(PDO $mysql) {
+    function prepare(\PDO $mysql) {
         $this->is_multiple = true;
         $check_login = array(
             "keys" => array("login"),

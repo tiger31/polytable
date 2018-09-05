@@ -7,22 +7,30 @@ function Calendar(group_id) {
 
     Calendar.today = moment().startOf("day");
 
-    this.shown_index = (this.get_type() === "month") ? Calendar.today.month() : Calendar.today.week();
+    this.shown_index = (this.get_type() === "month") ? moment(Calendar.today).startOf("month").format("YYYY-MM-DD") :
+        moment(Calendar.today).startOf("week").format("YYYY-MM-DD");
     this.shown_data = [];
 
     this.months = {};
     this.weeks = {};
     this.raw_data = {};
+    this.waiting = {};
 
     this.on("linked", function () {
         this.setter.set("next prev type");
         $(this.html['calendar_type']).prop('checked', (this.get_type() === "week"));
         (this.get_type() === "week") ? $(this.html['calendar']).addClass("weekly") : $(this.html['calendar']).removeClass("weekly");
     });
-    this.on("ready", function () {
-        this.show(this.shown_index);
+
+    const _this = this;
+
+    function appear() {
+        _this.show(_this.shown_index);
         Calendar.activeDay.toggle_lessons(true);
-    })
+        _this.emitter.off("ready", appear);
+    }
+
+    this.on("ready", appear);
 }
 Calendar.config = {
     name : "calendar",
@@ -73,10 +81,7 @@ Calendar.config = {
             object : "arrow_right",
             event : "click",
             handler : function () {
-                const keys = Object.keys((this.get_type() === "month") ? this.months : this.weeks);
-                const index = keys.indexOf(this.shown_index.toString());
-                if (index !== -1 && index !== keys.length - 1)
-                    this.show(keys[index + 1]);
+                this.show(moment(this.shown_index).add(1, (this.get_type() === "month") ? "months" : "weeks").format("YYYY-MM-DD"), true);
             }
         },
         prev : {
@@ -84,10 +89,7 @@ Calendar.config = {
             object : "arrow_left",
             event : "click",
             handler : function () {
-                const keys = Object.keys((this.get_type() === "month") ? this.months : this.weeks);
-                const index = keys.indexOf(this.shown_index.toString());
-                if (index !== -1 && index !== 0)
-                    this.show(keys[index - 1]);
+                this.show(moment(this.shown_index).subtract(1, (this.get_type() === "month") ? "months" : "weeks").format("YYYY-MM-DD"), false);
             }
         },
         type : {
@@ -97,7 +99,9 @@ Calendar.config = {
             handler : function (object) {
                 const type = (object[0].checked) ? "week" : "month";
                 localStorage.setItem("calendar_type", type);
-                this.shown_index = (type === "month") ? Calendar.today.month() : Calendar.today.week();
+                this.shown_index = (this.get_type() === "month") ? moment(Calendar.today).startOf("month").format("YYYY-MM-DD") :
+                    moment(Calendar.today).startOf("week").format("YYYY-MM-DD");
+                console.log(this.shown_index);
                 (type === "week") ? $(this.html['calendar']).addClass("weekly") : $(this.html['calendar']).removeClass("weekly");
                 this.refresh_controls();
                 this.show(this.shown_index);
@@ -125,41 +129,42 @@ Calendar.prototype.load = function () {
         }
     });
 };
-Calendar.prototype.construct = function (data) {
-    let date_start, date_end;
-    if (data !== null && data !== undefined && data.days.length !== 0) {
-        let cache_dates = Object.keys(data.days);
-        let date_from = new Date(cache_dates[0]);
-        let date_to = new Date(cache_dates[cache_dates.length - 1]);
-        date_start = moment(date_from).startOf("month");
-        date_end = moment(date_to).endOf("month");
-    } else {
-        date_start = moment().startOf("month");
-        date_end = moment().endOf("month");
-    }
-    //clearing current data stored
-    let months = {};
-    for (let date = moment(date_start); date <= date_end; date = moment(date).add(1, 'days')) {
-        let month = date.month();
-        if (months[month] === undefined || months === null)
-            months[month] = [];
-        months[month].push({
-            date: date,
-            data : data.days[date.format("YYYY-MM-DD")]
-        });
-    }
-    for (let month of Object.keys(months))
-        this.months[month] = new Month(this, months[month]);
-    this.emitter.emit("constructed");
-};
-Calendar.prototype.template_data = function () {
+Calendar.prototype.template_waiting = function () {
     let list = [];
-    for (let month of Object.values(this.months))
+    for (let month of Object.values(this.waiting))
         for (let day of month.days)
             list.push(day.template_lessons_data());
-    return Object.assign(this.template_object(), {
+    const obj = Object.assign(this.template_object(), {
         list : list,
-        months : Object.values(this.months).map(month => month.template_data()),
+        months : Object.values(this.waiting).map(month => month.template_data()),
+    });
+    this.waiting = {};
+    return obj;
+};
+
+Calendar.prototype.construct = function(data) {
+    if (data !== null && data !== undefined) {
+        Calendar.static_start = moment(data['static_start']);
+        Calendar.static_end = moment(data['static_end']);
+        Calendar.timetable_start = moment(data['timetable_start']);
+        Calendar.timetable_end = moment(data['timetable_end']);
+
+        Calendar.static = data['static'];
+        Calendar.dynamic = data['dynamic'];
+        Calendar.homework = data['homework'];
+
+        let today = moment();
+        if (today >= Calendar.timetable_start && today <= Calendar.timetable_end) {
+            const index = today.startOf("month").format("YYYY-MM-DD");
+            this.months[index] = new Month(this, moment(today).startOf("month"));
+            this.waiting[index] = this.months[index];
+        }
+    }
+    this.emitter.emit("constructed");
+};
+
+Calendar.prototype.template_data = function () {
+    return Object.assign(this.template_object(), this.template_waiting() ,{
         cache : "Последнее обновление информации: " + moment(this.raw_data['cache_last']).calendar(null, {
             lastDay : "[вчера в] LT",
             nextDay : "[завтра(как?) в] LT",
@@ -189,43 +194,83 @@ Calendar.prototype.template_data = function () {
         })
     });
 };
-Calendar.prototype.show = function (index) {
+Calendar.prototype.show = function (index, status) {
     const type = this.get_type();
-    if (this.visible) {
-        $(this.shown_data).each(function () {
-            $(this).hide(0);
-        });
+    let ready = false;
+    function late_show() {
+        this.show(index, status);
+        this.emitter.off("ready", late_show);
     }
-    //show part
-    this.shown_index = index;
-    let elements = [];
-    const days = (type === "month") ? this.months[this.shown_index].days : this.weeks[this.shown_index];
-    $(this.html['current_month']).text(Month.names[days[days.length - 1].date.month()]);
-    if (type === "month")
-        elements.push(...this.months[this.shown_index].html["empty"]);
-    else
-        if (index === Object.keys(this.weeks)[0]){
-            const month = this.weeks[index][0].date.month();
-            elements.push(...this.months[month].html["empty"]);
+
+    if (type === "month") {
+        if (this.months[index] === undefined) {
+            let time = moment(index).startOf("day");
+            let bound = (status) ? time.startOf("month") : time.endOf("month");
+            if (Calendar.timetable_start <= bound && Calendar.timetable_end >= bound) {
+                this.months[index] = new Month(this, moment(bound));
+                this.waiting[index] = this.months[index];
+                this.on("ready", late_show);
+                const data = this.template_waiting();
+                this.expand(
+                    { node : "lessons", template : "lesson_list", data : data},
+                    { node : "calendar", template : "month", data : data}
+                );
+            }
+        } else ready = true;
+    } else if (type === "week") {
+        if (this.weeks[index] === undefined || this.weeks[index].length < 7) {
+            let time = moment(index).startOf("day");
+            let bound = (status) ? time.endOf("week") : time.startOf("week");
+            if (Calendar.timetable_start <= bound && Calendar.timetable_end >= bound) {
+                this.months[index] = new Month(this, moment(bound));
+                this.waiting[index] = this.months[index];
+                this.on("ready", late_show);
+                const data = this.template_waiting();
+                this.expand(
+                    { node : "lessons", template : "lesson_list", data : data},
+                    { node : "calendar", template : "month", data : data}
+                );
+            }
+        } else ready = true;
+    }
+    if (ready) {
+        if (this.visible) {
+            $(this.shown_data).each(function () {
+                $(this).hide(0);
+            });
         }
-    for (let day of days)
-        elements.push(day.html['day']);
-    $(elements).each(function () {
-        const day = this;
-        $(day).show(0);
-    });
-    this.shown_data = elements;
-    this.refresh_controls();
-    this.visible = true;
+        //show part
+        this.shown_index = index;
+        let elements = [];
+
+
+
+        const days = (type === "month") ? this.months[this.shown_index].days : this.weeks[this.shown_index];
+        $(this.html['current_month']).text(Month.names[days[days.length - 1].date.month()]);
+        if (type === "month")
+            elements.push(...this.months[this.shown_index].html["empty"] || []);
+        else if (index === Object.keys(this.weeks)[0]) {
+            const month = this.weeks[index][0].date.format("YYYY-MM-DD");
+            elements.push(...this.months[month].html["empty"] || []);
+        }
+        for (let day of days)
+            elements.push(day.html['day']);
+        $(elements).each(function () {
+            const day = this;
+            $(day).show(0);
+        });
+        this.shown_data = elements;
+        this.refresh_controls();
+        this.visible = true;
+    }
 };
 Calendar.prototype.refresh_controls = function () {
-    const type = this.get_type();
-    const keys = (type === "month") ? Object.keys(this.months).map(Number) : Object.keys(this.weeks).map(Number);
-    const index = parseInt(this.shown_index);
-    const min = Math.min(...keys);
-    const max = Math.max(...keys);
-    $(this.html["arrow_right"]).css("display", ((index === max) ? "none" : "block"));
-    $(this.html["arrow_left"]).css("display", ((index === min) ? "none" : "block"));
+    const left_bound = moment(this.shown_index).startOf((this.get_type() === "month") ? "month" : "week").startOf("day");
+    const right_bound = moment(this.shown_index).endOf((this.get_type() === "month") ? "month" : "week").startOf("day");
+    const min = Calendar.timetable_start;
+    const max = Calendar.timetable_end;
+    $(this.html["arrow_right"]).css("display", ((right_bound >= max) ? "none" : "block"));
+    $(this.html["arrow_left"]).css("display", ((left_bound <= min) ? "none" : "block"));
 };
 Calendar.prototype.get_type = function () {
     let calendar_type = localStorage.getItem("calendar_type") || "month";
@@ -236,17 +281,20 @@ Calendar.prototype.get_type = function () {
 
 //---------- Submodule Month ----------//
 
-function Month(parent, days) {
+function Month(parent, date_start) {
     AjaxModule.apply(this, [Month.config, parent]);
-    this.days = days.map(day => new Day(day.date, day.data, this));
-    this.shift = moment(days[0].date).startOf('month').weekday();
-    for (let day of this.days) {
-        const week = day.date.week();
+    this.start = moment(date_start);
+    this.end = moment(date_start).endOf("month");
+    this.shift = date_start.weekday();
+    this.days = [];
+    for (let date = moment(this.start); date <= this.end; date = moment(date).add(1, 'days')) {
+        const day = new Day(this, moment(date));
+        this.days.push(day);
+        const week = moment(day.date).startOf("week").format("YYYY-MM-DD");
         if (!this.parent.weeks[week])
             this.parent.weeks[week] = [];
         this.parent.weeks[week].push(day);
     }
-
 }
 Month.config = {
     name : "month",
@@ -275,21 +323,42 @@ Month.prototype.template_data = function () {
 
 //---------- Submodule Day ----------//
 
-function Day(date, data, parent) {
+function Day(parent, date) {
     AjaxModule.apply(this, [Day.config, parent]);
     this.date = date;
     this.date_key = date.format("YYYY-MM-DD");
     this.day = date.date();
-    this.weekday = date.weekday();
+    this.is_odd = ((date.week() - Calendar.static_start.week()) % 2 === 0) ? 1 : 0;
+    this.weekday = date.isoWeekday();
     this.has_cache = false;
     this.lessons = [];
-    if (data !== null && data !== undefined) {
-        let lesson_keys = Object.keys(data);
-        this.has_cache = true;
-        this.time_start = data[lesson_keys[0]]["time_start"];
-        this.time_end = data[lesson_keys[lesson_keys.length - 1]]["time_end"];
-        for (let i = 0; i < data.length; i++)
-            this.lessons.push(new Lesson(data[i], this));
+    if ((Calendar.static[this.is_odd] !== undefined && Calendar.static[this.is_odd][this.weekday] !== undefined) ||
+            Calendar.dynamic[this.date_key] !== undefined) {
+        let lessons = {};
+        if (this.date >= Calendar.static_start && this.date <= Calendar.static_end)
+            lessons = Object.assign({}, Calendar.static[this.is_odd][this.weekday]) || {};
+        if (Calendar.dynamic[this.date_key] !== undefined)
+            for (let key of Object.keys(Calendar.dynamic[this.date_key])) {
+                if (Calendar.dynamic[this.date_key][key]['action'] === "ERASE")
+                    delete lessons[key];
+                else
+                    lessons[key] = Calendar.dynamic[this.date_key][key];
+            }
+        const lesson_keys = Object.keys(lessons);
+        if (Calendar.homework[this.date_key] !== undefined)
+            for (let key of lesson_keys)
+                if (Calendar.homework[this.date_key][key] !== undefined) {
+                    lessons[key]['text'] = Calendar.homework[this.date_key][key]['text'];
+                    lessons[key]['files'] = Calendar.homework[this.date_key][key]['files'];
+                }
+        if (lesson_keys.length > 0) {
+            this.has_cache = true;
+            this.time_start = lessons[lesson_keys[0]]["time_start"];
+            this.time_end = lessons[lesson_keys[lesson_keys.length - 1]]["time_end"];
+        }
+        for (let key of lesson_keys)
+            this.lessons.push(new Lesson(lessons[key], this));
+
     }
     if (this.date_key === moment().format("YYYY-MM-DD"))
         Calendar.activeDay = this;
@@ -361,14 +430,11 @@ Day.prototype.constructor = Day;
 Day.prototype.get_class_list = function () {
     let class_list = [];
     let today = moment().startOf('day');
-    if (today.format("YYYY-MM-DD") === this.date_key) {
+    if (today.format("YYYY-MM-DD") === this.date_key)
         class_list.push("current");
-        if (this.weekday !== 6)
-            class_list.push("active");
-    }
     if (this.date < today)
         class_list.push("past");
-    if (this.weekday === 6)
+    if (this.weekday === 7)
         class_list.push("weekend");
     if (!this.has_cache)
         class_list.push("uncached");
@@ -378,7 +444,7 @@ Day.prototype.template_data = function () {
     return Object.assign(this.template_object(), {
         classList : this.get_class_list(),
         number : this.date.format("DD"),
-        weekDay : Day.short[this.weekday],
+        weekDay : Day.short[this.weekday - 1],
         cached : this.has_cache,
         time : this.time_start + "-" + this.time_end
     });
@@ -450,7 +516,7 @@ Day.prototype.toggle_lessons = function (show) {
 
 function Lesson(data, parent) {
     AjaxModule.apply(this, [Lesson.config, parent]);
-    this.date_key = data['day'];
+    this.date_key = data['day'] || parent.date_key;
     this.db_key = data['lesson'];
     this.subject = data['subject'];
     this.type = data['type'];
@@ -688,11 +754,11 @@ Lesson.prototype.template_data = function () {
         teachers : {
             exists : this.teachers.length > 0,
             text: (this.teachers.length > 1) ? "Ведут: " : "Ведет: ",
-            teacher : this.teachers
+            teacher : this.teachers.map(teacher => teacher.name)
         },
         places : {
             exists : this.places.length > 0,
-            place : this.places
+            place : this.places.map(place => place.name)
         },
         homework : this.homework.template_data(),
         editor: Calendar.editor
@@ -710,7 +776,7 @@ Lesson.prototype.hide = function (time) {
 function Homework(text, files, parent) {
     AjaxModule.apply(this, [Homework.config, parent]);
     this.exists = false;
-    if (text !== null || files !== null) {
+    if (text !== undefined || files !== undefined) {
         this.exists = true;
         this.text = text || "";
         this.files = files || [];

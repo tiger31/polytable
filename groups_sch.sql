@@ -13,7 +13,6 @@
 
 
 -- Дамп структуры базы данных groups_sch
-DROP DATABASE IF EXISTS `groups_sch`;
 CREATE DATABASE IF NOT EXISTS `groups_sch` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `groups_sch`;
 
@@ -31,6 +30,81 @@ CREATE TABLE IF NOT EXISTS `calendar` (
   `teachers` varchar(256) NOT NULL,
   `places` varchar(256) NOT NULL,
   PRIMARY KEY (`group_id`,`day`,`lesson`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Экспортируемые данные не выделены.
+-- Дамп структуры для таблица groups_sch.calendar_dynamic
+DROP TABLE IF EXISTS `calendar_dynamic`;
+CREATE TABLE IF NOT EXISTS `calendar_dynamic` (
+  `id` int(11) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  `day` date NOT NULL,
+  `weekday` int(3) NOT NULL,
+  `lesson` int(4) NOT NULL,
+  `is_odd` int(1) NOT NULL,
+  `subject` varchar(200) DEFAULT NULL,
+  `type` varchar(32) DEFAULT NULL,
+  `time_start` varchar(5) DEFAULT NULL,
+  `time_end` varchar(5) DEFAULT NULL,
+  `teachers` varchar(1024) DEFAULT NULL,
+  `places` varchar(1024) DEFAULT NULL,
+  `chain` int(11) NOT NULL,
+  `action` enum('CHANGE','ERASE') NOT NULL,
+  PRIMARY KEY (`group_id`,`day`,`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Экспортируемые данные не выделены.
+-- Дамп структуры для таблица groups_sch.calendar_static
+DROP TABLE IF EXISTS `calendar_static`;
+CREATE TABLE IF NOT EXISTS `calendar_static` (
+  `id` int(32) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  `weekday` int(3) NOT NULL,
+  `lesson` int(4) NOT NULL,
+  `is_odd` int(1) NOT NULL,
+  `subject` varchar(200) NOT NULL,
+  `type` varchar(32) NOT NULL,
+  `time_start` varchar(5) NOT NULL,
+  `time_end` varchar(5) NOT NULL,
+  `teachers` varchar(1024) NOT NULL,
+  `places` varchar(1024) NOT NULL,
+  PRIMARY KEY (`group_id`,`lesson`,`weekday`,`is_odd`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Экспортируемые данные не выделены.
+-- Дамп структуры для таблица groups_sch.calendar_stored
+DROP TABLE IF EXISTS `calendar_stored`;
+CREATE TABLE IF NOT EXISTS `calendar_stored` (
+  `group_id` int(11) NOT NULL,
+  `day` date NOT NULL,
+  `weekday` int(3) NOT NULL,
+  `lesson` int(4) NOT NULL,
+  `is_odd` int(1) NOT NULL,
+  `subject` varchar(200) DEFAULT NULL,
+  `type` varchar(32) DEFAULT NULL,
+  `time_start` varchar(5) DEFAULT NULL,
+  `time_end` varchar(5) DEFAULT NULL,
+  `teachers` varchar(1024) DEFAULT NULL,
+  `places` varchar(1024) DEFAULT NULL,
+  PRIMARY KEY (`group_id`,`day`,`weekday`,`lesson`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Экспортируемые данные не выделены.
+-- Дамп структуры для таблица groups_sch.calendar_user
+DROP TABLE IF EXISTS `calendar_user`;
+CREATE TABLE IF NOT EXISTS `calendar_user` (
+  `group_id` int(11) NOT NULL,
+  `day` date DEFAULT NULL,
+  `weekday` int(3) NOT NULL,
+  `lesson` int(4) NOT NULL,
+  `is_odd` int(1) NOT NULL,
+  `subject` varchar(200) DEFAULT NULL,
+  `type` varchar(32) DEFAULT NULL,
+  `time_start` varchar(5) DEFAULT NULL,
+  `time_end` varchar(5) DEFAULT NULL,
+  `teachers` varchar(1024) DEFAULT NULL,
+  `places` varchar(1024) DEFAULT NULL,
+  `action` enum('CHANGE','ERASE') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Экспортируемые данные не выделены.
@@ -54,26 +128,23 @@ CREATE TABLE IF NOT EXISTS `contributors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Экспортируемые данные не выделены.
--- Дамп структуры для таблица groups_sch.email_services
-DROP TABLE IF EXISTS `email_services`;
-CREATE TABLE IF NOT EXISTS `email_services` (
-  `domain` char(24) NOT NULL,
-  `name` char(32) NOT NULL,
-  `url` char(64) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- Экспортируемые данные не выделены.
 -- Дамп структуры для таблица groups_sch.groups
 DROP TABLE IF EXISTS `groups`;
 CREATE TABLE IF NOT EXISTS `groups` (
   `name` varchar(16) DEFAULT NULL,
-  `id` int(11) DEFAULT NULL,
+  `id` int(11) NOT NULL,
   `header_login` varchar(32) DEFAULT NULL,
   `cache` int(1) DEFAULT '0',
-  `cache_until` date DEFAULT NULL,
-  `cache_last` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `cache_last` datetime DEFAULT NULL,
+  `static_changed` datetime DEFAULT NULL,
+  `cache_static` int(1) DEFAULT '0',
   `university_id` smallint(6) DEFAULT NULL,
-  `recache_count` int(11) DEFAULT '5'
+  `recache_count` int(11) DEFAULT '5',
+  `year` int(11) DEFAULT NULL,
+  `faculty_id` int(11) DEFAULT NULL,
+  `faculty_name` varchar(128) DEFAULT NULL,
+  `faculty_abbr` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Экспортируемые данные не выделены.
@@ -178,6 +249,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `verified` int(1) DEFAULT '0',
   `active` int(1) DEFAULT '0',
   `created` datetime DEFAULT CURRENT_TIMESTAMP,
+  `year` int(11) NOT NULL,
   KEY `key` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 

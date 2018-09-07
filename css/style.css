@@ -216,7 +216,7 @@ body {
     margin-top: 15px;
 }
 .day.active, .day:not(.empty):hover {
-    border: solid 2px var(--green);
+    border: solid 2px #ffadad;
 }
 .day:not(.empty):not(.weekend):not(.uncached):hover .content {
     margin-top: 13px;
@@ -919,20 +919,36 @@ body {
     width: 100%;
     overflow: hidden;
     text-align: center;
+    background-color: var(--darkGreen);
     -webkit-box-shadow: 0 0 5px 0 rgba(50, 50, 50, 0.5);
     -moz-box-shadow:    0 0 5px 0 rgba(50, 50, 50, 0.5);
     box-shadow:         0 0 5px 0 rgba(50, 50, 50, 0.5);
 }
 #index_search {
-    margin-top: 20px;
+    padding-top: 50px;
     min-height: 100px;
+
 }
 #index_content h1 {
     font-size: 32px;
     color: var(--blackGray);
     font-weight: bold;
 }
-
+#phrase {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--gray);
+}
+#polytable {
+    width: 480px;
+    padding-top: 100px;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
 #footer {
     height: auto;
     overflow: hidden;
@@ -957,9 +973,10 @@ body {
     float: left;
     text-align: left;
 }
-#contact {
-    position: relative;
+#footer_block.right{
+   text-align: right;
 }
+
 #footer a:not(#social_link) {
     display: block;
     float: left;
@@ -968,42 +985,30 @@ body {
     width: 200px;
     margin: 2px 0;
 }
+#contact {
+    overflow: hidden;
+}
 #contact a {
     float: left;
     text-decoration: none;
     color: var(--lightGray);
-    padding-left: 20px;
     width: 200px;
-}
-#contact > a:before {
-    content: url("../assets/images/mail.png");
-    position: absolute;
-    top: 5px;
-    left: 0;
 }
 #donate {
     position: relative;
     overflow: hidden;
 }
-#pp, #yd {
-    padding-left: 20px;
-}
-#pp:before {
-    content: url("../assets/images/pp.png");
-    position: absolute;
-    top: 5px;
-    left: 0;
-}
-#yd:before {
-    content: url("../assets/images/yd.png");
-    position: absolute;
-    top: 5px;
-    left: 0;
-}
 #footer h2 {
     color: var(--lightGray);
     font-weight: bold;
     font-size: 16px;
+    font-family: Calibri;
+    margin: 10px 0;
+}
+#footer h3 {
+    color: var(--darkGray);
+    font-size: 14px;
+    font-weight: normal;
     font-family: Calibri;
     margin: 10px 0;
 }
@@ -1020,20 +1025,26 @@ body {
 #social_container {
     width: 84px;
     height: 32px;
-    margin: 0 auto;
     overflow: hidden;
+    display: inline-block;
+}
+#social_link:first-child {
+    margin-left: 0;
 }
 #social_link {
     width: 32px;
     height: 32px;
-    float: left;
+    float: right;
     margin: 0 5px;
     display: block;
     border-radius: 16px;
+    text-decoration: none;
+    color: var(--grayGreen);
     background-color: var(--lightGray);
+    opacity: 0.8;
 }
-#social_link img {
-    margin: 4px 4px;
+#social_link:hover {
+    opacity: 1;
 }
 #domain {
     width: inherit;
@@ -1041,7 +1052,7 @@ body {
     text-align: center;
     font-size: 14px;
     color: var(--lightGray);
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .question {
     width: 700px;
@@ -1097,6 +1108,15 @@ body {
     font-size: 16px;
     font-weight: bold;
     text-shadow: 0 0 2px dimgrey;
+}
+#index_header .logo {
+    display: none;
+}
+#index_footer #footer {
+    background-color: var(--darkGreen);
+}
+#index_footer #social_link {
+    color: var(--darkGreen);
 }
 
 /* The switch - the box around the slider */

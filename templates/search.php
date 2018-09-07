@@ -1,7 +1,7 @@
 <script type="text/javascript" src="../js/lib/jquery3.2.1.min.js"></script>
 <script type="text/javascript" src="../js/lib/jquery.ajax.inputs.js?1337"></script>
 <div id="search">
-    <input type="text" name="query" class="group_search" placeholder="Поиск группы">
+    <input type="text" name="query" class="group_search" placeholder="Группа">
     <button class="group_search_submit" type="submit">Найти</button>
 </div>
 <div id="group_search_result"></div>
@@ -29,11 +29,11 @@
         var result_container = $('#group_search_result');
         $(result_container).html("");
         if (result.length === 0) {
-        $(result_container).append('<div id="search_non">По Вашему запросу групп не найдено. Староста? <a href="/register.php">Оставьте заявку</a> и расписание группы будет создано в ближайшее время</div>')
+        $(result_container).append('<div id="search_non">По Вашему запросу групп не найдено</div>')
         }
         for (var i = 0; i < result.length; i++) {
             var link = "https://<?=$_SERVER['HTTP_HOST'];?>/groups.php?id=" + result[i]['name'];
-            $(result_container).append($('<a href="' + link + '" class="group">' + result[i]['name'] + '</a>'))
+            $(result_container).append($('<a href="' + link + '" class="group">' + result[i]['name'] + '<span>' + result[i]['faculty_abbr'] + '</span></a>'))
         }
     }
 </script>

@@ -39,7 +39,7 @@
         <script type="text/javascript" src="js/lib/jquery.modal.window.js"></script>
         <script type="text/javascript" src="js/lib/jquery.ajax.inputs.js?1337"></script>
         <script type="text/javascript" src="js/lib/jquery.dropzone.js"></script>
-        <script type="text/javascript" src="js/modules/module.calendar.js"></script>
+        <script type="text/javascript" src="js/modules/module.calendar.js?1337"></script>
         <script type="text/javascript" src="js/loginform.js"></script>
         <script type="text/javascript" src="js/calendar.js?1337"></script>
         <script type="text/javascript">

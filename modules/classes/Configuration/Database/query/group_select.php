@@ -11,7 +11,7 @@ class group_select extends Query {
         );
         $search = array (
             "keys" => array("signature"),
-            "query" => $mysql->prepare("SELECT name FROM groups WHERE name LIKE CONCAT(:signature, '%')")
+            "query" => $mysql->prepare("SELECT name, faculty_abbr FROM groups WHERE name LIKE CONCAT(:signature, '%')")
         );
         $select = array(
             "keys" => array("name"),

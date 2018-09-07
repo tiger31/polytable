@@ -336,13 +336,13 @@ function Day(parent, date) {
             Calendar.dynamic[this.date_key] !== undefined) {
         let lessons = {};
         if (this.date >= Calendar.static_start && this.date <= Calendar.static_end)
-            lessons = Object.assign({}, Calendar.static[this.is_odd][this.weekday]) || {};
+            lessons = JSON.parse(JSON.stringify(Calendar.static[this.is_odd][this.weekday])) || {};
         if (Calendar.dynamic[this.date_key] !== undefined)
             for (let key of Object.keys(Calendar.dynamic[this.date_key])) {
                 if (Calendar.dynamic[this.date_key][key]['action'] === "ERASE")
                     delete lessons[key];
                 else
-                    lessons[key] = Calendar.dynamic[this.date_key][key];
+                    lessons[key] = JSON.parse(JSON.stringify(Calendar.dynamic[this.date_key][key]));
             }
         const lesson_keys = Object.keys(lessons);
         if (Calendar.homework[this.date_key] !== undefined)
@@ -356,8 +356,10 @@ function Day(parent, date) {
             this.time_start = lessons[lesson_keys[0]]["time_start"];
             this.time_end = lessons[lesson_keys[lesson_keys.length - 1]]["time_end"];
         }
-        for (let key of lesson_keys)
+        for (let key of lesson_keys) {
             this.lessons.push(new Lesson(lessons[key], this));
+
+        }
 
     }
     if (this.date_key === moment().format("YYYY-MM-DD"))
@@ -535,6 +537,108 @@ function Lesson(data, parent) {
             this.setter.set("homework_show");
     });
     //Editor
+    if (this.loader.loaded)
+        this.set_editor();
+    else
+        this.editor.on("loaded", function () {
+            _this.set_editor();
+        })
+}
+
+Lesson.config = {
+    name : "lesson",
+    submodule : true,
+    templates : {
+        main : "lesson",
+        templates : [
+            {
+                "name" : "lesson",
+                "path" : "templates/calendar/lesson.handlebars",
+                "type" : "partial"
+            },
+            {
+                "name" : "homework",
+                "path" : "templates/calendar/homework.handlebars",
+                "type" : "partial"
+            },
+            {
+                "name" : "homework_editor",
+                "path" : "templates/controls/homework_editor.handlebars",
+                "type" : "template"
+            }
+        ]
+    },
+    events : {
+        homework_show : {
+            type : "html",
+            object : "homework_button",
+            event : "click",
+            handler : function () {
+                const button = $(this.html["homework_button"]);
+                $(this.homework.html["homework"]).toggleClass("active").slideToggle(300);
+                $(button).text($(button).text() === "Показать ДЗ" ? "Скрыть ДЗ" : "Показать ДЗ");
+            }
+        },
+        homework_edit : {
+            type : "html",
+            object : "edit_button",
+            event : "click",
+            handler : function () {
+                let stored = ModalWindow.findStored(Editor.find, this.editor);
+                if (stored !== undefined) {
+                    ModalWindow.setActive(stored);
+                    ModalWindow.activeWindow.show();
+                } else {
+                    this.editor.template();
+                    this.editor.show();
+                }
+            }
+        }
+    }
+};
+
+Lesson.prototype = Object.create(AjaxModule.prototype);
+Lesson.prototype.constructor = Lesson;
+Lesson.prototype.get_color = function () {
+    switch (this.type) {
+        case "Практика":
+            return "blue";
+        case "Лабораторные":
+            return "dark_blue";
+        case "Курсовой проект":
+            return "purple";
+        case "Консультация":
+        case "Консультации":
+            return "orange";
+        case "Экзамен":
+        case "Доп. экзамен":
+            return "red";
+        case "Лекции":
+        default:
+            return "green";
+    }
+};
+Lesson.prototype.template_data = function () {
+    return Object.assign(this.template_object(), {
+        subject : this.subject,
+        color : this.get_color(),
+        type : this.type,
+        time : this.time_start + "-" + this.time_end,
+        teachers : {
+            exists : this.teachers.length > 0,
+            text: (this.teachers.length > 1) ? "Ведут: " : "Ведет: ",
+            teacher : this.teachers.map(teacher => teacher.name)
+        },
+        places : {
+            exists : this.places.length > 0,
+            place : this.places.map(place => place.name)
+        },
+        homework : this.homework.template_data(),
+        editor: Calendar.editor
+    });
+};
+Lesson.prototype.set_editor = function () {
+    const _this = this;
     if (Calendar.editor) {
         this.editor = new Editor(this, {
             template: TemplatesLoader.templates['homework_editor'].compilable,
@@ -670,99 +774,6 @@ function Lesson(data, parent) {
             }
         });
     }
-
-}
-Lesson.config = {
-    name : "lesson",
-    submodule : true,
-    templates : {
-        main : "lesson",
-        templates : [
-            {
-                "name" : "lesson",
-                "path" : "templates/calendar/lesson.handlebars",
-                "type" : "partial"
-            },
-            {
-                "name" : "homework",
-                "path" : "templates/calendar/homework.handlebars",
-                "type" : "partial"
-            },
-            {
-                "name" : "homework_editor",
-                "path" : "templates/controls/homework_editor.handlebars",
-                "type" : "template"
-            }
-        ]
-    },
-    events : {
-        homework_show : {
-            type : "html",
-            object : "homework_button",
-            event : "click",
-            handler : function () {
-                const button = $(this.html["homework_button"]);
-                $(this.homework.html["homework"]).toggleClass("active").slideToggle(300);
-                $(button).text($(button).text() === "Показать ДЗ" ? "Скрыть ДЗ" : "Показать ДЗ");
-            }
-        },
-        homework_edit : {
-            type : "html",
-            object : "edit_button",
-            event : "click",
-            handler : function () {
-                let stored = ModalWindow.findStored(Editor.find, this.editor);
-                if (stored !== undefined) {
-                    ModalWindow.setActive(stored);
-                    ModalWindow.activeWindow.show();
-                } else {
-                    this.editor.template();
-                    this.editor.show();
-                }
-            }
-        }
-    }
-};
-
-Lesson.prototype = Object.create(AjaxModule.prototype);
-Lesson.prototype.constructor = Lesson;
-Lesson.prototype.get_color = function () {
-    switch (this.type) {
-        case "Практика":
-            return "blue";
-        case "Лабораторные":
-            return "dark_blue";
-        case "Курсовой проект":
-            return "purple";
-        case "Консультация":
-        case "Консультации":
-            return "orange";
-        case "Экзамен":
-        case "Доп. экзамен":
-            return "red";
-        case "Лекции":
-        default:
-            return "green";
-    }
-};
-Lesson.prototype.template_data = function () {
-    return Object.assign(this.template_object(), {
-        subject : this.subject,
-        color : this.get_color(),
-        type : this.type,
-        time : this.time_start + "-" + this.time_end,
-        teachers : {
-            exists : this.teachers.length > 0,
-            text: (this.teachers.length > 1) ? "Ведут: " : "Ведет: ",
-            teacher : this.teachers.map(teacher => teacher.name)
-        },
-        places : {
-            exists : this.places.length > 0,
-            place : this.places.map(place => place.name)
-        },
-        homework : this.homework.template_data(),
-        editor: Calendar.editor
-    });
 };
 Lesson.prototype.show = function (time) {
     $(this.html["lesson"]).fadeIn(time);
@@ -776,7 +787,7 @@ Lesson.prototype.hide = function (time) {
 function Homework(text, files, parent) {
     AjaxModule.apply(this, [Homework.config, parent]);
     this.exists = false;
-    if (text !== undefined || files !== undefined) {
+    if (text || files) {
         this.exists = true;
         this.text = text || "";
         this.files = files || [];

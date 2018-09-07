@@ -1,6 +1,38 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/Config.php";
 header("pragma","no-cache");
+$phrases = [
+        "default" => [
+                "Ищешь свою пару?",
+                "Не падаем!",
+                "Сегодня физра в 8?",
+                "У пас пара, возможно лаба, по коням!",
+                "Осталась пара вопросов",
+                "А вы тоже в детстве не любили спать днём?",
+                "Закройте окно!",
+                "С легкой парой!",
+                "Между первой и второй перерывчик небольшой",
+                "Запарная неделя!"
+        ],
+        "rare" => [
+                "Fun and interactive",
+                "Lakad Matatag! Normalin, Normalin",
+                "Еще не отчислили?",
+                "Кажется, я уронил ruz",
+                "Опять работа?",
+                "Нельзя сотворить здесь",
+                "Я получил власть, которая и не снилась моему отцу",
+                "Спасибо в карман не положишь"
+        ]
+    ];
+$ticket_max = 100;
+$chances = [0.9, 0.1];
+$first_ticket = rand(0, $ticket_max);
+$phrase = "";
+if ($first_ticket <= 90)
+    $phrase = $phrases['default'][rand(0, count($phrases['default']) - 1)];
+else
+    $phrase = $phrases['rare'][rand(0, count($phrases['rare']) - 1)];
 ?>
 <html>
 <head>
@@ -29,37 +61,16 @@ header("pragma","no-cache");
         <?php include_once "templates/header.php"?>
     </div>
     <div id="index_content">
-        <div id="main">
-            <div id="polylogo"><img src="assets/images/logo2.png"/></div>
-        </div>
+        <img id="polytable" src="assets/images/biglogo.png">
+        <div id="phrase"><?=$phrase;?></div>
         <div id="index_search">
             <?php include_once "templates/search.php"; ?>
         </div>
-
-        <h1>Вопрос?</h1>
-        <div class="question">
-            <div class="question_image"></div>
-            <div class="question_text">
-                <h3>Как часто обновляется расписание?</h3>
-                <h4>Расписание сохраняется на три недели вперёд, раз в неделю. Ночью с воскресенья на понедельник.</h4>
-            </div>
-        </div>
-        <div class="question">
-            <div class="question_image"></div>
-            <div class="question_text">
-                <h3>Кто может добавлять ДЗ?</h3>
-                <h4>Староста группы и редакторы, которых староста лично назначает в своем профиле.</h4>
-            </div>
-        </div>
-        <div class="question">
-            <div class="question_image"></div>
-            <div class="question_text">
-                <h3>Кто может видеть мои личные данные?</h3>
-                <h4>Никто.</h4>
-            </div>
-        </div>
     </div>
-    <?php include_once "templates/footer.php"; ?>
+    <div id="index_footer">
+        <?php include_once "templates/footer.php"; ?>
+    </div>
+
 
 </body>
 </html>

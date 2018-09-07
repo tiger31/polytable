@@ -8,23 +8,23 @@
             <a href="profile.php">Профиль</a>
         </div>
         <div id="footer_block">
+            <h2>Поддержать нас</h2>
+            <h3>Все мы студенты и всем нам надо что-то кушать, даже разработчикам :3</h3>
+            <div id="donate"><a href="https://www.paypal.me/tiger31/5" target="_blank" id="pp"><i class="ui icon paypal"></i>PayPal</a></div>
+            <div id="donate"><a href="https://money.yandex.ru/to/410011780788508" target="_blank" id="yd"><i class="ui icon credit card"></i>Yandex.Деньги</a></div>
+        </div>
+        <div id="footer_block" class="right">
             <h2>Контактная информация</h2>
             <div id="contact">
-                <a href="mailto:support@polytable.ru">support@polytable.ru</a>
+                <a href="mailto:support@polytable.ru"><i class="ui icon envelope"></i>support@polytable.ru</a>
             </div>
-        </div>
-        <div id="footer_block">
-            <h2>Поддержать нас</h2>
-            <div id="donate"><a href="https://www.paypal.me/tiger31/5" target="_blank" id="pp">PayPal</a></div>
-            <div id="donate"><a href="https://money.yandex.ru/to/410011780788508" target="_blank" id="yd">Yandex.Деньги</a></div>
-        </div>
-        <div id="social">
+            <h2>Социальные сети</h2>
             <div id="social_container">
                 <a id="social_link" href="https://vk.com/polytable" target="_blank">
-                    <img src="assets/images/vk.png">
+                    <i class="ui icon vk circular"></i>
                 </a>
                 <a id="social_link" href="">
-                    <img src="assets/images/twi.png">
+                    <i class="ui icon twitter circular"></i>
                 </a>
             </div>
         </div>

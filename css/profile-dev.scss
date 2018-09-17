@@ -1,0 +1,62 @@
+@import "schema";
+
+body {
+  background-color: $first;
+}
+
+#profile {
+  overflow: hidden;
+}
+
+#menu {
+  width: 250px;
+  height: 100%;
+  background-color: $second;
+  vertical-align: top;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  .menu-item {
+    padding: 10px;
+    color: $text-main;
+    background: $second;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-weight: bold;
+    font-size: 14px;
+
+    &.card {
+      background-color: $third;
+    }
+  }
+  .card {
+    .avatar {
+      float: left;
+
+      & > img {
+        width: 36px;
+        height: 36px;
+        border-radius: 32px;
+        overflow: hidden;
+      }
+    }
+    .name, .post {
+      text-align: left;
+      float: left;
+      color: white;
+      margin-left: 10px;
+    }
+    .name {
+      font-size: 16px;
+      min-width: 124px;
+      max-width: 150px;
+      white-space: normal;
+      max-height: 44px;
+      overflow: hidden;
+    }
+  }
+}

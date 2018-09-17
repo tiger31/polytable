@@ -540,7 +540,7 @@ function Lesson(data, parent) {
     if (this.loader.loaded)
         this.set_editor();
     else
-        this.editor.on("loaded", function () {
+        this.loader.on("loaded", function () {
             _this.set_editor();
         })
 }

@@ -9,8 +9,9 @@
 
     $headers = getallheaders();
 
-    if (!isset($headers['Host'], $headers['X-Requested-With']) || $headers['Host'] !== $_SERVER['HTTP_HOST']
-        || $headers['X-Requested-With'] !== "XMLHttpRequest") {
+    if ((!isset($headers['Host']) || $headers['Host'] !== $_SERVER['HTTP_HOST'])
+        || ((!isset($headers['x-requested-with']) && !isset($headers['X-Requested-With'])) ||
+            ($headers['X-Requested-With'] !== "XMLHttpRequest") && $headers['x-requested-with'] !== "XMLHttpRequest")) {
         Response::create()->error(403, array("info" => "Probably malformed request"))();
     }
 

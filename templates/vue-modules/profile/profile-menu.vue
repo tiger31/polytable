@@ -8,9 +8,9 @@
             <div class="name">{{user['login']}}</div>
             <div class="post">{{user['post']}}</div>
         </menu-item>
-        <menu-item v-for="item in items">
-            <i v-bind:class="item.icon" class="ui icon"></i>
-            {{item.text}}
+        <menu-item v-for="(value, key) in items" :key="key">
+            <i v-bind:class="value.icon" class="ui icon"></i>
+            {{value.text}}
         </menu-item>
         <menu-item>
             <i class="ui icon sign out alternate"></i>
@@ -27,12 +27,11 @@
         name: "profile-menu",
         store,
         mixins: [userMixin],
-        props: ['modules-list'],
         computed : {
             src : function () {
                 return `data/image/64/${this.user['id']}.png`
             },
-            items : function () {
+            items () {
                 return store.state.menu.items;
             }
         },

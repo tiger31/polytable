@@ -1,5 +1,5 @@
 <template>
-    <component :is="component" :data="data" v-if="component"></component>
+    <component :is="component" :data="data" :type="type" v-if="component"></component>
 </template>
 
 <script>
@@ -31,6 +31,3 @@
     }
 </script>
 
-<style scoped>
-
-</style>

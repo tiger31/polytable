@@ -19,11 +19,11 @@ const menuItems = {
         items : {}
     },
     mutations : {
-        add (state, name, item) {
-            state[name] = item;
+        add (state, payload) {
+           Vue.set(state.items, payload.name, payload.item);
         },
         remove (state, name) {
-            delete state[name];
+            delete state.items[name];
         }
     }
 };

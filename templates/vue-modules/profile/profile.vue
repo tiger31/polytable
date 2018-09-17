@@ -1,12 +1,8 @@
 <template>
     <div id="profile">
-        <profile-menu
-                v-bind:modules-list="componentsList">
-        </profile-menu>
-        <div id="content">
-            <div id="components" v-if="dataLoaded" v-for="component in componentsList">
-                <profile-dyn-component :data="profileData[component]" :type="component"></profile-dyn-component>
-            </div>
+        <profile-menu></profile-menu>
+        <div id="components" v-if="dataLoaded" v-for="component in componentsList">
+            <profile-dyn-component :data="profileData[component]" :type="component"></profile-dyn-component>
         </div>
     </div>
 </template>

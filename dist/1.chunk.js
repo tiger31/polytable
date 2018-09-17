@@ -8,7 +8,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n    name : \"profile-me\",\n    props: ['data'],\n    data : function () {\n        return {\n            menuItem : {\n                icon : \"user\",\n                test : \"Учетная запись\"\n            }\n        }\n    }\n});\n\n\n//# sourceURL=webpack:///./templates/vue-modules/profile/dyn/profile-me.vue?./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mixins_menu_item_mount_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../mixins/menu-item-mount.js */ \"./templates/vue-modules/mixins/menu-item-mount.js\");\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n    name : \"profile-me\",\n    props: ['data', 'type'],\n    data () {\n        return {\n            menuItem : {\n                icon : \"user\",\n                text : \"Учетная запись\"\n            }\n        }\n    },\n    computed : {\n        groupLink () {\n            return `https://polytable.ru/groups.php?id=${this.data.group}`\n        },\n        imageSrc () {\n            return `/data/image/64/${this.data.id}.png`\n        }\n    },\n    mixins:[_mixins_menu_item_mount_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]]\n});\n\n\n//# sourceURL=webpack:///./templates/vue-modules/profile/dyn/profile-me.vue?./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -20,7 +20,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n\n/* harmony 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", { staticClass: \"module\" }, [_vm._v(\"me\")])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./templates/vue-modules/profile/dyn/profile-me.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", { staticClass: \"component\", attrs: { id: _vm.type } }, [\n    _c(\"h1\", [_vm._v(\"УЧЕТНАЯ ЗАПИСЬ\")]),\n    _vm._v(\" \"),\n    _c(\"div\", { attrs: { id: \"image_box\" } }, [\n      _c(\"img\", { attrs: { src: _vm.imageSrc } }),\n      _vm._v(\" \"),\n      _c(\"div\", { staticClass: \"login\" }, [_vm._v(_vm._s(_vm.data.login))]),\n      _vm._v(\" \"),\n      _c(\"div\", { staticClass: \"post\" }, [_vm._v(_vm._s(_vm.data.title))]),\n      _vm._v(\" \"),\n      _c(\"div\", { staticClass: \"group\" }, [\n        _c(\"a\", { attrs: { href: _vm.groupLink } }, [\n          _vm._v(_vm._s(_vm.data.group))\n        ])\n      ])\n    ]),\n    _vm._v(\" \"),\n    _c(\"h2\", [_vm._v(\"ЛИЧНЫЕ ДАННЫЕ\")])\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./templates/vue-modules/profile/dyn/profile-me.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
+/***/ "./templates/vue-modules/mixins/menu-item-mount.js":
+/*!*********************************************************!*\
+  !*** ./templates/vue-modules/mixins/menu-item-mount.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _polytable_store_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../polytable-store.js */ \"./templates/vue-modules/polytable-store.js\");\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\r\n    mounted () {\r\n        _polytable_store_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].commit(\"add\", { name : this.type, item : this.menuItem });\r\n    }\r\n});\n\n//# sourceURL=webpack:///./templates/vue-modules/mixins/menu-item-mount.js?");
 
 /***/ }),
 

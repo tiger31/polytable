@@ -28,9 +28,14 @@ body {
     box-shadow: none;
     font-weight: bold;
     font-size: 14px;
+    cursor: pointer;
+
+    &.card, &:hover {
+      background-color: $third;
+    }
 
     &.card {
-      background-color: $third;
+      cursor: default;
     }
   }
   .card {
@@ -40,7 +45,7 @@ body {
       & > img {
         width: 36px;
         height: 36px;
-        border-radius: 32px;
+        @include prefix(border-radius, 32px, webkit moz ms);
         overflow: hidden;
       }
     }
@@ -57,6 +62,68 @@ body {
       white-space: normal;
       max-height: 44px;
       overflow: hidden;
+    }
+  }
+}
+
+#components {
+  margin-left: 250px;
+  overflow: hidden;
+
+  .component {
+    margin: 20px;
+    overflow: hidden;
+
+    h1, h2 {
+      margin: 10px 0;
+      font-size: 20px;
+      font-weight: bold;
+      color: $text-main;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+  }
+}
+
+#profile-me {
+  width: 540px;
+
+  #image_box {
+    padding: 20px;
+    overflow: hidden;
+    background-color: $second;
+    font-weight: bold;
+    @include prefix(border-radius, 5px, webkit moz ms);
+
+    img {
+      display: block;
+      margin-right: 10px;
+      float: left;
+      @include prefix(border-radius, 32px, webkis moz ms);
+      @include prefix(filter, drop-shadow(0px 0px 3px rgba(50,50,50,0.2)), webkit moz ms);
+    }
+
+    .login {
+      font-size: 20px;
+      color: $text-main;
+    }
+    
+    .post {
+      font-size: 16px;
+      color: $text-locked;
+    }
+
+    .group {
+      a {
+        text-decoration: none;
+        color: $green;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

@@ -1,10 +1,22 @@
 $text-main: #eaeaea;
+$text-second: #cacaca;
+$text-locked: #777777;
 $first: rgb(54, 57, 63);
 $second: rgb(38, 40, 43);
 $third: #1d1d1d;
+
+$green: #21a649;
 
 body, html {
   margin: 0;
   padding: 0;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
 }

@@ -9,7 +9,7 @@ use User\User;
 class profile_me extends Module {
     public function __construct(Interceptor $mysql, User $user) {
         parent::__construct($mysql, $user);
-        $this->name = "me";
+        $this->name = "profile-me";
         $this->data = array(
             "id" => $user['id'],
             "login" => $user['login'],

@@ -5,8 +5,11 @@ const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
     mode: 'development',
     entry: {
-        countdown : './bundle.js',
         profile : './js/vue/profile.js',
+    },
+    output: {
+        publicPath: "/dist/",
+        chunkFilename: "[id].chunk.js"
     },
     module: {
         rules: [

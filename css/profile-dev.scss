@@ -84,6 +84,62 @@ body {
     h2 {
       font-size: 18px;
     }
+
+    .form {
+      overflow: hidden;
+
+      .input {
+        padding-left: 20px;
+        width: calc(100% - 20px);
+        margin: 10px 0;
+        overflow: hidden;
+
+        label, .title {
+          font-size: 16px;
+          padding: 7px 20px 0 0;
+          color: $text-main;
+          width: 158px;
+          text-align: right;
+          float: left;
+        }
+
+        input {
+          background-color: $second;
+          color: $text-second;
+          border: 0;
+          font-size: 14px;
+          display: block;
+          padding: 10px;
+          @include prefix(border-radius, 5px, webkit moz ms);
+          width: 322px;
+          float: left;
+
+          &:focus {
+            outline: none;
+          }
+          &.labeled {
+            @include prefix(border-radius, 0 5px 5px 0, webkit moz ms);
+            @include prefix(box-sizing, inherit, webkit moz ms);
+            width: 292px;
+          }
+        }
+
+        .input_icon {
+          width: 20px;
+          padding: 11px 0 11px 10px;
+          @include prefix(border-radius, 5px 0 0 5px, webkit moz ms);
+          font-size: 14px;
+          float: left;
+          background-color: $second;
+          color: $text-second;
+          @include prefix(transition, 0.4s, webkit moz ms);
+
+          &.hover {
+            color: white;
+          }
+        }
+      }
+    }
   }
 }
 

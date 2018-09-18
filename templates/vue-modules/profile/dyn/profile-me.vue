@@ -6,9 +6,15 @@
             <div class="login">{{data.login}}</div>
             <div class="post">{{data.title}}</div>
             <div class="group"><a :href="groupLink">{{data.group}}</a></div>
-
         </div>
         <h2>ЛИЧНЫЕ ДАННЫЕ</h2>
+        <div class="form">
+            <div class="input">
+                <label for="user-email">Электронная почта</label>
+                <div class="input_icon"><i class="ui icon envelope"></i></div>
+                <input name="email" id="user-email" class="labeled" type="email" maxlength="64" disabled>
+            </div>
+        </div>
     </div>
 </template>
 

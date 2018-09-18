@@ -1,7 +1,7 @@
 <template>
     <div class="background" v-bind:style="style">
         <div id="timer">
-            <div class="globalTitle">Предположительное время: 26 октября в 12:30</div>
+            <div class="globalTitle">Предположительное время: 27 октября в 12:30</div>
             <div id="days" class="number">
                 <span class="text">{{days}}</span>
                 <span class="title">{{daysText}}</span>

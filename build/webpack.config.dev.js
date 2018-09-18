@@ -6,6 +6,7 @@ module.exports = {
     mode: 'development',
     entry: {
         profile : './js/vue/profile.js',
+        countdown : './bundle.js'
     },
     output: {
         publicPath: "/dist/",

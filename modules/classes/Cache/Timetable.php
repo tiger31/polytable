@@ -3,10 +3,10 @@
 namespace Cache;
 include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/Config.php";
 set_time_limit(0);
-global $mysql;
 class Timetable {
 
     const URL = "http://ruz2.spbstu.ru/api/v1/ruz/scheduler/";
+    private static $queue;
 
     public static function lesson_sort($a, $b) {
         if ($a["is_odd"] == $b["is_odd"])
@@ -95,7 +95,7 @@ class Timetable {
     public static function timetable_diff($static, $dynamic) {
         $changes = [];
         //Определяем начала четной/нечетной недели, чтобы можно было переносить записи из static в dynamic
-        if ($dynamic['week1']['is_odd'] == 1) {
+        if ($dynamic['week1']['is_odd']) {
             $even = new \DateTime(str_replace(".", "-", $dynamic['week2']['date_start']));
             $odd = new \DateTime(str_replace(".", "-", $dynamic['week1']['date_start']));
         } else {
@@ -117,16 +117,16 @@ class Timetable {
                 }
             }
             if ($found) {
-               unset($dynamic[$key]);
+               unset($dynamic['lessons'][$key]);
             } else {
                 $static_lesson["action"] = "ERASE";
                 $static_left[] = $static_lesson;
             }
         }
-        foreach ($static_left as &$lesson) {
-            $date = new \DateTime(($lesson['is_odd'] == 1) ? $odd->format("Y-m-d") : $even->format("Y-m-d"));
-            $date->modify("+ " . ($lesson['weekday'] - 1) . " days");
-            $lesson['day'] = $date->format("Y-m-d");
+        for ($i = 0; $i < count($static_left); $i++) {
+            $date = new \DateTime(($static_left[$i]['is_odd'] == 1) ? $odd->format("Y-m-d") : $even->format("Y-m-d"));
+            $date->modify("+ " . ($static_left[$i]['weekday'] - 1) . " days");
+            $static_left[$i]['day'] = $date->format("Y-m-d");
         }
         return array_merge($changes, $static_left);
     }
@@ -137,11 +137,31 @@ class Timetable {
         $data = $weeks;
         $static = [];
         $static[] = self::static_from_cache($data[0], $data[1], $group_id);
-        $static[] = self::static_from_cache($data[2], $data[3], $group_id);
 
         for ($i = 0; $i < 1; $i++) {
             $dynamic_stored = self::dynamic_from_database($group_id);
-            $diff = self::chain(self::timetable_diff($database, $static[$i]), $dynamic_stored);
+            $changes = self::timetable_diff($database, $static[$i]);
+            $c = 0;
+            $e = 0;
+            foreach ($changes as &$change) {
+                if ($change['action'] == "CHANGE")
+                    $c++; else $e++;
+            }
+            echo "Найдено изменений: " . ($e + $c) . "из них CHANGE=$c и ERASE=$e<br/>";
+            if ($e > 8) {
+                echo "Слишком много удалений dump приложен:</br>";
+                var_dump(json_encode($changes, JSON_UNESCAPED_UNICODE));
+                echo "<br/>----------<br/>";
+                var_dump(json_encode($data, JSON_UNESCAPED_UNICODE));
+                echo "<br/>";
+            }
+            $c = 0; $e = 0;
+            $diff = self::chain($changes, $dynamic_stored);
+            foreach ($diff['dynamic'] as &$change) {
+                if ($change['action'] == "CHANGE")
+                    $c++; else $e++;
+            }
+            echo "Принято новых изменений: " . ($e + $c) . "из них CHANGE=$c и ERASE=$e<br/>";
 
             //self::insert_static($diff["static"]["CHANGE"] ?? []);
             //self::remove_static($diff["static"]["ERASE"] ?? []);
@@ -161,20 +181,20 @@ class Timetable {
 
     public static function cache_groups() {
         global $mysql;
-        $groups = ["23336/3"];
-        $i = 1;
-        foreach ($groups as $group_s) {
-            $group = $mysql(QUERY_GROUP_SELECT, RETURN_FALSE_ON_EMPTY, array("name" => $group_s));
+        $groups = $mysql(QUERY_GROUP_SELECT, RETURN_FALSE_ON_EMPTY, []);
+        $i = 0;
+        foreach ($groups as $group) {
             if ($group['year'] == 2018 && $group['cache'] == 1) {
-                echo "Начато кэширование группы " . $group['name'] . " <br>";
+                echo "-----Начато кэширование группы " . $group['name'] . "-----<br>";
                 self::cache_group($group);
-                echo "Завершено кэширование группы " . $group['name'] . " ($i/1256) <br>";
+                echo "-----Завершено кэширование группы " . $group['name'] . " ($i/1256)-----<br>";
                 $i++;
             }
         }
     }
 
     public static function tmp() {
+        /*
         $str = file_get_contents("../../../data/123.txt");
         //$str = mb_convert_encoding($str, 'UTF-8', 'UTF-8');
         $data = json_decode($str, true);
@@ -189,7 +209,7 @@ class Timetable {
         ), 28000);
         var_dump($cache['lessons']);
         self::insert_static($cache['lessons']);
-
+        */
     }
 
     public static function cache_group($group) {
@@ -197,19 +217,21 @@ class Timetable {
         $date = new \DateTime();
         $data = self::read_timetable($group['id']);
         $trust = true;
-        if ($group['cache_static'] == 0) {
+        if ($group['cache'] == 1) {
             if (isset($data[0]['week']['untrusted']) || isset($data[1]['week']['untrusted']))
                 $trust = false;
             if ($trust) {
                 $static = self::static_from_cache($data[0], $data[1], $group['id']);
-                self::insert_static($static['lessons']);
+                if ($group['cache_static'] == 0)
+                    self::insert_static($static['lessons']);
             }
         }
-                    //self::analyse($data, $group['id']);
         if (!$trust) {
             echo "Странный ответ от ruz.spbstu.ru для группы " . $group['name'] . " <br>";
+        } else {
+            self::analyse($data, $group['id']);
+            $mysql(QUERY_GROUP_UPDATE, RETURN_IGNORE, array("id" => $group['id'], "cache_last" => $date->format("Y-m-d H:i:s")));
         }
-        $mysql(QUERY_GROUP_UPDATE, RETURN_IGNORE, array("id" => $group['id'], "cache_last" => $date->format("Y-m-d H:i:s")));
     }
 
     public static function read_timetable($group_id) {
@@ -225,7 +247,7 @@ class Timetable {
             $data = json_decode(curl_exec($json), true);
             curl_close($json);
             if (!$data || !isset($data['week'])) {
-                $calendar_data[] = array( "week" => array("untrusted" => true));
+                $calendar_data[] = [ 'week' => ['untrusted' => true]];
             } else {
                 $calendar_data[] = $data;
             }
@@ -366,16 +388,35 @@ class Timetable {
 
 }
 //Timetable::tmp();
-//Timetable::cache_groups();
+Timetable::cache_groups();
 //Timetable::cache_group($mysql(QUERY_GROUP_SELECT, RETURN_FALSE_ON_EMPTY, array("id" =>  26708)));
 
 class Week {
     public $time_start;
     public $time_end;
-    public $evenness;
+    public $is_odd;
     public $days = array();
 
-    public function __construct() {
+    public function __construct($data, $group_id) {
+        $this->days = [ 1 => [], 2 => [], 3 => [], 4 => [], 5 => [], 6 => []];
+        $this->time_start = $data['week']['time_start'];
+        $this->time_end = $data['week']['time_end'];
+        $this->is_odd = $data['week']['is_odd'];
+        foreach (Timetable::cache_to_arr($data, $group_id) as $lesson)
+            $this->days[$lesson['weekday']][$lesson['lesson']] = $lesson;
+    }
+}
 
+class Table {
+    public $weeks = array();
+
+    public function __construct($week1, $week2, $group_id) {
+        if ($week1['week']['is_odd']) {
+            $this->weeks[0] = new Week($week2, $group_id);
+            $this->weeks[1] = new Week($week1, $group_id);
+        } else {
+            $this->weeks[0] = new Week($week1, $group_id);
+            $this->weeks[1] = new Week($week2, $group_id);
+        }
     }
 }

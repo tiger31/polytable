@@ -1,0 +1,40 @@
+<div class="lesson" {{{linker _l "lesson" r=true}}}>
+    <div class="header">
+        <div class="lesson_title">{{subject}}</div>
+        <div class="lesson_type {{color}}">
+            <div class="type_right"></div>
+            <div class="type_center">
+                {{type}}
+            </div>
+            <div class="type_left"></div>
+        </div>
+        <div class="lesson_period">{{time}}</div>
+    </div>
+        {{#teachers}}
+            {{#if exists}}
+                <div class="lesson_teacher">{{text}}</div>
+                {{#each teacher}}
+                    <a href="http://ruz.spbstu.ru/search/teacher?q={{this}}"><div class="lesson_list_item">{{this}}</div></a>
+                {{/each}}
+            {{/if}}
+        {{/teachers}}
+        {{#places}}
+            {{#if exists}}
+                <div class="lesson_place">Место: </div>
+                {{#each place}}
+                    <div class="lesson_list_item">{{this}}</div>
+                {{/each}}
+            {{/if}}
+        {{/places}}
+        {{#homework}}
+            {{> homework}}
+        {{/homework}}
+        <div class="lesson_controls">
+            {{#if homework.exists}}
+                <div class="lesson_homework_show" {{{linker _l "homework_button"}}}>Показать ДЗ</div>
+            {{/if}}
+            {{#if editor}}
+                <div class="lesson_edit" {{{linker _l "edit_button"}}}>Редактировать</div>
+            {{/if}}
+        </div>
+</div>

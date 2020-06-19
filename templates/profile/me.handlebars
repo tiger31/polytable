@@ -1,0 +1,70 @@
+<div class="module" id="me">
+    <div class="title">УЧЕТНАЯ ЗАПИСЬ</div>
+    <div class="image_box">
+        <img src="data/image/64/{{id}}.png">
+        <div class="text login">{{login}}</div>
+        <div class="text post">{{title}}</div>
+        <div class="text group"><a href="https://polytable.ru/groups.php?id={{group}}">{{group}}</a></div>
+        <div class="logout"><a href="logout.php"><i class="ui icon sign out alternate"></i>Выход</a></div>
+    </div>
+    <div class="title small">ЛИЧНЫЕ ДАННЫЕ</div>
+    <div class="form">
+        <div class="input">
+            <label for="user-email">Электронная почта</label>
+            <div class="input_icon"><i class="ui icon envelope"></i></div>
+            <input name="email" id="user-email" class="labeled" type="email" maxlength="64" {{{linker _l "email"}}} disabled>
+            <div class="input_error" {{{linker _l "email_error"}}}></div>
+        </div>
+        <div class="input">
+            <label for="user-phone">Номер телефона</label>
+            <div class="input_icon"><i class="ui icon phone"></i></div>
+            <input name="number" id="user-phone" class="labeled" type="text" {{{linker _l "number"}}}>
+        </div>
+        <div class="save-button" {{{linker _l "user-data"}}}>Сохранить изменения</div>
+        <div class="form-response" {{{linker _l "user-data-response"}}}></div>
+    </div>
+    <div class="title small">ПАРОЛЬ</div>
+    <div class="subtitle">Изменение или сброс пароля.</div>
+    <div class="form">
+        <div class="input">
+            <div class="title">Последняя смена пароля:</div>
+            <div class="value">{{changed}}</div>
+        </div>
+        <div class="input">
+            <label for="user-current-password">Текущий пароль</label>
+            <div class="input_icon"><i class="ui icon lock"></i></div>
+            <input name="password" id="user-current-password" class="labeled" type="password" {{{linker _l "password"}}}>
+        </div>
+        <div class="input">
+            <label for="user-new-password">Новый пароль</label>
+            <input name="new_password" id="user-new-password" type="password" {{{linker _l "new_password"}}}>
+            <div id="password-text-status" {{{linker _l "password_text"}}}></div>
+            <div id="password-color-status" {{{linker _l "password_color"}}}></div>
+        </div>
+        <div class="input">
+            <label for="user-new-password-confirm">Повторите пароль</label>
+            <input name="new_password_confirm" id="user-new-password-confirm" type="password" {{{linker _l "confirm_password"}}}>
+        </div>
+        <div class="save-button" {{{linker _l "user-password"}}}>Сохранить изменения</div>
+        <div class="form-response" {{{linker _l "user-password-response"}}}></div>
+    </div>
+    <div class="title small">ВКонтакте</div>
+    <div class="subtitle">Привязать или отвязать профиль ВКонтакте</div>
+    <div class="input">
+        <div class="title">Профиль ВКонтакте:</div>
+        {{#if vk_linked}}
+            <div class="value"><a href="{{vk}}" target="_blank">{{vk}}</a></div>
+        {{else}}
+            <div class="value">Не привязан</div>
+        {{/if}}
+    </div>
+
+        <div class="save-button" id="vk" {{{linker _l "vk_action"}}}>
+            {{#if vk_linked}}
+                <a href="https://polytable.ru/link.php?unlink=1">Отвязать</a>
+            {{else}}
+                <a href="http://oauth.vk.com/authorize?client_id=6463991&redirect_uri=https://polytable.ru/link.php&display=popup&response_type=code&v=5.74">Привязать</a>
+            {{/if}}
+        </div>
+
+</div>

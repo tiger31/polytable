@@ -1,0 +1,185 @@
+@import "schema";
+
+body {
+  background-color: $first;
+}
+
+#profile {
+  overflow: hidden;
+}
+
+#menu {
+  width: 250px;
+  height: 100%;
+  background-color: $second;
+  vertical-align: top;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  .menu-item {
+    padding: 10px;
+    color: $text-main;
+    background: $second;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+
+    &.card, &:hover {
+      background-color: $third;
+    }
+
+    &.card {
+      cursor: default;
+    }
+  }
+  .card {
+    .avatar {
+      float: left;
+
+      & > img {
+        width: 36px;
+        height: 36px;
+        @include prefix(border-radius, 32px, webkit moz ms);
+        overflow: hidden;
+      }
+    }
+    .name, .post {
+      text-align: left;
+      float: left;
+      color: white;
+      margin-left: 10px;
+    }
+    .name {
+      font-size: 16px;
+      min-width: 124px;
+      max-width: 150px;
+      white-space: normal;
+      max-height: 44px;
+      overflow: hidden;
+    }
+  }
+}
+
+#components {
+  margin-left: 250px;
+  overflow: hidden;
+
+  .component {
+    margin: 20px;
+    overflow: hidden;
+
+    h1, h2 {
+      margin: 10px 0;
+      font-size: 20px;
+      font-weight: bold;
+      color: $text-main;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    .form {
+      overflow: hidden;
+
+      .input {
+        padding-left: 20px;
+        width: calc(100% - 20px);
+        margin: 10px 0;
+        overflow: hidden;
+
+        label, .title {
+          font-size: 16px;
+          padding: 7px 20px 0 0;
+          color: $text-main;
+          width: 158px;
+          text-align: right;
+          float: left;
+        }
+
+        input {
+          background-color: $second;
+          color: $text-second;
+          border: 0;
+          font-size: 14px;
+          display: block;
+          padding: 10px;
+          @include prefix(border-radius, 5px, webkit moz ms);
+          width: 322px;
+          float: left;
+
+          &:focus {
+            outline: none;
+          }
+          &.labeled {
+            @include prefix(border-radius, 0 5px 5px 0, webkit moz ms);
+            @include prefix(box-sizing, inherit, webkit moz ms);
+            width: 292px;
+          }
+        }
+
+        .input_icon {
+          width: 20px;
+          padding: 11px 0 11px 10px;
+          @include prefix(border-radius, 5px 0 0 5px, webkit moz ms);
+          font-size: 14px;
+          float: left;
+          background-color: $second;
+          color: $text-second;
+          @include prefix(transition, 0.4s, webkit moz ms);
+
+          &.hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+#profile-me {
+  width: 540px;
+
+  #image_box {
+    padding: 20px;
+    overflow: hidden;
+    background-color: $second;
+    font-weight: bold;
+    @include prefix(border-radius, 5px, webkit moz ms);
+
+    img {
+      display: block;
+      margin-right: 10px;
+      float: left;
+      @include prefix(border-radius, 32px, webkis moz ms);
+      @include prefix(filter, drop-shadow(0px 0px 3px rgba(50,50,50,0.2)), webkit moz ms);
+    }
+
+    .login {
+      font-size: 20px;
+      color: $text-main;
+    }
+    
+    .post {
+      font-size: 16px;
+      color: $text-locked;
+    }
+
+    .group {
+      a {
+        text-decoration: none;
+        color: $green;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

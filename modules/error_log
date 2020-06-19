@@ -1,0 +1,1602 @@
+[07-Apr-2018 17:18:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/polytabl/public_html/modules/Connect.php:53
+Stack trace:
+#0 /home/polytabl/public_html/modules/Connect.php(53): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /home/polytabl/public_html/modules/Connect.php(42): db_interaction->__construct('127.0.0.1', 'root', '', 'groups_sch', Array)
+#2 /home/polytabl/public_html/index.php(3): include_once('/home/polytabl/...')
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/Connect.php on line 53
+[07-Apr-2018 17:18:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/polytabl/public_html/modules/Connect.php:53
+Stack trace:
+#0 /home/polytabl/public_html/modules/Connect.php(53): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /home/polytabl/public_html/modules/Connect.php(42): db_interaction->__construct('127.0.0.1', 'root', '', 'groups_sch', Array)
+#2 /home/polytabl/public_html/index.php(3): include_once('/home/polytabl/...')
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/Connect.php on line 53
+[07-Apr-2018 17:18:07 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/polytabl/public_html/modules/Connect.php:53
+Stack trace:
+#0 /home/polytabl/public_html/modules/Connect.php(53): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /home/polytabl/public_html/modules/Connect.php(42): db_interaction->__construct('127.0.0.1', 'root', '', 'groups_sch', Array)
+#2 /home/polytabl/public_html/index.php(3): include_once('/home/polytabl/...')
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/Connect.php on line 53
+[07-Apr-2018 17:19:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/polytabl/public_html/modules/Connect.php:53
+Stack trace:
+#0 /home/polytabl/public_html/modules/Connect.php(53): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /home/polytabl/public_html/modules/Connect.php(42): db_interaction->__construct('127.0.0.1', 'root', '', 'groups_sch', Array)
+#2 /home/polytabl/public_html/index.php(3): include_once('/home/polytabl/...')
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/Connect.php on line 53
+[07-Apr-2018 17:19:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/polytabl/public_html/modules/Connect.php:53
+Stack trace:
+#0 /home/polytabl/public_html/modules/Connect.php(53): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /home/polytabl/public_html/modules/Connect.php(42): db_interaction->__construct('127.0.0.1', 'root', '', 'groups_sch', Array)
+#2 /home/polytabl/public_html/index.php(3): include_once('/home/polytabl/...')
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/Connect.php on line 53
+[07-Apr-2018 17:19:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/polytabl/public_html/modules/Connect.php:53
+Stack trace:
+#0 /home/polytabl/public_html/modules/Connect.php(53): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /home/polytabl/public_html/modules/Connect.php(42): db_interaction->__construct('127.0.0.1', 'root', '', 'groups_sch', Array)
+#2 /home/polytabl/public_html/index.php(3): include_once('/home/polytabl/...')
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/Connect.php on line 53
+[07-Apr-2018 17:20:12 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/polytabl/public_html/modules/Connect.php:53
+Stack trace:
+#0 /home/polytabl/public_html/modules/Connect.php(53): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /home/polytabl/public_html/modules/Connect.php(42): db_interaction->__construct('127.0.0.1', 'root', '', 'groups_sch', Array)
+#2 /home/polytabl/public_html/index.php(3): include_once('/home/polytabl/...')
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/Connect.php on line 53
+[07-Apr-2018 17:20:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/polytabl/public_html/modules/Connect.php:53
+Stack trace:
+#0 /home/polytabl/public_html/modules/Connect.php(53): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /home/polytabl/public_html/modules/Connect.php(42): db_interaction->__construct('127.0.0.1', 'root', '', 'groups_sch', Array)
+#2 /home/polytabl/public_html/index.php(3): include_once('/home/polytabl/...')
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/Connect.php on line 53
+[07-Apr-2018 17:20:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/polytabl/public_html/modules/Connect.php:53
+Stack trace:
+#0 /home/polytabl/public_html/modules/Connect.php(53): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /home/polytabl/public_html/modules/Connect.php(42): db_interaction->__construct('127.0.0.1', 'root', '', 'groups_sch', Array)
+#2 /home/polytabl/public_html/index.php(3): include_once('/home/polytabl/...')
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/Connect.php on line 53
+[07-Apr-2018 17:20:17 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/polytabl/public_html/modules/Connect.php:53
+Stack trace:
+#0 /home/polytabl/public_html/modules/Connect.php(53): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /home/polytabl/public_html/modules/Connect.php(42): db_interaction->__construct('127.0.0.1', 'root', '', 'groups_sch', Array)
+#2 /home/polytabl/public_html/index.php(3): include_once('/home/polytabl/...')
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/Connect.php on line 53
+[07-Apr-2018 17:25:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '>>"$.text" AS `text`, CONCAT(
+		"[",
+		CASE WHEN JSON_LENGTH(homeworks.text->>"$' at line 1 in /home/polytabl/public_html/modules/query/db_query.php:34
+Stack trace:
+#0 /home/polytabl/public_html/modules/query/db_query.php(34): PDOStatement->execute(Array)
+#1 /home/polytabl/public_html/modules/Connect.php(91): db_query->exec(Array)
+#2 /home/polytabl/public_html/modules/api/calendar.php(17): db_interaction->exec('calendar_select', 1, Array)
+#3 /home/polytabl/public_html/action.php(53): calendar->handle()
+#4 {main}
+  thrown in /home/polytabl/public_html/modules/query/db_query.php on line 34
+[07-Apr-2018 17:26:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '>>"$.text" AS `text`, CONCAT(
+		"[",
+		CASE WHEN JSON_LENGTH(homeworks.text->>"$' at line 1 in /home/polytabl/public_html/modules/query/db_query.php:34
+Stack trace:
+#0 /home/polytabl/public_html/modules/query/db_query.php(34): PDOStatement->execute(Array)
+#1 /home/polytabl/public_html/modules/Connect.php(91): db_query->exec(Array)
+#2 /home/polytabl/public_html/modules/api/calendar.php(17): db_interaction->exec('calendar_select', 1, Array)
+#3 /home/polytabl/public_html/action.php(53): calendar->handle()
+#4 {main}
+  thrown in /home/polytabl/public_html/modules/query/db_query.php on line 34
+[07-Apr-2018 17:26:55 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[07-Apr-2018 17:28:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '>>"$.text" AS `text`, CONCAT(
+		"[",
+		CASE WHEN JSON_LENGTH(homeworks.text->>"$' at line 1 in /home/polytabl/public_html/modules/query/db_query.php:34
+Stack trace:
+#0 /home/polytabl/public_html/modules/query/db_query.php(34): PDOStatement->execute(Array)
+#1 /home/polytabl/public_html/modules/Connect.php(91): db_query->exec(Array)
+#2 /home/polytabl/public_html/modules/api/calendar.php(17): db_interaction->exec('calendar_select', 1, Array)
+#3 /home/polytabl/public_html/action.php(53): calendar->handle()
+#4 {main}
+  thrown in /home/polytabl/public_html/modules/query/db_query.php on line 34
+[07-Apr-2018 17:28:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '>>"$.text" AS `text`, CONCAT(
+		"[",
+		CASE WHEN JSON_LENGTH(homeworks.text->>"$' at line 1 in /home/polytabl/public_html/modules/query/db_query.php:34
+Stack trace:
+#0 /home/polytabl/public_html/modules/query/db_query.php(34): PDOStatement->execute(Array)
+#1 /home/polytabl/public_html/modules/Connect.php(91): db_query->exec(Array)
+#2 /home/polytabl/public_html/modules/api/calendar.php(17): db_interaction->exec('calendar_select', 1, Array)
+#3 /home/polytabl/public_html/action.php(53): calendar->handle()
+#4 {main}
+  thrown in /home/polytabl/public_html/modules/query/db_query.php on line 34
+[07-Apr-2018 17:29:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '>>"$.text" AS `text`, CONCAT(
+		"[",
+		CASE WHEN JSON_LENGTH(homeworks.text->>"$' at line 1 in /home/polytabl/public_html/modules/query/db_query.php:34
+Stack trace:
+#0 /home/polytabl/public_html/modules/query/db_query.php(34): PDOStatement->execute(Array)
+#1 /home/polytabl/public_html/modules/Connect.php(91): db_query->exec(Array)
+#2 /home/polytabl/public_html/modules/api/calendar.php(17): db_interaction->exec('calendar_select', 1, Array)
+#3 /home/polytabl/public_html/action.php(53): calendar->handle()
+#4 {main}
+  thrown in /home/polytabl/public_html/modules/query/db_query.php on line 34
+[07-Apr-2018 17:31:23 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[07-Apr-2018 17:31:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '>>"$.text" AS `text`, CONCAT(
+		"[",
+		CASE WHEN JSON_LENGTH(homeworks.text->>"$' at line 1 in /home/polytabl/public_html/modules/query/db_query.php:34
+Stack trace:
+#0 /home/polytabl/public_html/modules/query/db_query.php(34): PDOStatement->execute(Array)
+#1 /home/polytabl/public_html/modules/Connect.php(91): db_query->exec(Array)
+#2 /home/polytabl/public_html/modules/api/calendar.php(17): db_interaction->exec('calendar_select', 1, Array)
+#3 /home/polytabl/public_html/action.php(53): calendar->handle()
+#4 {main}
+  thrown in /home/polytabl/public_html/modules/query/db_query.php on line 34
+[07-Apr-2018 17:33:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '>>"$.text" AS `text`, CONCAT(
+		"[",
+		CASE WHEN JSON_LENGTH(homeworks.text->>"$' at line 1 in /home/polytabl/public_html/modules/query/db_query.php:34
+Stack trace:
+#0 /home/polytabl/public_html/modules/query/db_query.php(34): PDOStatement->execute(Array)
+#1 /home/polytabl/public_html/modules/Connect.php(91): db_query->exec(Array)
+#2 /home/polytabl/public_html/modules/api/calendar.php(17): db_interaction->exec('calendar_select', 1, Array)
+#3 /home/polytabl/public_html/action.php(53): calendar->handle()
+#4 {main}
+  thrown in /home/polytabl/public_html/modules/query/db_query.php on line 34
+[07-Apr-2018 17:33:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '>>"$.text" AS `text`, CONCAT(
+		"[",
+		CASE WHEN JSON_LENGTH(homeworks.text->>"$' at line 1 in /home/polytabl/public_html/modules/query/db_query.php:34
+Stack trace:
+#0 /home/polytabl/public_html/modules/query/db_query.php(34): PDOStatement->execute(Array)
+#1 /home/polytabl/public_html/modules/Connect.php(91): db_query->exec(Array)
+#2 /home/polytabl/public_html/modules/api/calendar.php(17): db_interaction->exec('calendar_select', 1, Array)
+#3 /home/polytabl/public_html/action.php(53): calendar->handle()
+#4 {main}
+  thrown in /home/polytabl/public_html/modules/query/db_query.php on line 34
+[07-Apr-2018 17:39:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '>>"$.text" AS `text`, CONCAT(
+		"[",
+		CASE WHEN JSON_LENGTH(homeworks.text->>"$' at line 1 in /home/polytabl/public_html/modules/query/db_query.php:34
+Stack trace:
+#0 /home/polytabl/public_html/modules/query/db_query.php(34): PDOStatement->execute(Array)
+#1 /home/polytabl/public_html/modules/Connect.php(91): db_query->exec(Array)
+#2 /home/polytabl/public_html/modules/api/calendar.php(17): db_interaction->exec('calendar_select', 1, Array)
+#3 /home/polytabl/public_html/action.php(53): calendar->handle()
+#4 {main}
+  thrown in /home/polytabl/public_html/modules/query/db_query.php on line 34
+[07-Apr-2018 17:51:23 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 17:51:40 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 17:51:42 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 17:51:47 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 17:51:53 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 17:52:01 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 17:54:02 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 17:54:39 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 17:54:42 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 17:54:47 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 17:57:39 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[07-Apr-2018 18:27:38 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:27:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(44): Eventviva\ImageResize->__construct('/tmp/phpqmO7MG')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:27:48 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:27:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(44): Eventviva\ImageResize->__construct('/tmp/phpDcrKZw')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:28:37 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:28:43 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:28:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(44): Eventviva\ImageResize->__construct('/tmp/phpTnJ0gq')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:29:54 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:29:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(44): Eventviva\ImageResize->__construct('/tmp/php8JpczQ')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:32:18 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:32:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(44): Eventviva\ImageResize->__construct('/tmp/phpIjCbeQ')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:33:19 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:33:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(44): Eventviva\ImageResize->__construct('/tmp/phpKp7ZS9')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:34:09 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:34:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(44): Eventviva\ImageResize->__construct('/tmp/phpZ57Myt')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:35:02 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:35:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(43): Eventviva\ImageResize->__construct('/tmp/phpYXGqpi')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:35:57 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:35:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(43): Eventviva\ImageResize->__construct('/tmp/phpiMZegF')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:36:23 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:36:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(44): Eventviva\ImageResize->__construct('/tmp/phpK4i6go')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:38:53 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:38:53 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(44): Eventviva\ImageResize->__construct('/tmp/phpIcBcUK')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:39:40 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:39:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(44): Eventviva\ImageResize->__construct('/tmp/php9TIJ57')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:40:06 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:40:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(45): Eventviva\ImageResize->__construct('/tmp/phpwCe8Kl')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:40:28 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:40:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(45): Eventviva\ImageResize->__construct('/tmp/phpnNfQ29')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:41:41 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:41:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(45): Eventviva\ImageResize->__construct('/tmp/phpJKmhru')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:44:19 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:44:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(45): Eventviva\ImageResize->__construct('/tmp/phpqn5Ofh')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:46:29 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:46:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Eventviva\finfo_open() in /home/polytabl/public_html/modules/ImageResize.php:63
+Stack trace:
+#0 /home/polytabl/public_html/modules/FileUpload.php(45): Eventviva\ImageResize->__construct('/tmp/phpI61V9l')
+#1 /home/polytabl/public_html/modules/api/upload.php(13): store_file()
+#2 /home/polytabl/public_html/action.php(62): upload->handle()
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/ImageResize.php on line 63
+[07-Apr-2018 18:47:57 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:47:58 UTC] PHP Notice:  imagecreatefromjpeg(): gd-jpeg, libjpeg: recoverable error: Corrupt JPEG data: 344 extraneous bytes before marker 0xd9
+ in /home/polytabl/public_html/modules/ImageResize.php on line 109
+[07-Apr-2018 18:48:47 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:48:47 UTC] PHP Notice:  imagecreatefromjpeg(): gd-jpeg, libjpeg: recoverable error: Corrupt JPEG data: 344 extraneous bytes before marker 0xd9
+ in /home/polytabl/public_html/modules/ImageResize.php on line 109
+[07-Apr-2018 18:48:49 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:49:26 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:49:26 UTC] PHP Notice:  imagecreatefromjpeg(): gd-jpeg, libjpeg: recoverable error: Corrupt JPEG data: 344 extraneous bytes before marker 0xd9
+ in /home/polytabl/public_html/modules/ImageResize.php on line 109
+[07-Apr-2018 18:49:28 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:50:13 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:50:13 UTC] PHP Notice:  imagecreatefromjpeg(): gd-jpeg, libjpeg: recoverable error: Corrupt JPEG data: 344 extraneous bytes before marker 0xd9
+ in /home/polytabl/public_html/modules/ImageResize.php on line 109
+[07-Apr-2018 18:50:14 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:51:01 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 18:51:01 UTC] PHP Notice:  imagecreatefromjpeg(): gd-jpeg, libjpeg: recoverable error: Corrupt JPEG data: 344 extraneous bytes before marker 0xd9
+ in /home/polytabl/public_html/modules/ImageResize.php on line 109
+[07-Apr-2018 18:51:04 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 19:13:38 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[07-Apr-2018 19:13:38 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[07-Apr-2018 19:18:42 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 19:18:57 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 19:19:41 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 19:27:46 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 19:31:15 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[07-Apr-2018 19:31:52 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[07-Apr-2018 19:31:52 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[07-Apr-2018 19:32:16 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[07-Apr-2018 19:32:16 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[07-Apr-2018 19:33:28 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 19:33:32 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[07-Apr-2018 19:33:32 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[07-Apr-2018 19:33:32 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 19:33:42 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 19:33:45 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[07-Apr-2018 19:33:48 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 19:34:08 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 19:34:09 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 19:34:14 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 19:34:21 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 19:43:56 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 19:44:42 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 19:50:17 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 19:50:52 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 20:11:00 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 20:13:48 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 20:14:37 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 20:16:42 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 20:17:50 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 20:18:56 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 20:19:16 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 20:23:44 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[07-Apr-2018 20:24:30 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[07-Apr-2018 21:33:14 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[08-Apr-2018 12:48:35 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[08-Apr-2018 13:10:17 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[08-Apr-2018 13:10:17 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[08-Apr-2018 13:21:42 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[08-Apr-2018 14:47:55 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[08-Apr-2018 17:17:43 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[08-Apr-2018 17:17:54 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[08-Apr-2018 17:24:28 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[08-Apr-2018 17:56:07 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[08-Apr-2018 18:11:32 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[08-Apr-2018 18:18:33 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[08-Apr-2018 18:20:37 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[08-Apr-2018 18:21:53 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[08-Apr-2018 18:34:03 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[08-Apr-2018 18:43:25 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[08-Apr-2018 20:26:32 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[09-Apr-2018 01:20:57 UTC] PHP Fatal error:  Uncaught Error: Class 'PDO' not found in /home/polytabl/public_html/modules/Connect.php:38
+Stack trace:
+#0 /home/polytabl/public_html/groups.php(3): include_once()
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/Connect.php on line 38
+[09-Apr-2018 01:21:01 UTC] PHP Fatal error:  Uncaught Error: Class 'PDO' not found in /home/polytabl/public_html/modules/Connect.php:38
+Stack trace:
+#0 /home/polytabl/public_html/groups.php(3): include_once()
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/Connect.php on line 38
+[09-Apr-2018 01:21:02 UTC] PHP Fatal error:  Uncaught Error: Class 'PDO' not found in /home/polytabl/public_html/modules/Connect.php:38
+Stack trace:
+#0 /home/polytabl/public_html/groups.php(3): include_once()
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/Connect.php on line 38
+[09-Apr-2018 01:21:03 UTC] PHP Fatal error:  Uncaught Error: Class 'PDO' not found in /home/polytabl/public_html/modules/Connect.php:38
+Stack trace:
+#0 /home/polytabl/public_html/groups.php(3): include_once()
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/Connect.php on line 38
+[09-Apr-2018 01:22:24 UTC] PHP Warning:  Constants may only evaluate to scalar values in /home/polytabl/public_html/modules/Config.php on line 9
+[09-Apr-2018 01:22:24 UTC] PHP Warning:  Constants may only evaluate to scalar values in /home/polytabl/public_html/modules/Config.php on line 22
+[09-Apr-2018 01:22:24 UTC] PHP Warning:  Constants may only evaluate to scalar values in /home/polytabl/public_html/modules/Config.php on line 69
+[09-Apr-2018 01:22:24 UTC] PHP Warning:  Constants may only evaluate to scalar values in /home/polytabl/public_html/modules/Config.php on line 179
+[09-Apr-2018 01:22:24 UTC] PHP Warning:  Unsupported declare 'strict_types' in /home/polytabl/public_html/modules/Calendar.php on line 2
+[09-Apr-2018 01:22:24 UTC] PHP Parse error:  syntax error, unexpected ':', expecting ';' or '{' in /home/polytabl/public_html/modules/Calendar.php on line 35
+[09-Apr-2018 03:25:33 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[10-Apr-2018 15:37:51 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[10-Apr-2018 17:48:34 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[10-Apr-2018 17:59:13 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[10-Apr-2018 17:59:13 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[10-Apr-2018 18:01:44 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[10-Apr-2018 18:01:45 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[10-Apr-2018 18:02:31 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[10-Apr-2018 18:09:03 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[10-Apr-2018 18:09:43 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[10-Apr-2018 18:09:43 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[10-Apr-2018 18:09:50 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[10-Apr-2018 18:09:50 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[10-Apr-2018 18:22:38 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[10-Apr-2018 18:22:38 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[10-Apr-2018 18:22:50 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[10-Apr-2018 18:22:50 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[10-Apr-2018 18:23:02 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[10-Apr-2018 18:23:02 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[10-Apr-2018 18:23:40 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[10-Apr-2018 18:23:40 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[10-Apr-2018 18:24:17 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[10-Apr-2018 18:24:17 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[10-Apr-2018 18:24:51 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[10-Apr-2018 18:24:51 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[10-Apr-2018 19:17:30 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[10-Apr-2018 19:20:47 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[10-Apr-2018 19:20:47 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[11-Apr-2018 12:35:56 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[12-Apr-2018 18:43:18 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[12-Apr-2018 18:46:02 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[12-Apr-2018 19:33:29 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 19:35:14 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 19:53:32 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[12-Apr-2018 19:54:36 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[12-Apr-2018 19:57:47 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[12-Apr-2018 20:12:05 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[12-Apr-2018 20:12:05 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[12-Apr-2018 20:12:08 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[12-Apr-2018 20:12:08 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[12-Apr-2018 20:12:59 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[12-Apr-2018 20:12:59 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[12-Apr-2018 20:13:43 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 20:14:52 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 20:28:09 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[12-Apr-2018 20:30:34 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[12-Apr-2018 20:40:22 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[12-Apr-2018 20:44:19 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 20:47:42 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[12-Apr-2018 20:49:40 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 20:50:10 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 20:55:43 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 20:57:55 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 21:13:50 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 21:15:11 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 21:20:26 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 21:29:08 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[12-Apr-2018 21:34:28 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 21:37:10 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 21:46:12 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 21:46:27 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 21:49:15 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[12-Apr-2018 21:49:48 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[12-Apr-2018 21:49:48 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[12-Apr-2018 22:07:54 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[12-Apr-2018 22:15:13 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[12-Apr-2018 22:15:18 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[13-Apr-2018 05:28:14 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[13-Apr-2018 06:26:53 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[13-Apr-2018 09:23:13 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[13-Apr-2018 14:36:18 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[13-Apr-2018 18:21:39 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[14-Apr-2018 06:44:15 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[14-Apr-2018 15:09:19 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[14-Apr-2018 17:41:27 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[15-Apr-2018 00:56:11 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[15-Apr-2018 03:20:52 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[15-Apr-2018 20:29:40 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[15-Apr-2018 21:13:29 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[15-Apr-2018 21:32:56 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[16-Apr-2018 14:13:58 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[16-Apr-2018 17:48:05 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[16-Apr-2018 18:13:13 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[16-Apr-2018 20:36:06 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[17-Apr-2018 08:24:27 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[18-Apr-2018 15:12:33 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[18-Apr-2018 23:04:40 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[19-Apr-2018 00:54:49 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[19-Apr-2018 09:14:08 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[19-Apr-2018 10:20:45 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[19-Apr-2018 10:21:49 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[19-Apr-2018 10:22:49 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[19-Apr-2018 10:44:09 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[19-Apr-2018 10:49:24 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[19-Apr-2018 13:03:04 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[19-Apr-2018 13:10:27 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[19-Apr-2018 19:33:06 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[19-Apr-2018 20:05:29 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[19-Apr-2018 20:37:45 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[19-Apr-2018 20:38:45 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[19-Apr-2018 20:39:53 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[19-Apr-2018 20:42:17 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[19-Apr-2018 20:43:12 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[19-Apr-2018 21:25:16 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[20-Apr-2018 04:53:46 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[20-Apr-2018 16:10:57 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[20-Apr-2018 17:00:43 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[20-Apr-2018 18:35:54 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[21-Apr-2018 09:21:19 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[21-Apr-2018 13:27:57 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[21-Apr-2018 18:53:30 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[21-Apr-2018 18:53:30 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[22-Apr-2018 07:49:58 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[22-Apr-2018 07:49:58 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[22-Apr-2018 12:28:33 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[22-Apr-2018 19:11:17 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[22-Apr-2018 19:31:09 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[22-Apr-2018 19:47:49 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[22-Apr-2018 20:14:02 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[22-Apr-2018 20:14:02 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[23-Apr-2018 14:32:47 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[23-Apr-2018 14:32:49 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[23-Apr-2018 14:32:57 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[23-Apr-2018 14:33:00 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[24-Apr-2018 09:17:07 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[24-Apr-2018 09:17:11 UTC] PHP Notice:  Undefined index: days in /home/polytabl/public_html/modules/TimetableCache.php on line 28
+[24-Apr-2018 09:17:11 UTC] PHP Notice:  Undefined index: days in /home/polytabl/public_html/modules/TimetableCache.php on line 28
+[24-Apr-2018 09:17:12 UTC] PHP Notice:  Undefined index: days in /home/polytabl/public_html/modules/TimetableCache.php on line 28
+[24-Apr-2018 12:11:33 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[24-Apr-2018 12:11:41 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[24-Apr-2018 17:47:43 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[24-Apr-2018 20:48:48 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[25-Apr-2018 04:48:58 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[25-Apr-2018 06:24:17 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[25-Apr-2018 11:33:28 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[25-Apr-2018 11:35:02 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[25-Apr-2018 11:51:45 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[25-Apr-2018 13:21:33 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[25-Apr-2018 13:32:57 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[25-Apr-2018 14:24:11 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer\PHPMailer' not found in /home/polytabl/public_html/test.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/polytabl/public_html/test.php on line 16
+[25-Apr-2018 15:09:31 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[25-Apr-2018 15:10:28 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[25-Apr-2018 15:17:38 UTC] PHP Notice:  Undefined variable: login in /home/polytabl/public_html/test.php on line 40
+[25-Apr-2018 15:17:38 UTC] PHP Notice:  Undefined variable: link in /home/polytabl/public_html/test.php on line 41
+[25-Apr-2018 15:20:04 UTC] PHP Notice:  Undefined variable: login in /home/polytabl/public_html/test.php on line 40
+[25-Apr-2018 15:20:04 UTC] PHP Notice:  Undefined variable: link in /home/polytabl/public_html/test.php on line 41
+[25-Apr-2018 15:22:30 UTC] PHP Notice:  Undefined variable: login in /home/polytabl/public_html/test.php on line 40
+[25-Apr-2018 15:22:30 UTC] PHP Notice:  Undefined variable: link in /home/polytabl/public_html/test.php on line 41
+[25-Apr-2018 15:22:30 UTC] PHP Warning:  Attempt to assign property of non-object in /home/polytabl/public_html/test.php on line 45
+[25-Apr-2018 15:24:37 UTC] PHP Notice:  Undefined variable: login in /home/polytabl/public_html/test.php on line 40
+[25-Apr-2018 15:24:37 UTC] PHP Notice:  Undefined variable: link in /home/polytabl/public_html/test.php on line 41
+[25-Apr-2018 15:25:12 UTC] PHP Notice:  Undefined variable: login in /home/polytabl/public_html/test.php on line 40
+[25-Apr-2018 15:25:12 UTC] PHP Notice:  Undefined variable: link in /home/polytabl/public_html/test.php on line 41
+[25-Apr-2018 15:27:41 UTC] PHP Notice:  Undefined variable: login in /home/polytabl/public_html/test.php on line 40
+[25-Apr-2018 15:27:41 UTC] PHP Notice:  Undefined variable: link in /home/polytabl/public_html/test.php on line 41
+[25-Apr-2018 15:38:23 UTC] PHP Notice:  Undefined variable: login in /home/polytabl/public_html/test.php on line 39
+[25-Apr-2018 15:38:23 UTC] PHP Notice:  Undefined variable: link in /home/polytabl/public_html/test.php on line 40
+[25-Apr-2018 15:41:28 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[25-Apr-2018 15:41:28 UTC] PHP Warning:  Attempt to assign property of non-object in /home/polytabl/public_html/mail.php on line 68
+[25-Apr-2018 15:46:51 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[25-Apr-2018 15:46:51 UTC] PHP Warning:  Attempt to assign property of non-object in /home/polytabl/public_html/mail.php on line 68
+[25-Apr-2018 15:53:51 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 16:05:55 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[25-Apr-2018 16:05:55 UTC] PHP Warning:  Attempt to assign property of non-object in /home/polytabl/public_html/mail.php on line 68
+[25-Apr-2018 16:25:09 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 16:29:23 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 16:50:34 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 16:51:43 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 16:52:32 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 16:53:50 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 16:53:58 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 16:54:13 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 16:54:27 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 16:58:50 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 17:14:49 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 17:16:43 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 17:16:57 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 17:33:33 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 17:58:06 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[25-Apr-2018 20:32:03 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[26-Apr-2018 09:26:01 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[26-Apr-2018 09:26:23 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[26-Apr-2018 10:39:11 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[26-Apr-2018 10:44:48 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[26-Apr-2018 10:45:01 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[26-Apr-2018 10:45:06 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[26-Apr-2018 11:00:47 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[26-Apr-2018 11:02:06 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[26-Apr-2018 15:37:55 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[26-Apr-2018 15:37:55 UTC] PHP Warning:  Attempt to assign property of non-object in /home/polytabl/public_html/mail.php on line 68
+[26-Apr-2018 16:35:01 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[26-Apr-2018 16:35:01 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[26-Apr-2018 16:52:42 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[26-Apr-2018 16:52:42 UTC] PHP Warning:  Attempt to assign property of non-object in /home/polytabl/public_html/mail.php on line 68
+[26-Apr-2018 17:03:25 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[26-Apr-2018 17:03:25 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[26-Apr-2018 17:17:38 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[26-Apr-2018 17:19:41 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[26-Apr-2018 17:32:14 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[26-Apr-2018 17:32:14 UTC] PHP Warning:  Attempt to assign property of non-object in /home/polytabl/public_html/mail.php on line 68
+[26-Apr-2018 17:43:20 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[26-Apr-2018 17:53:55 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[26-Apr-2018 17:53:55 UTC] PHP Warning:  Attempt to assign property of non-object in /home/polytabl/public_html/mail.php on line 68
+[26-Apr-2018 18:19:33 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[26-Apr-2018 18:19:33 UTC] PHP Warning:  Attempt to assign property of non-object in /home/polytabl/public_html/mail.php on line 68
+[26-Apr-2018 18:50:13 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[26-Apr-2018 18:50:13 UTC] PHP Warning:  Attempt to assign property of non-object in /home/polytabl/public_html/mail.php on line 68
+[26-Apr-2018 19:14:06 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[26-Apr-2018 19:14:06 UTC] PHP Warning:  Attempt to assign property of non-object in /home/polytabl/public_html/mail.php on line 68
+[26-Apr-2018 19:30:29 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[27-Apr-2018 11:42:11 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[27-Apr-2018 19:00:19 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[27-Apr-2018 19:00:19 UTC] PHP Warning:  Attempt to assign property of non-object in /home/polytabl/public_html/mail.php on line 68
+[27-Apr-2018 21:04:55 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[28-Apr-2018 10:28:20 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[28-Apr-2018 10:28:21 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[28-Apr-2018 13:49:21 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[28-Apr-2018 18:34:21 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[29-Apr-2018 11:25:47 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[29-Apr-2018 20:57:07 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[30-Apr-2018 00:12:32 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[30-Apr-2018 07:11:57 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[30-Apr-2018 13:11:14 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[30-Apr-2018 17:37:52 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[30-Apr-2018 17:37:52 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[30-Apr-2018 22:39:07 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[03-May-2018 15:17:48 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[03-May-2018 17:59:41 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[03-May-2018 17:59:42 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[03-May-2018 17:59:48 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[03-May-2018 18:01:30 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[03-May-2018 18:01:30 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[03-May-2018 18:01:36 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[03-May-2018 20:47:32 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[04-May-2018 10:06:38 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[04-May-2018 10:06:50 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/modules/FileUpload.php on line 9
+[04-May-2018 10:13:41 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 25
+[04-May-2018 10:13:41 UTC] PHP Notice:  Undefined index: adm in /home/polytabl/public_html/modules/classes/Profile.php on line 26
+[04-May-2018 11:50:34 UTC] PHP Notice:  Undefined index: value in /home/polytabl/public_html/modules/api/register.php on line 19
+[04-May-2018 11:50:34 UTC] PHP Warning:  Attempt to assign property of non-object in /home/polytabl/public_html/mail.php on line 68
+[04-May-2018 16:19:57 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[04-May-2018 17:24:53 UTC] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Profile::__construct() must be an instance of User, boolean given, called in /home/polytabl/public_html/profile.php on line 15 and defined in /home/polytabl/public_html/modules/classes/Profile.php:11
+Stack trace:
+#0 /home/polytabl/public_html/profile.php(15): Profile->__construct(false)
+#1 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Profile.php on line 11
+[04-May-2018 17:24:58 UTC] PHP Notice:  Undefined index: mod in /home/polytabl/public_html/modules/classes/Profile.php on line 20
+[05-May-2018 06:58:48 UTC] PHP Warning:  include_once(/home/polytabl/public_html/modules/Config.php): failed to open stream: No such file or directory in /home/polytabl/public_html/index.php on line 2
+[05-May-2018 06:58:49 UTC] PHP Warning:  include_once(): Failed opening '/home/polytabl/public_html/modules/Config.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/polytabl/public_html/index.php on line 2
+[05-May-2018 06:58:49 UTC] PHP Warning:  include_once(templates/header.php): failed to open stream: No such file or directory in /home/polytabl/public_html/index.php on line 30
+[05-May-2018 06:58:49 UTC] PHP Warning:  include_once(): Failed opening 'templates/header.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/polytabl/public_html/index.php on line 30
+[05-May-2018 06:58:49 UTC] PHP Warning:  include_once(templates/search.php): failed to open stream: No such file or directory in /home/polytabl/public_html/index.php on line 38
+[05-May-2018 06:58:49 UTC] PHP Warning:  include_once(): Failed opening 'templates/search.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/polytabl/public_html/index.php on line 38
+[05-May-2018 06:58:49 UTC] PHP Warning:  include_once(templates/footer.php): failed to open stream: No such file or directory in /home/polytabl/public_html/index.php on line 70
+[05-May-2018 06:58:49 UTC] PHP Warning:  include_once(): Failed opening 'templates/footer.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/polytabl/public_html/index.php on line 70
+[05-May-2018 07:07:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/polytabl/public_html/modules/classes/Configuration/Database/Connection.php:56
+Stack trace:
+#0 /home/polytabl/public_html/modules/classes/Configuration/Database/Connection.php(56): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /home/polytabl/public_html/modules/Config.php(30): Configuration\Database\Connection->__construct('127.0.0.1', 'root', '', 'groups_sch', Array)
+#2 /home/polytabl/public_html/index.php(2): include_once('/home/polytabl/...')
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Configuration/Database/Connection.php on line 56
+[05-May-2018 07:19:04 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:19:04 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:19:09 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=FjfrJcqVSRSzCmhlbVKL&amp;code=1a84d0cae19f6df8f4&amp;redirect_uri=https://polytable.ru/link.php): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/link.php on line 21
+[05-May-2018 07:19:10 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:19:10 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:19:20 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=FjfrJcqVSRSzCmhlbVKL&amp;code=0d4cfd63ae9cce6cae&amp;redirect_uri=https://polytable.ru/link.php): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/link.php on line 21
+[05-May-2018 07:19:21 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:19:21 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:19:53 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=FjfrJcqVSRSzCmhlbVKL&amp;code=c2b93a420598265565&amp;redirect_uri=https://polytable.ru/link.php): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/link.php on line 21
+[05-May-2018 07:19:54 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:19:54 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:20:14 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=FjfrJcqVSRSzCmhlbVKL&amp;code=c909e1cd4142a05d8a&amp;redirect_uri=https://polytable.ru/link.php): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/link.php on line 21
+[05-May-2018 07:20:16 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:20:16 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:22:53 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=FjfrJcqVSRSzCmhlbVKL&amp;code=21f41edf4c4c9e0815&amp;redirect_uri=https://polytable.ru/link.php): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/link.php on line 21
+[05-May-2018 07:22:54 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:22:54 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:23:05 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=FjfrJcqVSRSzCmhlbVKL&amp;code=b8eccfb50ca3011a78&amp;redirect_uri=https://polytable.ru/link.php): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/link.php on line 21
+[05-May-2018 07:23:06 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:23:06 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:24:28 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=FjfrJcqVSRSzCmhlbVKL&amp;code=47c6e9a9e01b238827&amp;redirect_uri=https://polytable.ru/link.php): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/link.php on line 21
+[05-May-2018 07:24:30 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:24:30 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:26:03 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:26:03 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:35:09 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:35:09 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:35:09 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:35:21 UTC] PHP Warning:  md5_file(uploads/images/ff2f45161caf4bb9ed3fb60bce60447a.jpg): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[05-May-2018 07:35:23 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:35:23 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:35:23 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:35:31 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:35:31 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:35:31 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:43:09 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:43:09 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:43:15 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:43:15 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:44:56 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:44:56 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:49:36 UTC] PHP Notice:  Undefined variable: local_modules_path in /home/polytabl/public_html/groups.php on line 3
+[05-May-2018 07:49:37 UTC] PHP Warning:  include_once(/Connect.php): failed to open stream: No such file or directory in /home/polytabl/public_html/groups.php on line 3
+[05-May-2018 07:49:37 UTC] PHP Warning:  include_once(): Failed opening '/Connect.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/polytabl/public_html/groups.php on line 3
+[05-May-2018 07:49:37 UTC] PHP Notice:  Undefined variable: local_modules_path in /home/polytabl/public_html/groups.php on line 4
+[05-May-2018 07:49:37 UTC] PHP Warning:  include_once(/Security.php): failed to open stream: No such file or directory in /home/polytabl/public_html/groups.php on line 4
+[05-May-2018 07:49:37 UTC] PHP Warning:  include_once(): Failed opening '/Security.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/polytabl/public_html/groups.php on line 4
+[05-May-2018 07:49:37 UTC] PHP Notice:  Undefined variable: local_modules_path in /home/polytabl/public_html/groups.php on line 5
+[05-May-2018 07:49:37 UTC] PHP Warning:  include_once(/Calendar.php): failed to open stream: No such file or directory in /home/polytabl/public_html/groups.php on line 5
+[05-May-2018 07:49:37 UTC] PHP Warning:  include_once(): Failed opening '/Calendar.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/polytabl/public_html/groups.php on line 5
+[05-May-2018 07:49:37 UTC] PHP Notice:  Undefined variable: local_modules_path in /home/polytabl/public_html/groups.php on line 6
+[05-May-2018 07:49:37 UTC] PHP Warning:  include_once(/classes/User.php): failed to open stream: No such file or directory in /home/polytabl/public_html/groups.php on line 6
+[05-May-2018 07:49:37 UTC] PHP Warning:  include_once(): Failed opening '/classes/User.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/polytabl/public_html/groups.php on line 6
+[05-May-2018 07:49:37 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /home/polytabl/public_html/groups.php on line 11
+[05-May-2018 07:49:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function set_csrf_token() in /home/polytabl/public_html/groups.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/polytabl/public_html/groups.php on line 12
+[05-May-2018 07:56:34 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 07:56:34 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:01:47 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:01:47 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:06:27 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:06:27 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:06:30 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:06:30 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:06:32 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:06:32 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:06:42 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:06:42 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:06:49 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:09:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:09:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:12:50 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:12:50 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:13:00 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:13:00 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:26:54 UTC] PHP Notice:  Undefined index: m in /home/polytabl/public_html/auth.php on line 5
+[05-May-2018 08:35:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:35:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:44:03 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 08:44:03 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 09:04:37 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 09:04:37 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 09:30:34 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 09:30:34 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 09:31:04 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 09:31:04 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 09:32:36 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 09:32:36 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 10:29:34 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=220efad2f4ad32189c&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[05-May-2018 10:29:35 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=b883ca696e56a8681e&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[05-May-2018 10:29:36 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=b883ca696e56a8681e&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[05-May-2018 10:29:37 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=a6dad865470a733d0d&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[05-May-2018 10:29:39 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=a6dad865470a733d0d&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[05-May-2018 13:24:06 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 13:24:06 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 16:28:44 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 16:28:44 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 16:28:54 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 16:28:54 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 16:28:58 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 16:28:58 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 19:57:05 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 19:57:05 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 19:57:06 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 19:57:06 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 19:57:16 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 19:57:16 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 19:58:14 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 20:01:16 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 20:01:16 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:03:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:03:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:03:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:03:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:03:55 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:03:55 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:03:56 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:03:56 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:03:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:03:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:04:05 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:04:05 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:04:07 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:04:07 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:04:08 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:04:08 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:04:09 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:04:09 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:04:11 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:04:11 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:04:30 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:04:30 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:04:40 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:09:22 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:09:22 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:09:22 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-May-2018 22:09:22 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 08:45:46 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 08:45:46 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 10:01:19 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 10:01:19 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 12:29:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 12:29:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 12:29:58 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 12:29:58 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 12:30:01 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 12:30:01 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 12:32:53 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 12:32:53 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 17:04:31 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 17:04:31 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 21:12:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 21:12:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 22:26:27 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 22:26:27 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 22:27:32 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-May-2018 22:27:32 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 04:55:32 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 04:55:32 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 04:55:53 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 04:55:53 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 05:58:39 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 05:58:39 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 06:45:32 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 06:45:32 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 06:45:40 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 06:45:40 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 06:45:53 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:50:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:50:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:50:13 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:50:13 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:50:14 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:50:14 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:50:15 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:50:15 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:50:17 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:50:17 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:50:25 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:50:25 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:50:42 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:55:24 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:55:24 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:55:33 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:55:33 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:55:47 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:55:47 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:56:03 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:56:03 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:58:21 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 08:58:21 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 15:58:04 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 15:58:04 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 15:58:04 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 16:00:21 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 16:00:21 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 16:00:21 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 16:00:56 UTC] PHP Warning:  md5_file(uploads/images/692ddbee35f3c1d32b7d9a9fe9a6e0b9.jpg): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[07-May-2018 16:00:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 16:00:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 16:00:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 16:01:16 UTC] PHP Warning:  md5_file(uploads/images/d49dd059f7c998034cfe885468426a0d.jpg): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[07-May-2018 16:01:40 UTC] PHP Warning:  md5_file(uploads/images/ca89a1901ab025585047c59eab30380b.jpg): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[07-May-2018 16:02:08 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 16:02:08 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 16:02:08 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 16:10:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 16:10:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 16:10:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:15:29 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:15:29 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:15:44 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:15:44 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:15:46 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:15:46 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:15:48 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:15:48 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:16:30 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:16:30 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:16:39 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:16:39 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:16:40 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:16:40 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:16:41 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:16:41 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:16:42 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:16:42 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:16:43 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:16:43 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:16:45 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:16:45 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:17:02 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:17:02 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:17:03 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:17:03 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:17:04 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:17:04 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:17:06 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:17:06 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:17:10 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:17:10 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:17:26 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:17:26 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:17:32 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:17:32 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:18:46 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:19:31 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:19:31 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:20:13 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:20:13 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:20:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:20:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:24:43 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:24:43 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:26:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:26:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:26:53 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:26:53 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:27:54 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:27:54 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:27:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:27:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:28:01 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:28:01 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:29:21 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=3514d7d13162209135&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[07-May-2018 17:29:22 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=3514d7d13162209135&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[07-May-2018 17:29:22 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=2beba94fa9bccbd48f&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[07-May-2018 17:29:23 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=2beba94fa9bccbd48f&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[07-May-2018 17:30:08 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:30:08 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:30:34 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:30:34 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:30:36 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:30:36 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:30:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:30:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:31:23 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:31:23 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:31:28 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:31:28 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:31:44 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:31:44 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:31:50 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:31:50 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:31:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:31:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:31:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:31:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:32:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:32:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:33:36 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:33:36 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:36:28 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:36:28 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:36:38 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:36:38 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:40:35 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:40:35 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:41:02 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:41:02 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:41:03 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:41:03 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:41:03 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:41:03 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:41:56 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:41:56 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:42:30 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:42:30 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:42:50 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=da06b88bb40d3f200a&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[07-May-2018 17:42:51 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=d11a399b38f507fd91&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[07-May-2018 17:42:52 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=d11a399b38f507fd91&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[07-May-2018 17:43:18 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:43:18 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:43:27 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:43:27 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:43:45 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:43:45 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:44:01 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:45:39 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:45:39 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:45:45 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:45:45 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:46:09 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:46:09 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:46:12 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=9a591a83f8dcddbd4e&amp;redirect_uri=https://polytable.ru/link.php): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/link.php on line 22
+[07-May-2018 17:46:20 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:46:20 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:46:28 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:46:28 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:49:19 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:49:19 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:50:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:50:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:51:21 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:51:21 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:51:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:51:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:57:06 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:57:06 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:59:18 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:59:18 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:59:30 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 17:59:30 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 18:00:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 18:00:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 18:01:02 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 18:01:02 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 18:02:44 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 18:02:44 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 18:05:34 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 18:05:34 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 18:05:38 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 18:05:38 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 18:05:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 18:05:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 18:07:26 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 18:07:26 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 19:23:03 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 19:23:03 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 19:26:33 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 19:26:33 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 19:36:43 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 19:36:43 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 21:43:18 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 21:43:18 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 21:43:28 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[07-May-2018 21:43:28 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[08-May-2018 11:57:06 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[08-May-2018 11:57:06 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[08-May-2018 11:57:06 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[08-May-2018 12:33:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[08-May-2018 12:33:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[08-May-2018 12:33:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[08-May-2018 16:47:41 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[08-May-2018 16:47:41 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[09-May-2018 10:31:20 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[09-May-2018 10:31:20 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[09-May-2018 20:52:34 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[09-May-2018 20:52:34 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[09-May-2018 20:53:37 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[09-May-2018 20:53:37 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 09:03:36 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 09:03:36 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 09:03:47 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 11:30:35 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=45b41353449e31e5aa&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[10-May-2018 11:30:36 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=242d75809d28f86b01&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[10-May-2018 11:30:37 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=242d75809d28f86b01&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[10-May-2018 11:30:37 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=6e9bea791897c9b99b&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[10-May-2018 11:30:38 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=8a8be80019b93dca9a&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[10-May-2018 11:30:39 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=8a8be80019b93dca9a&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[10-May-2018 11:30:39 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=54192801b124f71060&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[10-May-2018 11:30:40 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=cbacee7e4208a7a663&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[10-May-2018 11:41:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 11:41:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 11:42:11 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 11:42:11 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 11:42:26 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 11:42:28 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 11:52:23 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 11:52:23 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 11:53:10 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 11:53:10 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 11:54:11 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 11:54:11 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 11:55:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 11:55:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 20:38:47 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 20:38:47 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 22:37:47 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 22:37:47 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 22:38:10 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-May-2018 22:38:10 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[11-May-2018 14:10:35 UTC] PHP Warning:  md5_file(uploads/images/770a68106745fad42aba041d529b4ef6.jpg): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[11-May-2018 14:10:36 UTC] PHP Warning:  md5_file(uploads/images/ca640658383dfe3d368c5c3d07a7cea5.jpg): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[11-May-2018 14:10:58 UTC] PHP Warning:  md5_file(uploads/images/88efaae9d3021a7be78d781d02a15662.jpg): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[11-May-2018 14:11:07 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[11-May-2018 14:11:07 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[11-May-2018 14:11:07 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[11-May-2018 14:12:41 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[11-May-2018 14:12:41 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[11-May-2018 14:12:41 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[11-May-2018 19:09:59 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[11-May-2018 19:09:59 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-May-2018 15:00:48 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-May-2018 15:00:48 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-May-2018 15:16:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-May-2018 15:16:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-May-2018 16:01:00 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-May-2018 16:01:00 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-May-2018 16:13:06 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-May-2018 16:13:06 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-May-2018 18:27:57 UTC] PHP Warning:  md5_file(uploads/images/656618553dc3c7688fdb6347852a45d1.jpeg): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[12-May-2018 18:27:59 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-May-2018 18:27:59 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-May-2018 18:27:59 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[14-May-2018 16:14:19 UTC] PHP Warning:  md5_file(uploads/images/3320f6c3a20feee84810adf2df0d5a57.jpg): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[14-May-2018 16:14:21 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[14-May-2018 16:14:21 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[14-May-2018 16:14:21 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[14-May-2018 16:28:49 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[14-May-2018 16:28:49 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[14-May-2018 16:28:49 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[14-May-2018 20:00:46 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[14-May-2018 20:00:46 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[14-May-2018 20:00:46 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[14-May-2018 20:04:00 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[14-May-2018 20:04:00 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[14-May-2018 20:04:04 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[14-May-2018 20:04:04 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[14-May-2018 20:50:34 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[14-May-2018 20:50:34 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[16-May-2018 08:35:16 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[16-May-2018 08:35:16 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[16-May-2018 14:35:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[16-May-2018 14:35:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[16-May-2018 14:35:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[16-May-2018 14:55:39 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[16-May-2018 14:55:39 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[16-May-2018 21:35:42 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[16-May-2018 21:35:42 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[18-May-2018 00:40:46 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[18-May-2018 00:40:46 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[18-May-2018 08:25:08 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[18-May-2018 08:25:08 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[18-May-2018 08:26:49 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[18-May-2018 08:26:49 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[18-May-2018 08:26:49 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[18-May-2018 18:38:23 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[18-May-2018 18:38:23 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[19-May-2018 21:54:37 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[19-May-2018 21:54:37 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-May-2018 12:26:32 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-May-2018 12:26:32 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-May-2018 12:29:43 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-May-2018 12:29:43 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-May-2018 17:52:01 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-May-2018 17:52:01 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-May-2018 17:56:16 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-May-2018 17:56:16 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-May-2018 19:10:11 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-May-2018 19:10:11 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-May-2018 20:37:46 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-May-2018 20:37:46 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-May-2018 20:39:55 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-May-2018 20:39:55 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[21-May-2018 09:49:54 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[21-May-2018 09:49:54 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[21-May-2018 09:50:21 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[21-May-2018 09:50:21 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[21-May-2018 16:21:07 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[21-May-2018 16:21:07 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[21-May-2018 19:44:45 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[21-May-2018 19:44:45 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[22-May-2018 15:42:10 UTC] PHP Warning:  md5_file(uploads/images/bb1e66612f22e4297b1ffcc083e46feb.jpg): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[22-May-2018 15:43:10 UTC] PHP Warning:  md5_file(uploads/images/9e8789ba0736c415eace934682f5f511.jpg): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[22-May-2018 15:43:15 UTC] PHP Warning:  md5_file(uploads/images/e89484bce93b4a0202cac35922bd0441.jpg): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[22-May-2018 15:43:17 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[22-May-2018 15:43:17 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[22-May-2018 15:43:17 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[22-May-2018 19:39:00 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[22-May-2018 19:39:01 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[23-May-2018 10:53:40 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[23-May-2018 10:53:40 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[23-May-2018 10:53:40 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[24-May-2018 19:58:18 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[24-May-2018 19:58:18 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[25-May-2018 01:39:29 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[25-May-2018 01:39:29 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[25-May-2018 17:32:16 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[25-May-2018 17:32:16 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[01-Jun-2018 10:28:45 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=6c7829d52a151c9cc2&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[01-Jun-2018 10:28:52 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=b8f70f5982ac6b602c&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[03-Jun-2018 10:12:18 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[03-Jun-2018 10:12:18 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[03-Jun-2018 10:12:35 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[03-Jun-2018 10:12:35 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[03-Jun-2018 10:12:51 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[04-Jun-2018 14:10:35 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[04-Jun-2018 14:10:35 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[04-Jun-2018 19:39:17 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[04-Jun-2018 19:39:17 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[04-Jun-2018 19:39:17 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-Jun-2018 11:49:00 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-Jun-2018 11:49:00 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-Jun-2018 11:49:00 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-Jun-2018 11:49:48 UTC] PHP Warning:  md5_file(uploads/files/8b76e4b3db584b892762d2f64f3503a4.pdf): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[05-Jun-2018 11:50:54 UTC] PHP Warning:  md5_file(uploads/images/99d0835e7ddedec59f331a81501a3f6c.jpg): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[05-Jun-2018 11:50:58 UTC] PHP Warning:  md5_file(uploads/files/fd905f39022d01c2897468e6637bcd30.pdf): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[05-Jun-2018 11:50:59 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-Jun-2018 11:50:59 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-Jun-2018 11:50:59 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-Jun-2018 18:04:55 UTC] PHP Warning:  md5_file(uploads/files/2d8ae4ea08d61831a7f8f66acef17ab7.pdf): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[05-Jun-2018 18:05:04 UTC] PHP Warning:  md5_file(uploads/files/de4fa93b8bb0616129056c41521d3b90.pdf): failed to open stream: Permission denied in /home/polytabl/public_html/modules/classes/Files/Files.php on line 67
+[05-Jun-2018 18:05:08 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-Jun-2018 18:05:08 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[05-Jun-2018 18:05:08 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:25:58 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:25:58 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:26:08 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:26:08 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:26:09 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:26:09 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:26:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:26:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:26:32 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:26:32 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:27:10 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:27:11 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:28:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:28:12 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:29:01 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[06-Jun-2018 23:29:01 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[08-Jun-2018 00:30:04 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[08-Jun-2018 00:30:04 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[08-Jun-2018 00:30:04 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-Jun-2018 11:47:25 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-Jun-2018 11:47:25 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-Jun-2018 12:00:25 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-Jun-2018 12:00:25 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-Jun-2018 12:03:34 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-Jun-2018 12:03:34 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-Jun-2018 12:03:35 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-Jun-2018 12:03:35 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-Jun-2018 12:03:36 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-Jun-2018 12:03:36 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-Jun-2018 12:03:55 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-Jun-2018 12:03:55 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-Jun-2018 12:03:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-Jun-2018 12:03:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[10-Jun-2018 12:04:11 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-Jun-2018 09:25:17 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-Jun-2018 09:25:17 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-Jun-2018 09:25:17 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-Jun-2018 21:44:24 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-Jun-2018 21:44:24 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-Jun-2018 21:44:36 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-Jun-2018 21:44:36 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[12-Jun-2018 21:45:08 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[18-Jun-2018 09:47:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[18-Jun-2018 09:47:52 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Jun-2018 23:56:41 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Jun-2018 23:56:41 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Jun-2018 23:56:43 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Jun-2018 23:56:43 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Jun-2018 23:56:45 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Jun-2018 23:56:45 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Jun-2018 23:56:45 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Jun-2018 23:56:45 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Jun-2018 23:56:46 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Jun-2018 23:56:46 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Jun-2018 23:56:47 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Jun-2018 23:56:47 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[04-Jul-2018 01:01:26 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[04-Jul-2018 01:01:26 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[04-Jul-2018 01:03:43 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[04-Jul-2018 01:03:43 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[16-Jul-2018 12:03:13 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=1bdcd19fa00965a07f&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[16-Jul-2018 12:03:14 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=207dc7ff54339957a7&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[16-Jul-2018 12:03:14 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=d1a3958a77be0bc622&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[16-Jul-2018 12:03:15 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=d1a3958a77be0bc622&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[30-Jul-2018 08:35:59 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=b1d97229d0e41f4204&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[30-Jul-2018 08:35:59 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=f940d347a6b7a3aec8&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[30-Jul-2018 08:36:00 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=cc285ddf50a97c0bf4&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[30-Jul-2018 08:36:01 UTC] PHP Warning:  file_get_contents(https://oauth.vk.com/access_token?client_id=6463991&amp;client_secret=R5MRskuOucoUzHPE6s4T&amp;code=cc285ddf50a97c0bf4&amp;redirect_uri=https://polytable.ru/auth.php?m=vk): failed to open stream: HTTP request failed! HTTP/1.1 401 Unauthorized
+ in /home/polytabl/public_html/modules/classes/User/Auth/Auth_vk.php on line 23
+[01-Aug-2018 20:09:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[01-Aug-2018 20:09:57 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[01-Aug-2018 20:10:25 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[01-Aug-2018 20:10:25 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[02-Aug-2018 18:34:56 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[02-Aug-2018 18:34:56 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Aug-2018 15:07:42 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Aug-2018 15:07:42 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Aug-2018 15:08:24 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[20-Aug-2018 15:08:24 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[27-Aug-2018 13:32:29 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[27-Aug-2018 13:32:29 UTC] PHP Notice:  Undefined index: regex in /home/polytabl/public_html/modules/classes/Interaction/APICall.php on line 54
+[04-Sep-2018 19:13:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/polytabl/public_html/modules/classes/Configuration/Database/Connection.php:59
+Stack trace:
+#0 /home/polytabl/public_html/modules/classes/Configuration/Database/Connection.php(59): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /home/polytabl/public_html/modules/Config.php(30): Configuration\Database\Connection->__construct('127.0.0.1', 'root', '', 'groups_sch', Array)
+#2 /home/polytabl/public_html/index.php(2): include_once('/home/polytabl/...')
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Configuration/Database/Connection.php on line 59
+[04-Sep-2018 19:15:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000] [1044] Access denied for user 'polytabl'@'localhost' to database 'groups_sch' in /home/polytabl/public_html/modules/classes/Configuration/Database/Connection.php:59
+Stack trace:
+#0 /home/polytabl/public_html/modules/classes/Configuration/Database/Connection.php(59): PDO->__construct('mysql:host=127....', 'polytabl', 'kxGh2Pr608', Array)
+#1 /home/polytabl/public_html/modules/Config.php(30): Configuration\Database\Connection->__construct('127.0.0.1', 'polytabl', 'kxGh2Pr608', 'groups_sch', Array)
+#2 /home/polytabl/public_html/index.php(2): include_once('/home/polytabl/...')
+#3 {main}
+  thrown in /home/polytabl/public_html/modules/classes/Configuration/Database/Connection.php on line 59

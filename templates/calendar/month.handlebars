@@ -1,0 +1,8 @@
+{{#months}}
+    {{#times empty}}
+        <div class="day empty" {{{linker _l "empty"}}}></div>
+    {{/times}}
+    {{#days}}
+        {{> day}}
+    {{/days}}
+{{/months}}

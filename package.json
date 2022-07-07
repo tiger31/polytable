@@ -19,7 +19,7 @@
   "homepage": "https://github.com/tiger31/polytable#readme",
   "dependencies": {
     "axios": "^0.18.0",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "vee-validate": "^2.1.0-beta.9",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
